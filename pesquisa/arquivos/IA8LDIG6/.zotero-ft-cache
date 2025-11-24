@@ -1,0 +1,166 @@
+HomeMarketingEconomicsDigital Marketing
+ArticlePDF Available
+Artificial Intelligence in E-Commerce and Digital Marketing: A Systematic Review of Opportunities, Challenges, and Ethical Implications
+February 2025Asian Journal of Research in Computer Science 18(3):395-410
+DOI:10.9734/ajrcos/2025/v18i3601
+Authors:
+Redeer Avdal Saleh
+Akre University for Applied Sciences
+Subhi R. M. Zeebaree
+DPU
+Citations (12)
+References (34)
+Abstract
+The transformative power of AI has only just begun to redefine how businesses function and relate to their customers within e-commerce and digital marketing. In fact, AI really does help firms adjust to changes in consumer preference and market fluctuations by improving operational efficiencies. Big data analytics, aided by artificial intelligence, really boosts the understanding of the customer journey-hence, optimizing and finally allowing for tailor-made marketing campaigns in real time. This leads to great growth for the business. The COVID-19 pandemic pushed companies into adopting AI-driven solutions in the quest for their resilience; this consequently led to an increase in the need for effective digital marketing strategies. E-commerce activities are integrated with 396 artificial intelligence in order to better understand consumer behavior, support market dynamics forecasting, and enhance risk management strategies. Hence, it becomes an indispensable aspect. It is relevant that ethical frameworks and further research address the problems of data privacy and scalability in order to optimize the intrinsic potential of AI. A focus on innovative applications of AI, alongside interdisciplinary collaboration, can empower an organization to develop genuinely inclusive and effective marketing strategies. Embracing the AI-driven initiatives, this will result in long-term relationship building with the customer for growth in a sustainable manner and maintaining competitiveness at an exponential pace in changing digitization.
+
+Discover the world's research
+
+25+ million members
+160+ million publication pages
+2.3+ billion citations
+Join for free
+Public Full-texts 2
+Saleh1832025AJRCOS131968
+2.pdf
+Content uploaded by Redeer Avdal Saleh
+Author content
+Content may be subject to copyright.
+Citations (12)
+References (34)
+... The integration of artificial intelligence (AI) into brand communication and operations presents not only opportunities but also a set of unique challenges that significantly impact consumer trust (Rosário and Dias, 2025:19;Kuma, 2025;Saleh and Zeebaree, 2025;. In industries like food manufacturing, where consumer expectations are closely linked to health, transparency, and ethical standards, trust is both fragile and foundational. ...
+... In industries like food manufacturing, where consumer expectations are closely linked to health, transparency, and ethical standards, trust is both fragile and foundational. For Aljaied for Food Industries, the effective adoption of AI must be accompanied by a clear understanding of the trust-related challenges that arise from AI-driven brand strategies (Saleh and Zeebaree, 2025;. One of the core challenges undermining trust in AI branding is the lack of algorithmic transparency and explain ability (Tasnim et al., 2025;Vuyyuru, 2025;Kuma, 2025:17;Saleh and Zeebaree, 2025;. ...
+... For Aljaied for Food Industries, the effective adoption of AI must be accompanied by a clear understanding of the trust-related challenges that arise from AI-driven brand strategies (Saleh and Zeebaree, 2025;. One of the core challenges undermining trust in AI branding is the lack of algorithmic transparency and explain ability (Tasnim et al., 2025;Vuyyuru, 2025;Kuma, 2025:17;Saleh and Zeebaree, 2025;. When consumers are unaware of how AI systems make decisions such as product suggestions, service responses, or personalized promotions they may develop skepticism about the brand's intentions and fairness (Tasnim et al., 2025;Saleh and Zeebaree, 2025;. ...
+GRADUATE SCHOOL DEPARTMENT OF INTERNATIONAL TRADE AND BUSINESS ADMINISTRATION Leveraging Artificial intelligence AI for Branding: Consumer Behavior Insights from Aljaied For Food Industries in Libya
+Preprint
+Full-text available
+Sep 2025
+Abdalla Almagalfata
+Mehmet Etlioglu
+View
+Show abstract
+... The integration of artificial intelligence (AI) into brand communication and operations presents not only opportunities but also a set of unique challenges that significantly impact consumer trust (Rosário and Dias, 2025:19;Kuma, 2025;Saleh and Zeebaree, 2025;. In industries like food manufacturing, where consumer expectations are closely linked to health, transparency, and ethical standards, trust is both fragile and foundational. ...
+... In industries like food manufacturing, where consumer expectations are closely linked to health, transparency, and ethical standards, trust is both fragile and foundational. For Aljaied for Food Industries, the effective adoption of AI must be accompanied by a clear understanding of the trust-related challenges that arise from AI-driven brand strategies (Saleh and Zeebaree, 2025;. One of the core challenges undermining trust in AI branding is the lack of algorithmic transparency and explain ability (Tasnim et al., 2025;Vuyyuru, 2025;Kuma, 2025:17;Saleh and Zeebaree, 2025;. ...
+... For Aljaied for Food Industries, the effective adoption of AI must be accompanied by a clear understanding of the trust-related challenges that arise from AI-driven brand strategies (Saleh and Zeebaree, 2025;. One of the core challenges undermining trust in AI branding is the lack of algorithmic transparency and explain ability (Tasnim et al., 2025;Vuyyuru, 2025;Kuma, 2025:17;Saleh and Zeebaree, 2025;. When consumers are unaware of how AI systems make decisions such as product suggestions, service responses, or personalized promotions they may develop skepticism about the brand's intentions and fairness (Tasnim et al., 2025;Saleh and Zeebaree, 2025;. ...
+Artificial intelligence AI for Branding: Consumer Behavior Insights from Aljaied For Food Industries in Libya
+Article
+Full-text available
+Sep 2025
+Abdalla Almagalfata
+Mehmet Etlioglu
+View
+... For instance, the search for "waterproof jackets for less than $80" returns sku_context with only those products having price ≤ 80 and in_stock: True, while policy_rules clearly mention the constraints utilized. The correctly constructed binding is used to make sure that only policyconforming data is utilized by the LLM, decreasing the likelihood of response ambiguity [3]. The schema also includes a timestamp field to prevent replay attacks where old responses would be maliciously misused. ...
+... Benchmarks on 30,000 queries verified that MCP signing incorporates just 18ms of end-to-end latency, a 6x increase over conventional PKI-based systems. The protocol further accommodates key rotation through environment variables without any downtime [3]. ...
+... The increase came from the capability of the A2A Orchestrator to score highly confident SKUs with exact semantic intent and policy matches. With fuzzy queries such as "wallet-friendly wireless headphones," MCP-RAG corrected 83% of the time by filtering out out-of-stock or used ones, whereas vanilla RAG corrected 62% [3]. ...
+Model Context Protocol for Dynamic Shopping Agents: Eliminating Hallucinations in E-Commerce RAG Pipelines
+Article
+Full-text available
+Jun 2025
+Amarnath Reddy Kallam
+View
+Show abstract
+... Pneumonia, an inflammatory condition affecting the lungs, is traditionally diagnosed using clinical symptoms in conjunction with imaging techniques such as chest X-rays (CXR) and computed tomography (CT) scans as shown in Figure 1. However, with the outbreak of COVID-19 the diagnostic landscape has faced unprecedented stress [4]. Molecular testing methods like real-time polymerase chain reaction (RTP-CR), well considered the gold standard, suffer from several limitations, including low sensitivity, delays in result delivery, and limited availability in certain regions [5]. ...
+Comparative Evaluation of Resnet-50 and Efficientnet-B1 for Pneumonia Detection in Chest X-Ray Images Using Transfer Learning
+Article
+Jun 2025
+Najwan Waisi
+View
+... In the era of big data, modern database systems are evolving rapidly to keep up with the growing demand for efficient data management, real-time analytics, and enhanced security [1] [2]. Artificial Intelligence (AI) and Machine Learning (ML) have emerged as transformative forces in this evolution, enabling databases to become more intelligent, adaptive, and autonomous [3] [4]. The integration of AI and ML into database systems is not just a technological advancement but a fundamental shift in how data is stored, processed, and utilized [5] [6]. ...
+Comparative Analysis of AI and Machine Learning Applications in Modern Database Systems
+Article
+Full-text available
+May 2025
+Redeer Avdal Saleh
+Hajar Maseeh
+View
+Show abstract
+... Detecting dishonesty has always mostly depended on human judgment, which is prone to prejudice, inconsistency, and limited cognitive ability [1] [2].Through the development of artificial intelligence (AI) and machine learning (ML), researchers have been gradually investigating automated systems that are capable of analyzing subtle behavioral, linguistic, and physiological indicators in order to identify fraudulent activity with improved accuracy and scalability [3]. This is being done in order to combat the growing prevalence of fraudulent activity [4] [5]. Under cognitive stress, for instance, facial micro-expression analysis using support vector machines (SVMs) has demonstrated more efficacy in identifying dishonesty than human observers, specifically [6]. ...
+Artificial Intelligence for Deception Detection: A Multimodal Review of Methods, Challenges, And Ethical Perspectives
+Article
+Full-text available
+Apr 2025
+Redeer Avdal Saleh
+Omar Sedqi Kareem
+View
+Show abstract
+E-Business in the age of artificial intelligence
+Article
+Full-text available
+Sep 2025
+View
+Show abstract
+Marketing Drivers of Consumer Purchase Decisions for Smart Home Products in E-Commerce Environments
+Article
+Full-text available
+Jan 2025
+清清 李
+View
+دور التسويق الرقمي في إعادة تشكيل الصورة الذهنية للمقصد السياحي النوبي
+Article
+Jul 2025
+خلود محمدي احمد عبد الحفيظغادة محمد وفيقرانيا محمد بهاء الدين محمد بهاء الدينمصطفي صبحي أبو النيل صبحي أبو النيل
+View
+Face Detection in the Wild: Techniques, Applications, and Future Directions
+Article
+May 2025
+Warveen merza Eido
+Omar Sedqi Kareem
+View
+Show abstract
+Show more
+Recommended publications
+Discover more about: Digital Marketing
+Article
+Full-text available
+How Short Video Platforms Influence the Purchasing Habits of Young Consumers: Mechanisms, Challenges...
+February 2025 · Advances in Economics Management and Political Sciences
+Du Li
+This paper explores the transformative impact of short video platforms on young consumers purchasing habits. By integrating theories of consumer behavior, such as the AIDA model, and examining short video marketing models, this study reveals the mechanisms by which these platforms capture attention, stimulate interest, and drive purchase decisions. Through personalized content recommendations and ... [Show full abstract]
+View full-text
+Chapter
+Global Digital Marketing Strategy
+February 2022
+Bodo Schlegelmilch
+This chapter looks at digitalization from a consumer perspective and from a corporate perspective. We start by pointing out how uneven the Internet penetration and the adaption of smartphones still are across the globe. Next, we take a closer look at the substantial differences in e-commerce and proximity mobile payment systems between countries. We argue that these differences are only partially ... [Show full abstract]
+Read more
+Article
+Full-text available
+Gamification in digital marketing for e-commerce: a review of strategies to boost engagement and sa...
+March 2025 · International Journal of Scientific World
+Subhi R. M. ZeebareeNazik Saber Rashid
+Gamification has become an innovative and strategic approach within digital marketing, particularly for e-commerce platforms striving to enhance customer engagement, drive sales, and cultivate brand loyalty. Despite its growing adoption, the academic understanding of its mechanisms, implications, and sustainability remains underexplored. This comprehensive review integrates empirical evidence ... [Show full abstract]
+View full-text
+Article
+Full-text available
+AI, Cloud, and Web-Driven Enterprise Systems: The Future of Digital Marketing in the Smart Business...
+May 2025 · Engineering and Technology Journal
+Subhi R. M. ZeebareeHisham Ahmed
+Artificial Intelligence (AI) has revolutionized digital marketing with its promising opportunities and challenges. This essay examines the groundbreaking influence of AI on marketing by considering its application in personalization, automation, predictive analytics, and customer interaction. AI-based approaches enhance efficiency, simplify consumer interactions, and enable businesses to leverage ... [Show full abstract]
+View full-text
+Conference Paper
+Full-text available
+AI in Consumer Behavior Analysis and Digital Marketing: A Strategic Approach
+October 2024
+Nane Davtyan
+The rapid advancement of Artificial Intelligence (AI) has revolutionized consumer behavior analysis and digital marketing strategies by enabling personalized and efficient data-driven approaches. AI-driven tools like predictive analytics, natural language processing (NLP), machine learning, and programmatic advertising allow marketers to process vast amounts of real-time consumer data, ... [Show full abstract]
+View full-text
+Article
+Full-text available
+From Web to Cloud: How Machine Learning Is Shaping Enterprise Systems and Digital Marketing
+August 2025 · International Journal of Scientific World
+Subhi R. M. ZeebareeRenjbar Sh. Othman
+This review critically examines the transformative impact of machine learning (ML) on enterprise systems and digital marketing, transitioning-ing from traditional web-based models to sophisticated, cloud-integrated platforms. The primary objective is to investigate how ML technologies, including predictive analytics, natural language processing, and deep learning, enhance automation, ... [Show full abstract]
+View full-text
+Last Updated: 08 Aug 2025
+Join for free
+Login
+Company
+About us
+News
+Careers
+Support
+Help Center
+Business solutions
+Advertising
+Recruiting
+© 2008-2025 ResearchGate GmbH. All rights reserved.
+TermsPrivacyCopyrightImprintConsent preferences

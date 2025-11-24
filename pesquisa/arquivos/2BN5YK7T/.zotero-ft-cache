@@ -1,0 +1,62 @@
+Ir para o conteúdo principal
+Fazer login
+Agradecemos por acompanhar o Google I/O. Assista ao conteúdo sob demanda.
+Esta página foi traduzida pela API Cloud Translation.
+web.dev
+Isso foi útil?
+Alibaba
+Resumo
+
+O Alibaba.com aumentou as conversões na Web para dispositivos móveis em 76% com o Progressive Web App.
+
+Resultados
+Aumento de 76% nas conversões em navegadores
+14% mais usuários ativos por mês no iOS, 30% no Android
+Taxa de interação 4 vezes maior com a opção "Adicionar à tela inicial"
+
+Faça o download do estudo de caso em PDF
+
+Sobre o Alibaba
+
+O Alibaba.com é a maior plataforma de comércio entre empresas (B2B) on-line do mundo, com atendimento em mais de 200 países e regiões. Depois de fazer upgrade do site para um Progressive Web App (PWA), houve um aumento de 76% no total de conversões em todos os navegadores.
+
+Desafio
+
+Criar ótimas experiências móveis é uma parte indispensável do sucesso do Alibaba.com. A Web para dispositivos móveis é a principal plataforma para descoberta em dispositivos móveis, então sempre se concentraram no design e na funcionalidade. No entanto, foi difícil criar uma experiência envolvente para a Web para dispositivos móveis. A empresa considerou a Web para dispositivos móveis como uma plataforma para direcionar usuários que não usavam o aplicativo para o aplicativo, mas muitos preferem permanecer no navegador.
+
+Os usuários consideram ter que fazer o download de um app para navegar ou concluir uma transação uma barreira desnecessária, em comparação com a solução rápida e fácil de navegar diretamente do navegador para dispositivos móveis.
+
+Zou Yu, diretor da equipe de dispositivos móveis do Alibaba.com
+Solução
+
+O Alibaba.com reconheceu que, para criar uma presença eficaz em dispositivos móveis, era necessário entender como dois segmentos diferentes de usuários (usuários de apps nativos e usuários da Web para dispositivos móveis) interagiam com a empresa. Ela queria proporcionar uma ótima experiência do usuário para os visitantes novos (na esperança de reenvolvê-los) e para os visitantes recorrentes (que são mais leais ao site). O Alibaba.com criou um PWA que leva a uma experiência rápida, eficaz e confiável na Web para dispositivos móveis. A nova estratégia gerou um aumento de 76% no total de conversões em todos os navegadores. Uma conversão corresponde a visitas que resultam em contato direto com um fornecedor.
+
+Para usuários da Web para dispositivos móveis no Android, o Alibaba.com integrou recursos que ajudaram os usuários a se engajar novamente com o site. A empresa implementou uma solicitação "Adicionar à tela inicial", o que resultou em usuários reengajados quatro vezes mais do que outros usuários de dispositivos móveis. Eles também notaram que o reengajamento na Web era comparável ao do app nativo. Para notificações push, a taxa de abertura na Web para dispositivos móveis é a mesma do app nativo.
+
+A nova estratégia também melhorou muito a experiência do usuário em todas as plataformas. O investimento na Web para dispositivos móveis aumentou as taxas mensais de usuários ativos no iOS em 14%. Em dispositivos Android em que os recursos de reengajamento, como notificações push e "Adicionar à tela inicial", estavam ativados, as taxas de usuários ativos aumentaram em 30%.
+
+Oferecer um site móvel centrado no usuário e que prioriza dispositivos móveis e que aproveite o melhor do app nativo, com toda a acessibilidade e versatilidade da Web para dispositivos móveis, é fundamental para manter nossa vantagem competitiva e o caminho para melhores conversões.
+
+Zou Yu, diretor da equipe de dispositivos móveis do Alibaba.com
+Isso foi útil?
+
+Exceto em caso de indicação contrária, o conteúdo desta página é licenciado de acordo com a Licença de atribuição 4.0 do Creative Commons, e as amostras de código são licenciadas de acordo com a Licença Apache 2.0. Para mais detalhes, consulte as políticas do site do Google Developers. Java é uma marca registrada da Oracle e/ou afiliadas.
+
+Última atualização 2016-11-09 UTC.
+
+Queremos ajudar você a criar sites bonitos, acessíveis, rápidos e seguros que funcionem em vários navegadores e para todos os seus usuários. Este site é nossa central de conteúdo para ajudar você nessa jornada, escrito por membros da equipe do Chrome e especialistas externos.
+Contribuir
+Registre um bug
+Veja as questões em aberto
+Conteúdo relacionado
+Chrome para desenvolvedores
+Atualizações do Chromium
+Estudos de caso
+Podcasts e programas
+Seguir
+@ChromiumDev no X
+YouTube
+Chrome for Developers no LinkedIn
+RSS
+Termos de Serviço
+Privacidade

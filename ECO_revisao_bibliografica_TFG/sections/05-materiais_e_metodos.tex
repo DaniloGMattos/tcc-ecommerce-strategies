@@ -1,0 +1,151 @@
+\newpage
+\section{Aplicação e observação em aplicações de e-commerce}
+\label{sc:aplicacao_e_observacao}
+
+\subsection{Análise da aplicação das estratégias técnicas em plataformas de e-commerce - Plataforma Achievece}
+
+ Consiste em uma observação das estratégias técnicas identificadas na revisão bibliográfica através de estudo da plataforma Achievece, um e-commerce americano especializado em venda de cursos online. O estudo busca verificar o impacto nas métricas de receita e conversão da empresa.
+
+\subsubsection{Contexto da Plataforma}
+
+Achievece é uma plataforma de e-commerce de cursos online que apresenta características representativas no cenário de educação continuada para médicos nos Estados Unidos, com volume médio de tráfego de aproximadamente 30 mil visitantes mensais e receita diária na ordem de US\$ 2.500. A plataforma opera com modelo de negócio híbrido, oferecendo tanto cursos com pagamento único quanto planos de assinatura recorrente, permitindo análise de estratégias específicas para ambos os modelos de monetização. A escolha desta plataforma como objeto de estudo justifica-se por: (i) acesso autorizado aos dados de analytics e métricas de negócio, respeitando informações sigilosas da empresa, (ii) possibilidade de implementação controlada de modificações técnicas, (iii) volume de tráfego suficiente para análise estatística significativa, (iv) representatividade do segmento de e-learning no mercado americano, e (v) diversidade de modelos de monetização que permite análise comparativa.
+
+\subsubsection{Possíveis pontos de observação }
+
+\textbf{Item 1: Testes A/B de Interface do Usuário}
+
+Implementação de testes A/B controlados utilizando a plataforma GrowthBook para avaliar o impacto de modificações de UI/UX em taxas de conversão. Variações planejadas incluem:
+\begin{itemize}
+    \item Redesign do processo de checkout (redução de etapas, otimização de formulários)
+    \item Modificações na página de detalhes do produto (disposição de informações, call-to-action)
+    \item Variações de design responsivo para dispositivos móveis
+    \item Testes de copy e messaging (títulos, descrições, CTAs)
+    \item Elementos de urgência e escassez nas páginas de produto
+\end{itemize}
+
+\textbf{Avaliação}: Divisão aleatória e controlada do tráfego entre versões A (controle) e B (variação) através do GrowthBook, com período mínimo de 2 semanas por experimento para garantir significância estatística considerando o volume de tráfego da plataforma. Métricas monitoradas: taxa de conversão, taxa de abandono de carrinho, tempo médio na página, receita por visitante.
+
+\textbf{Item 2: Avaliação do uso de Progressive Web App (PWA)}
+
+Análise do impacto da implementação de funcionalidades de Progressive Web App na plataforma, seguindo evidências documentadas em casos como o Alibaba.com. Funcionalidades a serem avaliadas:
+\begin{itemize}
+    \item Redução de tempo de carregamento através de estratégias de cache
+    \item Funcionalidade offline para navegação no catálogo de cursos
+    \item Implementação de notificações push para engajamento de usuários
+    \item Capacidade de instalação no dispositivo (add to home screen)
+\end{itemize}
+
+\textbf{Avaliação}: Comparação de métricas antes e depois da implementação das funcionalidades PWA, com período de baseline de 4 semanas pré-implementação e 8 semanas pós-implementação. Análise de impacto em: tempo de carregamento, taxa de rejeição, sessões por usuário, conversões totais, receita. A análise considerará possíveis efeitos de sazonalidade através de comparação com períodos equivalentes do ano anterior, quando disponível.
+
+\textbf{Item 3: Otimizações de Performance e Arquitetura}
+
+Implementação incremental de otimizações técnicas baseadas nas estratégias identificadas na revisão bibliográfica:
+\begin{itemize}
+    \item Otimização de imagens e assets (lazy loading, compressão, formatos modernos)
+    \item Implementação de CDN para distribuição de conteúdo estático
+    \item Otimização de queries e cache de dados
+    \item Análise de distribuição de carga e identificação de gargalos
+\end{itemize}
+
+\textbf{Avaliação}: Monitoramento contínuo de métricas de performance (Core Web Vitals: LCP, FID, CLS) através do Google Lighthouse e correlação com métricas de negócio (taxa de conversão, receita por sessão). Cada otimização será implementada de forma isolada quando possível, permitindo identificar contribuições individuais para melhoria de performance.
+
+\textbf{Item 4: Personalização e Recomendação}
+
+Implementação de sistema básico de recomendação de cursos baseado em:
+\begin{itemize}
+    \item Filtragem colaborativa (cursos visualizados por usuários similares)
+    \item Análise de navegação e comportamento
+    \item Categorização e tags de conteúdo
+\end{itemize}
+
+\textbf{Avaliação}: Teste A/B através do GrowthBook comparando versão com e sem recomendações personalizadas. Métricas: taxa de cliques em recomendações, cross-selling, ticket médio, receita por usuário.
+
+\textbf{Item 5: Análise de SEO e Impacto em Tráfego Orgânico}
+
+Implementação de otimizações de SEO técnico e de conteúdo para avaliar impacto em visibilidade e conversões:
+\begin{itemize}
+    \item Otimização de meta tags, títulos e descrições
+    \item Melhoria de estrutura de URLs e breadcrumbs
+    \item Implementação de schema markup para rich snippets
+    \item Otimização de velocidade de carregamento (já contemplada no Ponto 3)
+    \item Criação e otimização de conteúdo relevante
+\end{itemize}
+
+\textbf{Avaliação}: Monitoramento de posicionamento em mecanismos de busca (Google Search Console), volume de tráfego orgânico e correlação com receita. Análise do ROI de tráfego orgânico comparado a outras fontes.
+
+\textbf{Item 6: Análise Comparativa de Fontes de Tráfego}
+
+Análise detalhada do comportamento e performance de diferentes fontes de tráfego para validar os achados de Muralidhar e Lakkanna (2024):
+\begin{itemize}
+    \item Tráfego orgânico (busca)
+    \item Tráfego pago (Google Ads, Meta Ads)
+    \item Tráfego direto
+    \item Tráfego de referência
+    \item Tráfego social (redes sociais)
+\end{itemize}
+
+\textbf{Avaliação}: Segmentação de análise por fonte de tráfego, comparando: taxa de conversão, valor médio do pedido, receita por visitante, custo de aquisição (quando aplicável), ROI. Identificação de fontes com maior potencial de otimização e melhor retorno sobre investimento.
+
+\textbf{Item 7: Testes de Recuperação de Carrinho Abandonado}
+
+Implementação e teste A/B de estratégias de recuperação de carrinhos abandonados:
+\begin{itemize}
+    \item Emails automatizados de lembrete de carrinho abandonado
+    \item Variações de timing de envio (1h, 24h, 48h após abandono)
+    \item Testes de copy e ofertas (desconto vs urgência vs valor agregado)
+    \item Análise de push notifications via PWA para recuperação
+\end{itemize}
+
+\textbf{Avaliação}: Teste A/B controlado através do GrowthBook para diferentes abordagens de messaging. Métricas: taxa de abertura de emails, taxa de cliques, taxa de recuperação de carrinho, receita recuperada.
+
+\textbf{Item 8: Estratégias de Upsell e Retenção para Assinaturas}
+
+Implementação e análise de estratégias de marketing técnicas específicas para o modelo de assinatura de cursos, focando em maximização de receita recorrente (MRR) e redução de churn:
+\begin{itemize}
+    \item Upsell durante a jornada de compra: ofertas de upgrade de plano no momento da compra inicial
+    \item Upsell pós-compra: ofertas de cursos complementares ou upgrades de plano para assinantes ativos
+    \item Cancellation offers: ofertas de retenção apresentadas no fluxo de cancelamento (descontos, pausa de assinatura, downgrade de plano)
+    \item Timing de ofertas: teste de diferentes momentos para apresentação de upsells (checkout, onboarding, uso ativo)
+\end{itemize}
+
+\textbf{Avaliação}: Implementação de testes A/B através do GrowthBook para diferentes estratégias de upsell e ofertas de cancelamento. Grupo controle: sem ofertas de upsell/retenção. Grupos de variação: diferentes tipos de ofertas, timings e messaging. Análise de fluxo de cancelamento com identificação de pontos de abandono através do Lucky Orange.
+
+\textbf{Métricas específicas para assinaturas}:
+\begin{itemize}
+    \item Taxa de conversão de upsell (percentual de usuários que aceitam ofertas)
+    \item Receita incremental por upsell
+    \item Customer Lifetime Value (CLTV) médio por segmento
+    \item Taxa de churn (cancelamentos mensais)
+    \item Taxa de retenção via cancellation offers
+    \item Monthly Recurring Revenue (MRR) e impacto de cada estratégia
+    \item Average Revenue Per User (ARPU)
+    \item Tempo médio de assinatura antes do cancelamento
+\end{itemize}
+
+A análise considerará a segmentação de usuários por tipo de plano (básico, intermediário, premium), tempo de assinatura e padrões de uso para identificar quais estratégias são mais efetivas para cada perfil de cliente.
+
+\subsubsection{Coleta e Análise de Dados}
+
+\textbf{Ferramentas de instrumentação}:
+\begin{itemize}
+    \item Google Analytics 4 para análise de comportamento e conversões
+    \item Google Lighthouse para métricas de performance e Core Web Vitals
+    \item Google Search Console para dados de tráfego orgânico e SEO
+    \item GrowthBook para execução e análise de testes A/B
+    \item Lucky Orange para análise comportamental (heatmaps, session recordings, funnels)
+    \item Ferramentas próprias de analytics da plataforma para dados de receita
+\end{itemize}
+
+\textbf{Métricas primárias}: Taxa de conversão, receita total, receita por visitante (RPV), valor médio do pedido (AOV), Monthly Recurring Revenue (MRR), Customer Lifetime Value (CLTV).
+
+\textbf{Métricas secundárias}: Taxa de rejeição, tempo médio na página, páginas por sessão, taxa de abandono de carrinho, tempo de carregamento, Core Web Vitals (LCP, FID, CLS), taxa de recuperação de carrinho, sessões por usuário, taxa de churn, taxa de retenção, ARPU.
+
+\textbf{Métricas específicas de assinaturas}: Taxa de conversão de upsell, taxa de retenção via cancellation offers, tempo médio de assinatura, taxa de upgrade/downgrade entre planos, receita incremental por estratégia de upsell.
+
+\textbf{Análise estatística}: Testes de significância estatística (teste t para médias, teste qui-quadrado para proporções) com nível de confiança de 95\% para validação de hipóteses. Cálculo de tamanho de amostra considerando o volume de tráfego da plataforma (aproximadamente 30.000 visitantes mensais) para garantir poder estatístico adequado. Análise de séries temporais para identificação de tendências e sazonalidades. Correção de Bonferroni quando aplicável para testes múltiplos.
+
+\subsubsection{Considerações Éticas e Limitações}
+
+O estudo será conduzido respeitando a privacidade dos usuários, utilizando apenas dados agregados e anonimizados em conformidade com a Lei Geral de Proteção de Dados (LGPD). Todas as variações de experimentos A/B manterão funcionalidades essenciais, garantindo que nenhum grupo de usuários tenha experiência degradada. Informações sigilosas da empresa serão preservadas, com apresentação de dados de forma agregada ou normalizada quando necessário.
+
+Limitações reconhecidas incluem: (i) generalização dos resultados limitada ao contexto de e-commerce de cursos online nos Estados Unidos, (ii) período de observação de quatro meses, que pode não capturar completamente efeitos de longo prazo ou variações anuais, (iii) impossibilidade de isolar completamente fatores externos como sazonalidade do mercado educacional, campanhas de marketing não controladas pelo estudo, mudanças na concorrência e variações macroeconômicas, (iv) volume de tráfego que, embora significativo, pode limitar a detecção de efeitos pequenos em certos pontos de observação.

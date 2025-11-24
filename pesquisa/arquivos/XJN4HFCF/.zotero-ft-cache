@@ -1,0 +1,173 @@
+Skip to main content
+Skip to main navigation menu
+Skip to site footer
+HOME / ARCHIVES / VOL. 6 NO. 3 (2024): ARTICLES RESEARCH VOLUME 6 ISSUE 3, JULY 2024 / Articles
+Performance Analysis of an E-commerce Website Using Distributed Servers (Case Study: Ecommerce Bumdes Sarining Kukuh Winangun)
+Authors
+I Kadek Susila Satwika
+Program Studi Rekayasa Sistem Komputer, Institut Bisnis dan Teknologi Indonesia
+I Gede Andika
+Program Studi Rekayasa Sistem Komputer, Institut Bisnis dan Teknologi Indonesia
+DOI: https://doi.org/10.47709/cnahpc.v6i3.4383 
+Keywords: Distributed, Server, Website, Virtualization, Round-Robin
+ABSTRACT
+
+Digital transformation has significantly altered our interactions by leveraging the internet for fast global information exchange and collaboration. This shift impacts businesses, individuals, organizations, and governments by increasing the demand for fast, reliable web services. To meet these demands, many organizations are turning to distributed server infrastructures, which help handle large storage needs and avoid performance issues. This research focuses on creating a distributed web server system that uses Round-Robin load balancing to evenly distribute traffic and enhance performance. The Round-Robin algorithm’s simplicity and effectiveness in balancing loads, combined with the advantages of virtualization, such as cost efficiency, improved performance, and better resource management are central to this approach. Virtualization also offers improved scalability, accuracy, and security, further enhancing overall system efficiency and effectiveness in data centers. This research evaluates and contrasts the performance of websites utilizing distributed servers against those using single servers. The findings indicate that websites with distributed servers significantly outperform those with single servers. Specifically, distributed servers offer response times that are 5.8 times faster, achieve 2.2 times more successful responses, and transfer 2.1 times more data than single servers. Additionally, single servers experience a much higher rate of timeouts, with 14.2 times more occurrences compared to distributed servers.
+
+DOWNLOADS
+REFERENCES
+
+Abdulkarim, Abdulrahman, Ishaq Muhammed, Lele Mohammed, and Abbas Babayaro. 2019. “Performance Analysis of an Improved Load Balancing Algorithm in Cloud Computing.” American Journal of Networks and Communications 8(2).
+
+Alankar, B., Sharma, G., Kaur, H., Valverde, R., & Chang, V. (2020). Experimental setup for investigating the efficient load balancing algorithms on virtual cloud. Sensors, 20(24), 7342.
+
+Arfeen, Asad, Muhammad Asim Khan, Obad Zafar, and Usama Ahsan. 2022. “Process Based Volatile Memory Forensics for Ransomware Detection.” Concurrency and Computation: Practice and Experience 34(4).
+
+Cuzzocrea, Alfredo, Enzo Mumolo, and Pietro Corona. 2015. “Cloud-Based Machine Learning Tools for Enhanced Big Data Applications.” In Proceedings - 2015 IEEE/ACM 15th International Symposium on Cluster, Cloud, and Grid Computing, CCGrid 2015,.
+
+Du, Guangyu, Hong He, and Qinggang Meng. 2014. “Energy-Efficient Scheduling for Tasks with Deadline in Virtualized Environments.” Mathematical Problems in Engineering 2014.
+
+Deshmukh, G. (2023). Performance comparison of different load balancing algorithms in cloud computing. International Journal on Recent and Innovation Trends in Computing and Communication, 11(8s), 747-754.
+
+Ekre, A.A., N.M. Nimbarte, and S.V. Balamwar. 2018. “An Empirical Proposition to Load Balancing Effectuate on AWS Hybrid Cloud.” International Journal of Scientific Research in Computer Science and Engineering 6(4).
+
+Eludiora, Safiriyu et al. 2010. “A Load Balancing Policy for Distributed Web Service.” International Journal of Communications, Network and System Sciences 03(08).
+
+Ma'arifah, W. (2024). Performance comparison of zevenet multi service load balancing with least connection and round robin algorithm. Joiv International Journal on Informatics Visualization, 8(2), 882.
+
+Motohashi, H., Nguyen, P., Nguyen, K., & Sekiya, H. (2022). Implementation of p4-based schedulers for multipath communication. Ieee Access, 10, 76537-76546.
+
+Ramadhan, H. and Wardhana, S. (2021). Computer networks optimization using load balancing algorithms on the citrix adc virtual server. Jurnal Online Informatika, 6(1), 103.
+
+Rino Subekti et al. 2024. TRANSFORMASI DIGITAL (Teori & Implementasi Menuju Era Society 5.0). Jakarta: PT. Sonpedia Publishing Indonesia. https://www.researchgate.net/publication/380462238_TRANSFORMASI_DIGITAL_Teori_implementasi_Menuju_Era_Society_50.
+
+Satwika, I Kadek Susila, I Putu Susila Handika, and Made Hanindia Prami Swari. 2022. “ANALISIS UTILISASI RESOURCE CLUSTERS PADA HADOOP MENGGUNAKAN VIRTUALIZATION.” Jurnal RESISTOR (Rekayasa Sistem Komputer) 5(1).
+
+Setiawan, Roisul, Bayu Rahayudi, Dany Primanita, and Kartika Sari. 2020. “Implementasi High Availability Web Server Menggunakan Metode Web Cluster Dan High Availability Proxy Pada Single Board Computer (Studi Kasus: UD Sendang Putra).” Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer (J-PTIIK) Universitas Brawijaya 4(9): 2548–2964. https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/7880.
+
+Song, He, Xiaofeng Wang, Mengdong Zhai, and Guangjie Zhang. 2020. “High-Fidelity Router Emulation Technologies Based on Multi-Scale Virtualization.” Information (Switzerland) 11(1).
+
+Swari, Made Hanindia Prami, I Kadek Susila Satwika, and I Putu Susila Handika. 2020. “Performance Analysis of Sales Big Data Processing Using Hadoop and Hive in Cloud Environment.” In 2020 6th Information Technology International Seminar (ITIS), IEEE, 162–66. https://ieeexplore.ieee.org/document/9320964/.
+
+Wunarso, Novita Belinda, Andrias Rusli, Michelle Angelica, and Arabella Margaret Salim. 2013. “Implementasi Distributed File Server Pada Apache Web Server.” Jurnal ULTIMA InfoSys 4(2).
+
+Downloads
+ DOWNLOAD PDF
+PUBLISHED
+2024-07-31
+HOW TO CITE
+Satwika, I. K. S. ., & Andika, I. G. . (2024). Performance Analysis of an E-commerce Website Using Distributed Servers (Case Study: Ecommerce Bumdes Sarining Kukuh Winangun). Journal of Computer Networks, Architecture and High Performance Computing, 6(3), 1390–1398. https://doi.org/10.47709/cnahpc.v6i3.4383
+More Citation Formats
+ISSUE
+Vol. 6 No. 3 (2024): Articles Research Volume 6 Issue 3, July 2024
+SECTION
+Articles
+LICENSE
+
+Copyright (c) 2024 I Kadek Susila Satwika, I Gede Andika
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+Similar Articles
+I Gusti Putu Yada Giri, Luh Joni Erawati Dewi , I Made Gede Sunarya, The Evaluation of Usability and Website Development using Cognitive Walkthrough, Performance Measurement, and System Usability Scale , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 5 No. 2 (2023): Article Research Volume 5 Issue 2, July 2023
+Dewi Laksmiati, Vulnerability Assessment with Network-Based Scanner Method for Improving Website Security , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 5 No. 1 (2023): Article Research Volume 5 Issue 1, January 2023
+Hylenarti Hertyana, Syahrozi Lomotu , Eva Rahmawati, User Satisfaction Analysis of the PT Dikstra Cipta Solusi Website Using the Webqual 4.0 Method , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 6 No. 3 (2024): Articles Research Volume 6 Issue 3, July 2024
+Windania Purba, Irsan Jaya Sihombing, Ayu Elpriyani Sidabutar, Nur Ainun Siahaan, The Design of a Website-Based Motorcycle Installment Bill Check Application at Indah Motor KM.5 , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 3 No. 2 (2021): Journal of Computer Networks, Architecture and High Performance Computing, July 2021
+I Putu Indra Wiguna, Christian Tonyjanto, Aulia Iefan Datya, Putu Andika Kurniawijaya, Interactive Multimedia Website For Promoting Mumbul Sangeh Park As A Tourist Destination , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 7 No. 3 (2025): Articles Research July 2025
+Eka Dewi Utari, Ferry Setyadi Atmadja, Ria Rahma Nida, Lathiefah Rabbaniyah, Dinda Ramadhani Qurrota Ayyun, Evaluation of the Quality of Academic Information Services on the FEB UNJ Website Based on the WebQual and EUCS Models , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 7 No. 3 (2025): Articles Research July 2025
+Abdul Aziz Anaoval, Ahmad Turmudi Zy, Suherman S, Analysis of Manual and Automated Methods Effectiveness in Website Penetration Testing for Identifying SQL Injection Vulnerabilities , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 6 No. 3 (2024): Articles Research Volume 6 Issue 3, July 2024
+I Kadek Noppi Adi Jaya, Ida Ayu Utari Dewi, Gede Surya Mahendra, Implementation of Wireshark Application in Data Security Analysis on LMS Website , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 4 No. 1 (2022): Article Research Volume 4 Number 1, Januay 2022
+Jihan Ula Usla, Ali Ikhwan, Web Based Social Assistance Distribution Monitoring System Using Waterfall Method , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 5 No. 1 (2023): Article Research Volume 5 Issue 1, January 2023
+Sulistiyanto, Indra Satriadi, Arif Rahman, Electronic Archive Design With RC4 Cryptographic Based File Security , Journal of Computer Networks, Architecture and High Performance Computing: Vol. 6 No. 1 (2024): Article Research Volume 6 Issue 1, January 2024
+
+1 2 3 4 5 > >> 
+
+You may also start an advanced similarity search for this article.
+
+Developed By
+Open Journal Systems
+INDEX
+
+ Accreditation Certificate
+
+ 
+
+Editorial Team
+
+
+Peer Reviewer Process
+
+
+Reviewer Team
+
+
+Aims & Scope
+
+
+Publication Ethics
+
+
+Privacy Statement
+
+
+Author Guidelines
+
+
+Facebook Fanpage
+
+
+Become Reviewer
+
+
+Open Access Policy
+
+
+Copyright and Licence
+
+
+Plagiarism Policy
+
+
+Author Fee
+
+
+Archiving Policy
+
+
+ORCid Member ID
+
+
+Repository Policy
+
+e-ISSN 2655-9102 :
+
+Template/Author Guidelines:
+
+ 
+
+INDEXING :
+
+  
+
+TOOLS
+
+      
+
+ 
+
+TEMPLATE
+LICENSE
+
+Journal Of Computer Networks, Architecture and High Performance Computing is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License(CC-BY-NC-SA 4.0).
+
+ 
+
+FLAGCOUNTER
+
+
+info@itscience.org, web: https://itscience.org
+
+Journal Of Computer Networks, Architecture and High-Performance Computing is licensed under a  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License(CC-BY-NC-SA 4.0)
+
+
+  View My Stats

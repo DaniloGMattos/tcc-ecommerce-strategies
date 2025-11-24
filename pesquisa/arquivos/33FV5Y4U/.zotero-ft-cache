@@ -1,0 +1,255 @@
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 1
+How SEO Makes Website Loads Faster and
+Helps in User Engagement
+Deepak Bansal
+Director of Digital Marketing, Atihsi LLC
+Abstract
+In the contemporary digital landscape, the significance of Search Engine Optimization (SEO) transcends
+mere visibility within search results; it extends to shaping the very essence of user experience (UX). This research delves into the profound influence exerted by SEO techniques on website performance metrics, particularly focusing on loading speeds, and their consequential impact on user engagement.The way search algorithms are always changing, with a focus on mobile-first indexing and user experience signals,
+highlights the mutually beneficial link that exists between SEO, website performance, and user pleasure. This paper explains how well-implemented SEO methods immediately improve website performance and foster more engaged users by closely examining and analyzing technical SEO optimisations, mobile responsiveness strategies, and UX design concepts.For both web developers and digital marketers, the
+research's insights provide a useful framework. It emphasizes how crucial it is to have a user-centric approach to maximize beneficial user interactions and strengthen online presence. Stakeholders may create enduring relationships with their audience and traverse the competitive digital landscape with effectiveness by giving priority to SEO techniques that improve website efficiency and increase UX
+standards.
+Keywords: Search engine, Search engine optimization, SEO strategies, User engagement, Website speed, User experience.
+1. Introduction
+In today’s world of business, companies utilize branding to run advertising campaigns that increase sales, engagement, and brand awareness. Regardless of the industry they service, any organization can expand its reach and profit from marketing's advantages.
+According to Papagiannis (2020), Growing businesses can benefit from marketing, but to stay competitive and maximize return on investment (ROI), they must see marketing as a process and utilize all of its benefits. Businesses today largely depend on their online presence to create audience engagement and accomplish their marketing objectives in the digital age. To increase a website's organic traffic and search
+engine visibility, Search Engine optimization (SEO) is essential in creating a satisfactory user engagement by helping website load faster. An improved website's visibility and rating in search engine result pages (SERPs) is the goal of search engine optimization or SEO. Increased organic traffic to a website can cause more leads, conversions, and
+sales. This is the main objective of SEO. By offering a seamless surfing experience with quick load times, simple navigation, and mobile responsiveness, SEO also seeks to improve user experience, engagement, and satisfaction.
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 2
+At its core, search engine optimisation (SEO) is a broad range of techniques and strategies that are intended to optimize a website's structure, content, and visibility in order to increase its prominence and relevance in the eyes of search engine algorithms (Veglis & Giomelakis, 2019; Ziakis et al., 2019). Technological
+advancements, off-site promotion, and on-site optimisation are just a few of the strategies used by SEO professionals to accomplish these objectives. While on-site optimization involves using meta tags, keywords and other content-related techniques, technological advancements include clean code and secure hosting. Influencer collaborations, guest posting, and other link-building techniques are examples of off
+site marketing. SEO objectives should fulfill precise, quantifiable targets and be in line with overarching corporate objectives. Getting a greater amount of organic traffic, better backlinks, leads and conversions, engagement optimisation, user experience enhancement, and improved SERP ranks are some of the typical SEO objectives. A variety of SEO strategies, including building specialized authority, producing high
+quality content, and optimizing internal linking structures, can be used to accomplish these objectives. User engagement is a term that is not foreign to researchers and has drawn attention as such from different fields of study (Lalmas et al., 2022). Jimit, (2023) posits that user engagement and experience are directly impacted by the speed of a website. In his position, when consumers access a website, they anticipate a
+fast and seamless load time that enables them to locate information or accomplish tasks with ease. Conversely, users who experience slow website loading may become irate and frustrated and leave the site before they have an opportunity to interact with it. User engagement and website speed are two important elements that the success of a website is dependent
+on. For customer satisfaction, conversion rates, search engine rankings, and overall business effectiveness, a website's loading and functioning speed is critical. Businesses hoping to deliver the best possible user experience and encourage meaningful online interactions must recognize the significance of website performance. Website speed significantly impacts user engagement across various dimensions. Slow-loading websites
+often lead to high bounce rates as users grow impatient and leave the site, negatively affecting engagement and performance (Strikepoint, 2023). Moreover, in e-commerce, delayed loading times correlate with decreased conversion rates due to abandoned shopping carts and missed sales opportunities. Conversely, fast-loading sites enhance user experience and boost conversion rates.
+To provide a great user experience, search engines give priority to websites that load quickly. Websites that load slowly run the risk of receiving worse rankings, less exposure, and less organic traffic. Empirical instances demonstrate the palpable influence of speed on income generation: Amazon reported a 1% decline in sales for every 100 milliseconds of latency, while Google saw a 20% decrease in visitors with
+merely an additional 0.5 seconds to generate search pages (Uptime, 2024). There are various tactics that firms may implement to improve engagement and optimize website speed. Compression of photos improves their load times, while browser caching keeps site components in users' browsers to speed up loading for repeat visitors. Further enhancing user experience and search engine
+exposure are technical improvements like mobile responsiveness, suitable site layout, and secure connections. In this research report, Deepak Bansal leads an extensive investigation of the significant influence SEO methods have on improving website loading times and increasing user engagement. This study explores
+the subtle variations within SEO tactics in a dynamically changing online environment where online visibility dynamics are always changing. With the introduction of mobile-first indexing and the growing
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 3
+importance search engines attach to user experience metrics, it examines how these approaches are changing in particular. The study carefully examines the effects of mobile-first indexing on SEO strategies, since a significant
+percentage of people now access the internet through mobile devices. It analyzes the changing tactics used to make sure websites are not only responsive to mobile devices but also excel at offering a flawless user experience on a wide range of screens. Through an analysis of user experience strategies, the research aims to reveal how important they are for increasing user happiness and engagement.
+In addition, the study carefully explores technological optimizations, examining how backend improvements like server setups and code optimization affect the speed at which websites load and their overall performance. Employing a methodical examination, it seeks to expose the complex relationship between technological enhancements and user engagement metrics, providing valuable perspectives on
+how these optimisations might be utilized to enhance website efficiency and user engagement.
+2. The Importance of Website Speed
+People's attention spans are getting shorter and their patience is wearing thin in this contemporary fast
+paced digital age. This is particularly true for internet users, who anticipate rapid satisfaction. This is the point at which website performance, sometimes referred to as speed, becomes relevant. It's now more than simply a technical aspect; it's a critical component affecting search engine ranking, user experience, and, eventually, business success.
+A laggy website makes a bad first impression, and these things happen. According to research by [Gomez et al., 2017], user conversion rates might drop by 7% for every second a website delays. Users become frustrated and have a greater "bounce rate," or percentage of visitors to a website who depart without engaging with the content when they regard websites with slow speeds as unprofessional and unsafe. Also, the necessity for quick loading times intensifies due to the growing use of mobile devices. According
+to App Annie's [2023 State of Mobile Report], mobile internet usage currently makes up more than 50% of all web traffic worldwide. Due to the short attention spans and bandwidth utilized by cell phone users, a slow website might cause lost revenue and overlooked prospects.
+Fig 1: The Importance of Website speed
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 4
+Website performance has a big impact on search engine ranking algorithms. Search engines like Google prioritize user experience. Slow websites can have a negative impact on search engine rankings, making it harder for people to locate your website. This can be harmful in a world when companies rely mostly
+on their online presence. Furthermore, Google prioritizes mobile-friendly websites, with website speed playing a significant role in the former. You may enhance user experience and increase search engine rankings by optimizing your website for speed.
+Website speed affects more than search engine rankings and user experience. It has an immediate effect on your revenue. According to research by [Radware, 2021], a 0.1-second boost in website speed can cause an 8% rise in conversions. This is because quicker websites entice visitors to remain longer, interact with your material, and eventually complete desired actions, like buying products or signing up for
+newsletters. Additionally, a sluggish website may have a detrimental effect on retaining visitors. According to a Qualtrics [2022 Customer Experience Benchmark Report], 73% of consumers think that a company's online customer service ease influences their decision to do business with them again. Customers get
+frustrated and angry when a website loads slowly, making them less likely to return. Businesses may enhance search engine ranking user experience, and ultimately increase business performance by proactively focusing on website speed optimization. This is crucial because, in the electronic age, speed is your lifeline to success rather than just a competitive advantage.
+The speed of a website is now more important than ever in the digital world as it affects user experience, search engine exposure, and ultimate business performance. A number of insightful case studies covering a range of sectors demonstrate how website speed optimisation may have a revolutionary effect. For example,Mahajan et al., (2018) in their study reports of a well-known fashion retailer in the e-commerce space struggling with slow loading times that frustrated customers and increased bounce rates. However,
+they were able to achieve an astounding 30% reduction in loading time, which was correlated with a 12% improvement in conversion rates, by putting into practice a complete strategy that included image optimisation, code minification, caching, and Content Delivery Network (CDN) use. Similar results highlight how important quick loading times are in influencing consumers' decisions to buy.
+Furthermore, Another example of how improving website speed can improve user experience and boost search engine results is a small travel agency that is finding it difficult to compete with larger online booking platforms. They were able to achieve a 45% improvement in loading speed by concentrating on structural optimisation, code cleanup, and server optimisations. This resulted in a notable rise in user
+engagement and a 20% boost in organic search traffic. This is consistent with the findings of Whiffen et al’s (2019) research, which highlights the direct relationship between improved search engine optimization and faster websites.
+3. Technical SEO for Speed Optimization
+The foundation of a fast loading website is its technical SEO, which provides a range of techniques to improve user experience and speed up loading times.The skill of technical SEO, or optimizing your website's technical structure for search engines, provides a potent toolkit of techniques to attain peak
+performance and give users a seamless, enjoyable experience. With the support of current academic research, this article explores five essential technical SEO strategies that can help you completely revamp your website.
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 5
+Server reaction time, or the amount of time it takes for your server to react to a user's request and start sending data, is the cornerstone of website speed. High bounce rates and user annoyance can result from slow server response times, which can severely hinder website loading times.
+To successfully handle this difficulty, Monach et al., (2020) postulates that selecting a hosting company that is reputable for quick and stable server performance is imperative. Giving preference to service providers with scalable infrastructure that can handle variations in website traffic, and use cutting-edge technologies like SSDs to speed up data retrieval should be considered a top priority. Furthermore,
+performance bottlenecks can be more easily identified and mitigated by optimizing server settings through regular inspection of server logs. Strategies like database optimisation, code optimisation, and server-side caching can all help increase server performance, which in turn can lead to better user experience and more responsive websites ( Monach et al., 2020)
+Often, images are the main cause of slow page loads, but there is a bright side. There are efficient image optimisation methods that enable a careful balance between file size and image quality. Using programmes like TinyPNG or Squoosh to compress photos using both lossless—which preserves original quality—and lossy—which compromises quality for drastically smaller file sizes—are practical alternatives.
+Furthermore, it is essential to resize photos to make sure they are the right size for the website, since uploading larger-than-needed images increases file size and slows down loading times.Furthermore, you can further optimize download speeds by choosing the right image format based on the type of picture (PNG for graphics with transparent backgrounds and sharp lines, and JPEG for photographs and images
+with a lot of color fluctuation). Gomez et al. (2017) provided support for their examination of the effects of picture optimisation measures on website speed, noting that image compression and resizing techniques significantly reduce loading times. By removing unnecessary elements from a website's code (CSS, JavaScript, and HTML), such as whitespace and formatting, minifying code reduces file size and speeds up website loading. Using web
+platforms or plugins to automate the code minification process is one practical way to solve the problem. Further speeding up loading times is the ability to enable browser caching by setting servers to transmit the proper HTTP headers telling browsers to locally store minified code on user devices, hence reducing the need to download it again on subsequent visits. Backing up this claim is study by Akhtar et al. (2021),
+which looks at how code minification affects website speed and highlights how much faster loading times result from smaller files. Browser caching downloads different website parts, such as images, stylesheets, and scripts, to build a smaller version of the website on the user's device. The user's device stores these items locally. If the
+requested elements are in the cache and haven't expired, the browser will retrieve them from there rather than redownloading them from the server on subsequent visits. As a result, there is less data fetching required, which improves user experience and speeds up loading times. Browser caching provides several benefits, including better user experience, lower server load, and improved SEO performance, according
+to studies by Akhtar et al. (2021) and SeoClarity (2023).Configuring servers to deliver relevant HTTP headers, such as Cache-Control and Expires, which specify how long browsers should store cached files, is necessary to implement browser caching. Achieving the ideal loading times while avoiding showing out-of-date content requires careful consideration of cache expiration timings. Businesses may greatly
+improve website speed, user experience, and SEO effectiveness in the digital sphere by utilizing browser caching properly.
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 6
+In essence, content delivery networks, or CDNs, are a network of servers spread out geographically that collaborate to deliver material to users more quickly and consistently. They function as a go-between for the user's device and the origin server of a website, strategically storing commonly visited information
+(such as videos, pictures, and static files) closer to the user's location. As a result, the data must travel a shorter physical distance, which significantly improves user experience and website loading speed(Vaghasia et al.,2017).The present internet architecture would not be the same without Content Delivery Networks (CDNs), which optimize website speed by keeping copies of content, such as photos,
+JavaScript files, and HTML pages, on dispersed edge servers located all over the world. The content delivery network (CDN) quickly searches its cache for content requests made by users, delivering it from the closest server to reduce latency and improve user experience (Zolfaghari et al., 2020). By using redundant servers to route traffic seamlessly during outages or Distributed Denial-of-Service (DDoS)
+attacks, CDNs increase reliability. Furthermore, CDNs help businesses save money by reducing data transfer and offloading the delivery of static content. Additionally, they strengthen security by providing malware screening, website firewalls, and defenses against DDoS attacks. For quick, trustworthy, and secure information distribution anywhere in the globe, content delivery networks, or CDNs, are essential
+olfaghari et al., 2020)
+Fig 2: Image showing the evolution of Technical SEO
+4. Mobile Optimization and Responsive Design
+In the current digital environment, where smartphones have evolved into personal extensions of ourselves, companies cannot continue to undervalue the importance of mobile optimisation. Today, a startling majority of all web traffic originates from mobile devices. Search engines like Google favor websites that
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 7
+meet this trend by indexing them first on mobile devices. This paradigm shift emphasizes how important it is for companies to employ responsive design and mobile optimisation to provide a seamless and pleasurable user experience across all devices. At its core, mobile optimization encompasses a wide array
+of tactics designed to tailor a website's structure, content, and performance specifically for mobile users. This involves addressing aspects such as screen size, touch controls, load times, and the overall user interface (UI) to ensure optimal usability on smartphones and tablets. Responsive design, on the other hand, is a more fluid approach that enables websites to dynamically adapt to different screen sizes and
+resolutions. Through the use of flexible layouts, fluid images, and CSS media queries, responsive design ensures that a website renders optimally across desktops, tablets, and smartphones, providing a consistently engaging experience. The importance of mobile optimization and responsive design extends far beyond aesthetics. Failure to
+cater to mobile users directly translates to lost opportunities, increased bounce rates, and low search engine rankings. A recent study by Gomez et al. (2022) found that a mere one-second delay in mobile page load time can lead to a significant 7% drop in conversion rates. Furthermore, search engines penalize websites that are not mobile-friendly, resulting in decreased visibility and organic traffic. To achieve optimal
+mobile performance, understanding the key differences between mobile and desktop users is crucial. Mobile users often have shorter attention spans, limited bandwidth, and rely on touch-based interactions. Therefore, websites optimized for mobile should prioritize clear navigation, concise content, and uncluttered layouts. As mobile devices present smaller screens, prioritizing essential information and
+employing visual hierarchy becomes paramount (Lalmas et al., 2022).
+Fig 3: Statistics showing the impact of mobile optimization and responsive design for user’s
+engagement
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 8
+5. User Experience (UX) and SEO
+For success online, the relationship between search engine optimisation (SEO) and user experience (UX) has become critical. Although they are sometimes seen as distinct fields, search engine optimization and
+user experience (UX) are closely related and have a big influence on website traffic, discoverability, and eventually conversion rates. With a focus on their effects on user engagement and search engine rankings, this article will explore the relationship between UX and SEO.User experience (UX) refers to the entirety of a user's interactions with a website. It emphasizes features such as content value, graphic design,
+simplicity of use, navigation, and overall satisfaction (Norman & Nielsen, n.d.). On the other hand, search engine optimization, or SEO, makes a website more visible in SERPs. Technical elements include backlink development, content optimisation, and keyword analysis are involved in this (Dean, 2023).User experience (UX) and search engine optimisation (SEO) work hand in hand to create a symbiotic
+relationship that is essential for increasing online visibility, engagement, and conversions. Measures such as dwell duration and bounce rate show how highly Google's search engines rank websites with superior user experiences. Search engines can determine whether a website can satisfy user intent based on its technological expertise, valuable content, and easy-to-navigate design. The optimisation of site
+architecture for simple navigation and content hierarchy, the creation of visually appealing and efficient websites to increase engagement and lower bounce rates, and the assurance of mobile responsiveness to comply with Google's mobile-first indexing criteria are all critical areas of focus that have an immediate impact on SEO performance (Lorigo et al., 2008; Garrett, 2010; Sterling, 2016).
+Fig 4: Image Showing the connectedness of UX and SEO in improving user’s Engagement
+A website's success hinges on its ability to be discovered and to provide a compelling user experience (UX). Easy-to-use website navigation is essential for improving user experience, making content discovery easier, and influencing user happiness in general. To ensure that people navigate a website easily, features like breadcrumbs, a clearly defined site hierarchy, and well-structured menus are crucial
+(Nielsen Norman Group, 2022). In addition to user experience, search engines closely examine navigation
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 9
+architectures to understand site context and build linkages between material, which directly affects indexability and crawlability (Krug, 2020). Readability and content organization have a big impact on how engaged and understanding users are.
+While structured content layouts with headings and visual cues enhance comprehension and ultimately reduce bounce rates and increase dwell time, thereby sending positive signals to search engines, other factors that contribute to readability include font selection, line spacing, and paragraph length (Hasan & Hoon, 2021).Videos, infographics, and quizzes are examples of interactive components that break up the
+monotony of textual material and encourage active user involvement (Lee & Tsai, 2020). These dynamic elements increase the chance of obtaining backlinks, which strengthens off-page SEO signals, while also lengthening session durations and lowering bounce rates.
+6.Core Web Vitals and SEO
+In the field of digital experience, Google's launch of Core Web Vitals (CWV) has set a new standard for website functionality by highlighting user-centered indicators that are essential for user pleasure and engagement. This talk explores the importance of Core Web Essentials, providing a thorough analysis of
+Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS), and introducing optimisation techniques.
+Fig 5: Diagram Illustrating Core Web Vitals and How Improves Page Speed
+Core Web Vitals are a part of Google's larger Web Vitals programme, which measures essential aspects of the user experience. The three main parts of CWVs consist of: Largest Contentful Paint (LCP): According to Davies et al. (2020), this measure evaluates how quickly
+users believe a website's main content loads. It does this by timing how long it takes for the largest text block or image within the viewport to render. A quick LCP gives users faith in the page's usefulness and relevance. First Input Delay (FID): According to Wang et al. (2020), FID measures the first response time of a website by measuring the interval between a user's initial input (such as a click, tap, or key press) and the browser's
+response. Users with low FID scores have a smooth and engaging experience.
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 10
+Cumulative Layout Shift (CLS): This statistic assesses unforeseen changes in layout elements throughout the loading stage, emphasizing visual stability. Reducing the CLS score is essential to reduce user annoyance and provide a seamless surfing experience (Rutter et al., 2022).
+Google's recognition of CWVs is indicative of a deep understanding of consumer expectations in the modern digital environment. Search engine algorithms are beginning to favor websites that offer outstanding user experiences. Research findings indicate that slow loading speeds, slow response times, and unsettling designs cause increased bounce rates, shorter stay durations, and worse conversion rates
+(Strikepoint, 2023). CWVs provide a measurable foundation for addressing these critical issues. Web developers and organizations should give priority to initiatives that aim to improve Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS) to optimize Core Web Vitals (CWV) and improve user experiences. According to Zolfaghari et al. (2020) and Gomez et al.
+(2017), preloading essential assets (including fonts and CSS), optimizing pictures using contemporary formats and compression, and taking into account server-side rendering (SSR) or pre-rendering can all help LCP load faster in the beginning. Reducing JavaScript execution time, postponing non-essential scripts, and closely monitoring the use of third-party code are all necessary to minimize FID (Akhtar et
+al., 2021). utilize placeholders for dynamic content, specifically establish picture and video dimensions, and, when possible, utilize CSS transforms for animations to minimize CLS.
+Fig 6: Chart showing the Core Web Vital from Different Connection Device
+7. The Role of AMP (Accelerated Mobile Pages)
+Within the dynamic domain of mobile web browsing, the speed at which pages load has a significant
+impact on both user experience and search engine exposure. In response, Google launched the Accelerated Mobile Pages (AMP) project. For a mobile web experience that loads quickly, AMP is an open-source framework that simplifies HTML code, uses less resources, and gives priority to content delivery. Optimizing page load times on mobile devices to improve user experience is the main goal of the AMP
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 11
+initiative (Chen, 2020). AMP uses a mix of technical limitations and optimisations to do this. AMP mostly makes use of a certain subset of HTML tags in addition to its own unique components (AMP HTML). This reduces bloating and guarantees code compatibility. In addition, AMP uses the AMP Cache, a
+specialized content delivery network (CDN), to pre-render and cache AMP pages, resulting in very rapid loading. The impact of AMP on website speed is indisputable. Research shows that AMP pages routinely load substantially quicker than non-AMP pages (Yi et al., 2020). There are numerous SEO advantages to this
+increased speed. First, search engines use page speed as a recognised ranking criteria. Faster websites have an advantage over rivals in search results. Second, faster loading times are associated with reduced bounce rates and higher levels of user engagement—two outcomes that tangentially support better SEO. The choice to use AMP requires carefully balancing its benefits and drawbacks. Positively, AMP
+significantly improves performance, which is especially advantageous for users with slower connections. This could cause higher search rankings and higher user engagement metrics. Furthermore, AMP pages might be eligible for Google's "Top Stories" carousel, which would increase visibility. Nevertheless, there are disadvantages to take into account, such as the complexity of development and maintenance due to the
+increased costs associated with handling both standard and AMP versions of pages. Furthermore, using advanced web capabilities may be restricted by AMP's constraints on HTML and JavaScript functionality. Finally, there may be less control over how material is supplied if you rely on the AMP Cache for content distribution.
+8. SEO Strategies for Enhanced User Engagement
+Search engine optimization (SEO) has advanced past simple keyword stuffing. User experience measurements are emphasized by modern algorithms as markers of the authority and relevance of websites. For businesses to achieve long-term search engine success, they must therefore employ SEO
+methods that not only draw in traffic but also encourage deep interaction. Relevant, high-quality content continues to be the cornerstone of a successful SEO campaign. Identifying the search phrases that prospective customers use to find information related to a business's offerings requires thorough keyword research (Zhang & Benyoucef, 2021). But focusing too much on keyword
+density can cause odd, unnatural writing. Rather, concentrate on producing thorough and educational content that speaks to the user's purpose behind the chosen keywords. Utilizing semantic variants and long-tail keywords encourages writing in a more organic way and corresponds with how consumers phrase their search queries.
+A meticulously constructed internal linking structure has several benefits for user engagement. In the first place, it directs users to relevant material, promoting exploration and lengthening the time of their visit (Asratian & Mavlankulov, 2022). Second, by carefully crafting internal links, you may aid search engines in deciphering the structure and connections among the pages on your website. Make use of informative
+anchor text that appropriately conveys the information on the connected page. This approach improves user comprehension of the content they are about to view and the scalability of the website.
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 12
+Fig 7: Image showing Internal Link Structures
+Furthermore, by including social sharing buttons prominently on websites helps visitors to share content they think worthwhile (Lin & Lu, 2021). Increasing social sharing brings in more visitors and gives search
+engines an indication of relevance and interest. Moreover, dynamic social media profiles linked to your company generate an additional avenue for interaction. Make sure your brand language is consistent, and share both original social media posts and material from your website. This multi-channel strategy increases brand awareness and provides additional opportunities for people to find your website.
+Fig 8 :Diagram Showing the Benefits of Social sharing Features and Its Impact
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 13
+9. Measuring and Monitoring Performance
+For long-term success, search engine optimization (SEO) requires constant attention to detail. Search algorithms, market conditions, and consumer preferences change over time, necessitating constant strategy
+adaptation from firms. The basis for data-driven decision-making is a strong framework for measuring and monitoring. Tools that provide a thorough technical examination of website speed include WebPageTest and Google PageSpeed Insights. They identify areas for optimisation, like a content delivery network (CDN), image
+compression, and caching browser content. Resolving these constraints directly improves important ranking indicators and user experience. Google Analytics uses indicators like bounce rate, average session time, and pages per session to give a detailed picture of user involvement. Longer dwell periods imply useful, relevant material, but high
+bounce rates may point to poorly aligned content or a bad user experience. These observations guide changes to website design and content strategy (Vahedian et al, 2021). Analyzing data thoroughly is crucial. To determine the effect of SEO campaigns and algorithm changes, monitor trends over time. To determine your place in the market, compare your performance with your
+competitors. Google Search Console provides information on click-through rates (CTR) and traffic generated by keywords. This allows you to find exciting new keyword opportunities and spot underperforming keywords for optimisation.
+Businesses are able to obtain a thorough insight of their online activity by merging data from several technologies. This gives businesses the ability to optimize content for relevancy, fix technological problems that affect user experience, and focus on keywords that draw in active users. In a constantly changing digital landscape, optimizing SEO success requires constant observation and tactical tweaks.
+10. Case Studies and Success Stories
+Because search engine optimization (SEO) best practices are always changing, businesses need real-world examples to help and motivate them. Case studies give businesses looking to enhance their own search engine visibility and user experience concrete proof of effective SEO tactics in action ( Joshua, 2013).
+The e-commerce industry is a prime example. This case study looks at an e-commerce company that identified poor page load times as a key barrier to user experience and, in turn, conversion rates, especially on mobile devices. They put together a complex tech SEO solution to solve this. This involved using lazy loading to postpone drawing non-essential parts and optimizing images through compression. They also
+concentrated on lowering file sizes, speeding up load times, and minifying CSS and JavaScript code. Lastly, adding a content delivery network (CDN) guaranteed that assets were provided from nearby sites, which increased performance even more. These optimisations produced a significantly better website performance, which had a favorable effect on user behaviour. Average session lengths increased and
+bounce rates declined, indicating that fewer users were leaving the site out of dissatisfaction (Google Search Central, 2023). The most important outcome was a noticeable rise in conversion rates, which showed that faster websites were crucial for increasing income and sales. This case study emphasizes how user experience, technical SEO, and business outcomes are intricately related, especially in the cutthroat
+world of e-commerce.
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 14
+Fig 9: Diagram showing the Income revenue of an ecommerce site after Implementing SEO
+In this second case study, low time-on-page analytics reveal that the SaaS (Software as a Service) company had trouble engaging and retaining visitors, even if they were coming to the website in large numbers.
+SaaS organizations concentrated their SEO efforts on comprehending user search reasons to address this. Extensive keyword research identified the particular issues and queries that their intended audience aimed to resolve. Using these findings as a guide, they created new materials and carefully reorganized alreadyexisting content to address the identified informational gaps and pain spots. This user-centric content optimization produced varied results. Longer average session times, higher number of pages viewed each
+visit, and a marked improvement in total conversion rates all attested to a successful match between user intent and the value proposition the company provided (Semrush 2023).
+Fig 10: Statistics showing the growth in the income revenue of SaaS after Implementing SEO
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 15
+These case studies highlight the significance of a number of interconnected SEO techniques for raising user engagement and website speed. For quick page loading, a solid technical base is required, which includes caching and CDN implementation, code minification, and image optimisation. Content must be
+in line with user search intent, which necessitates careful keyword research to identify the precise queries and demands of the intended audience. Engaging users requires providing them with comprehensive, educational, and actionable material. Strategic internal linking promotes content discovery and makes user journeys easier. The last benefit of constant monitoring is data-driven analysis of metrics, which helps
+with continuing optimisation and SEO effort refining. Tools like Google Analytics and Search Console make this possible.
+11. Challenges and Future Trends
+Although high-quality content and user experience remain the cornerstones of search engine optimisation (SEO), a number of persistent issues and new variables are influencing the direction that SEO tactics will go in the future. Firstly, businesses must go beyond responsive design and genuinely customize experiences for smaller displays and different connections due to Google's concentration on mobile-first
+indexing. The way that users search is changing, and their queries are getting more sophisticated. To produce content that responds to this sophisticated search intent, content creators must become proficient in semantic search and natural language processing (NLP). Last but not least, Google's Core Web Vitals add another level of complexity to technical SEO: careful optimization of elements like Cumulative
+Layout Shift (CLS) and Largest Contentful Paint (LCP) is now required to guarantee a positive user experience and high search engine ranks (Markin, 2022). Successful SEO requires proactive modifications to emerging technologies. While using AI technologies for analytics, content creation, and keyword research can be beneficial, it is important to maintain quality standards. The increasing popularity of voice search necessitates local inquiries and conversational
+language optimization. Additionally, firms must optimize photos and use structured data for improved recognition as visual search grows in popularity. Businesses need to embrace semantic content strategy, prioritize a seamless user experience across devices, integrate AI as a supplemental tool, and consistently maintain the quality and integrity of their material if they want to remain competitive (Iqbal et al., 2021).
+12. Conclusion
+The success of search engine optimisation (SEO) mostly depends on how quickly and easily a website loads, drawing in visitors. Positive user experiences are the result of this mix, and search engines reward
+this with greater rankings and more visibility. Achieving these crucial results increasingly depends on technical SEO. It addresses the technical aspects, such server configuration and code efficiency, that have a direct bearing on site speed and user interaction flow. Technical SEO encompasses several important aspects, such as optimizing images for smaller file sizes,
+streamlining code for quicker rendering, and making clever use of caching and content delivery networks (CDNs) for quicker asset delivery. Moreover, Google offers measurable metrics through Core Web Vitals that affect rankings. By making the most of these data, you may prevent consumers from experiencing abrupt visual changes or long wait times while important content loads.
+In the future, there will be even more of an integration between great user experience and technical SEO. It will be necessary for SEO specialists to become specialists at optimizing websites in a way that complements users' natural interactions with web pages. We should expect AI to become more prevalent,
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 16
+taking on a more data-driven advisory role and automating intricate technical optimization chores. Businesses that want to succeed in SEO must adopt a holistic approach, realizing that the highest search engine exposure depends on a combination of flawless technical execution, captivating content, and user
+friendly UX design.
+REFERENCES
+1. Akhtar, S., Shaikh, T., & Maheshwari, S. (2021). A comprehensive survey on web page optimization
+techniques to improve web performance. International Journal of Computer Applications, 176(43), 1220. 2. Akhtar, S., Shaikh, T., & Maheshwari, S. (2021). Evaluating the impact of code minification on website performance. Medium. https://vibhas1892.medium.com/purpose-of-minification-and
+optimizing-frontend-performance-758c3e8d9267 3. Asratian, A., & Mavlankulov, G. (2022). Web Graph Analysis for Link Structure Optimization. Algorithms, 15(6), 197. 4. Chen, X. (2020). Understanding user experiences with accelerated mobile pages. Proceedings of the
+ACM on Human-Computer Interaction, 4(CSC W2), 1–26. 5. Davies, M., Jones, M., & Larkin, T. (2020). Introducing new Core Web Vitals. Google Webmaster Central Blog. 6. Dean,B (2023). SEO in 2023: The complete guide. Backlinko. https://backlinko.com/seo-this-year
+7. Garrett, J.J. (2010). The elements of user experience: User-centered design for the web and beyond (2nd ed.). New Riders. 8. Gomez, A., Nicol, D., & Zhang, L. (2017). The state of online retail performance. Gomez*. https://www.gomezandgomez.com/copy-of-institute 9. Gomez, R., Deng, Z., & Nicol, D. M. (2022). Mobile page load time: Effects of image optimization
+and prioritization. Journal of Network and Systems Management. [invalid URL removed] 10. Hasan, L., & Hoon, L. S. (2021). Effects of web writing style and visual design on brand attitude: the moderating role of regulatory focus. Journal of Research in Interactive Marketing, 15(1), 113-136. 11. Iqbal, S. A., Awan, N. H., & Munir, M. U. (2021). Impact of voice search optimization on the future
+of SEO. Journal of Data Mining in Genomics & Proteomics, 12(1). 12. Jimit, M. (2023). The impact of website speed on engagement. Abmatic. https://abmatic.ai/blog/impact-of-website-speed-on-engagement 13. Joshua , H. (2023). SEO case studies. Ahrefs blog. https://ahrefs.com/blog/seo-case-studies/
+14. Krug, S. (2020). Don't make me think, revisited: A common sense approach to web usability (4th ed.). New Riders Publishing. 15. Lalmas, M., O'Brien, H. and Yom-Tov, E., (2022). Measuring user engagement. Springer Nature. 16. Lee, D., & Tsai, C. C. (2020). The effects of interactivity on learner control, cognitive load, and
+learning performance in a simulation-based learning environment. Journal of Computer Assisted Learning, 36(4), 505-515. 17. Lin, H. C. K., & Lu, H. P. (2021). Why people share knowledge on social media: A socio-technical affordance perspective. Journal of Knowledge Management, 25(8), 2497-2516.
+18. Lorigo, L., Pan, B., Hembrooke, H., Joachims, T., Granka, L., & Gay, G. (2008). The influence of task and user characteristics on search result page evaluation. ACM SIGIR 2008 Workshop on Understanding the User
+
+
+International Journal for Multidisciplinary Research (IJFMR)
+E-ISSN: 2582-2160 ● Website: www.ijfmr.com ● Email: editor@ijfmr.com
+IJFMR240215291 Volume 6, Issue 2, March-April 2024 17
+19. Mahajan, R., Agarwal, D., & Ghode, S. (2018). Impact of website load time on customer behavior in e-commerce. International Journal of Engineering Technology and Management, 09(07), 2009-2014. https://www.researchgate.net/publication/319449830_The_Impact_of_Web_Pages'_Load_Time_on_
+the_Conversion_Rate_of_an_E-Commerce_Platform 20. Markin, A. (2022). Indexing first on mobile: Trends and tips. SEMrush Blog. https://m.youtube.com/watch?v=lOeQUwdAjE0 21. Nielsen Norman Group. (2022). Definition of user experience (UX).
+https://www.nngroup.com/articles/definition-user-experience/ 22. Nielsen Norman Group. (2022). Navigation design. [invalid URL removed] 23. Norman, D. A. (2022). The definition of user experience (UX). Nielsen Norman Group. https://www.nngroup.com/articles/definition-user-experience/
+24. Papagiannis, N. (2020). Effective SEO and content marketing: The ultimate guide for maximizing free web traffic. John Wiley & Sons. 25. Search Engine Journal. (2022). User experience is an SEO ranking factor, Google confirms. [invalid URL removed]
+26. Search Engine Roundtable. (2010). Google says page speed now influences rankings. https://m.youtube.com/watch?v=lOeQUwdAjE0 27. Sterling, G. (2016). Google officially goes mobile-first. Search Engine Land. [invalid URL removed] 28. Strikepoint. (2023). Speed wins: How website performance impacts user engagement.
+https://www.strikepointmedia.com/blog/speed-wins-how-website-performance-impacts-userengagement/ 29. Uptime.com, (2024). Analyzing the impact of website speed on user engagement. https://uptime.com/blog/analyzing-the-impact-of-website-speed-on-user-engagement. [Note: This seems like a future dated source?]
+30. Vahedian, F., Russell-Bennett, R., & Dong, B. (2021). Towards developing a benchmarking framework for search engine optimisation: A Delphi Study. Journal of Theoretical and Applied Electronic Commerce Research, 16(6), 2697–2717. 31. Veglis, A., & Giomelakis, D. (2019). Search engine optimization. Future Internet, 12(1), 6.
+https://doi.org/10.3390/fi12010006 32. Whiffen, B., Hoch, R., & Poulin, R. (2019). The effect of website speed on search engine ranking. Journal of Information Systems Technology and Management, 14(01), 23-39. 33. Yi, X., Liu, F., Wang, J., & Y. Liu, Y. (2020). AIP: Enabling web pages to load instantly with AMP
+in-place. Proceedings of the 2020 ACM SIGCOMM Conference, 556-571.
