@@ -155,6 +155,34 @@ A revisão bibliográfica está organizada em 6 subsections:
 
 4. **Revisão final** seguindo normas ABNT
 
+## Diretrizes de Escrita
+
+### Tom e Estilo do Texto
+O texto deve ser escrito com **tom de estudante universitário em TFG**, seguindo estas diretrizes:
+
+1. **Humildade e realismo**: Evitar afirmações grandiosas ou promessas que um TFG não consegue cumprir
+2. **Linguagem acadêmica simples**: Usar vocabulário técnico quando necessário, mas sem exageros
+3. **Reconhecer limitações**: Sempre mencionar que o trabalho possui limitações e é uma contribuição modesta
+4. **Evitar superlativos**: Não usar termos como "revolucionário", "inovador", "pioneiro" sem justificativa
+5. **Citações adequadas**: Todo dado ou afirmação de terceiros deve ter citação no formato ABNT usando `\citeonline{}` ou `\cite{}`
+6. **Verbos no condicional**: Preferir "pode influenciar", "tende a refletir" em vez de afirmações absolutas
+7. **Naturalidade**: O texto deve parecer escrito por um estudante, não por IA - evitar estruturas muito padronizadas ou listas excessivas
+
+### Formato de Citações (ABNT - abntex2)
+- Citação no meio do texto: `\citeonline{chave}` → Autor (ano)
+- Citação entre parênteses: `\cite{chave}` → (AUTOR, ano)
+- Citação com página: `\citeonline[p. 10]{chave}` → Autor (ano, p. 10)
+
+### Referências Disponíveis
+As referências estão em `referencias_tcc.bib` com as seguintes chaves principais:
+- `shopify_relatorio_2025` - Dados de vendas globais de e-commerce
+- `ubur_reviewing_2023` - Arquitetura monolítica vs microsserviços
+- `muralidhar_clicks_2024` - Jornada do usuário e conversões
+- `nguyen_personalized_2024` - Sistemas de recomendação (H&M)
+- `stamkou_user_2025` - IA generativa em e-commerce
+- `zhao_systematic_2024` - Mapeamento sistemático de performance
+- `noauthor_alibaba_nodate` - Case study Alibaba PWA (+76% conversões)
+
 ## Notas Importantes
 
 - O documento está configurado para fonte Arial, conforme especificações da UNIFEI

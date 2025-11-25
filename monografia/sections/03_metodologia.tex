@@ -1,0 +1,115 @@
+% ----------------------------------------------------------------
+% Metodologia
+% ----------------------------------------------------------------
+\chapter{Metodologia}
+\label{ch:metodologia}
+
+Este capítulo descreve a metodologia adotada para o desenvolvimento do trabalho, que combina revisão bibliográfica com aplicação prática das estratégias identificadas.
+
+\section{Tipo de Pesquisa}
+
+Este trabalho caracteriza-se como pesquisa exploratória de natureza aplicada. A abordagem exploratória justifica-se pela necessidade de compreender o cenário atual das estratégias técnicas em e-commerce e suas relações com métricas de receita. A natureza aplicada decorre da intenção de não apenas mapear o conhecimento existente, mas também demonstrar a aplicação prática de algumas dessas estratégias em um contexto real de negócio.
+
+\section{Revisão Bibliográfica}
+
+A primeira etapa do trabalho consistiu em uma revisão bibliográfica para identificar e analisar as principais estratégias técnicas empregadas no desenvolvimento de plataformas de e-commerce.
+
+\subsection{Critérios de Seleção}
+
+A busca por trabalhos foi realizada em bases como Google Scholar, ResearchGate, arXiv e repositórios de estudos de caso técnicos. Os termos de busca incluíram combinações de palavras-chave relacionadas a arquitetura de software para e-commerce, experiência do usuário em plataformas de comércio eletrônico, sistemas de recomendação, otimização de conversão e Progressive Web Apps.
+
+Os critérios para inclusão dos trabalhos foram: (i) abordar pelo menos uma das quatro dimensões definidas no escopo (arquitetura e performance, UX/UI, inteligência artificial, ou tráfego e conversão); (ii) apresentar dados empíricos, estudos de caso ou análises sistemáticas; e (iii) ter relevância para o contexto de plataformas de e-commerce. Foram priorizadas publicações recentes (2023-2025), embora trabalhos anteriores tenham sido incluídos quando apresentavam contribuições relevantes.
+
+\subsection{Organização da Análise}
+
+Os 12 trabalhos selecionados foram organizados em quatro eixos temáticos, permitindo uma análise estruturada das diferentes dimensões técnicas:
+
+\begin{itemize}
+    \item \textbf{Arquitetura e Performance:} estudos sobre escolhas arquiteturais (monolítico, microsserviços, servidores distribuídos) e seu impacto no desempenho;
+    \item \textbf{Experiência do Usuário:} trabalhos sobre otimização de interface, performance de carregamento, SEO técnico e Progressive Web Apps;
+    \item \textbf{Inteligência Artificial:} pesquisas sobre sistemas de recomendação, IA generativa e personalização;
+    \item \textbf{Métricas e Conversão:} análises sobre jornada do usuário, fontes de tráfego e otimização de funil de vendas.
+\end{itemize}
+
+\section{Aplicação Prática}
+
+Além da revisão bibliográfica, este trabalho apresenta a aplicação prática de estratégias técnicas em uma plataforma real de e-commerce. Essa etapa permite ilustrar como conceitos identificados na literatura podem ser implementados e observados em um contexto de negócio.
+
+\subsection{Contexto da Plataforma}
+
+A aplicação prática foi realizada na Achievece, uma plataforma de e-commerce de cursos online especializada em educação continuada para médicos nos Estados Unidos. A plataforma apresenta volume médio de aproximadamente 30 mil visitantes mensais e receita diária na ordem de US\$ 2.500. A Achievece opera com modelo de negócio híbrido, oferecendo tanto cursos com pagamento único quanto planos de assinatura recorrente, permitindo análise de estratégias específicas para ambos os modelos de monetização.
+
+A escolha dessa plataforma justifica-se por: (i) acesso autorizado aos dados de analytics e métricas de negócio; (ii) possibilidade de implementação controlada de modificações técnicas; (iii) volume de tráfego suficiente para análise estatística significativa; (iv) representatividade do segmento de e-learning no mercado americano; e (v) diversidade de modelos de monetização que permite análise comparativa.
+
+\subsection{Estratégias Implementadas}
+
+Com base nas oportunidades identificadas na revisão bibliográfica e na observação de práticas do mercado, foram selecionadas frentes de aplicação prática organizadas em grupos temáticos:
+
+\subsubsection{Otimizações de Interface e Experiência do Usuário}
+
+A literatura revisada indica relação direta entre experiência do usuário e taxas de conversão. \citeonline{nawir_impact_2024} demonstram que 70\% da variância nas taxas de conversão pode ser explicada por fatores de usabilidade, enquanto \citeonline{muralidhar_clicks_2024} identificam gargalos entre o interesse do usuário e a conclusão da transação.
+
+Na plataforma Achievece, são implementados testes A/B controlados utilizando a ferramenta GrowthBook para avaliar o impacto de modificações de UI/UX. As variações incluem: redesign do processo de checkout (redução de etapas, otimização de formulários), modificações na página de detalhes do produto, variações de design responsivo para dispositivos móveis e testes de copy e messaging.
+
+\subsubsection{Progressive Web App e Otimizações de Performance}
+
+O caso documentado do Alibaba.com, que apresentou aumento de 76\% nas conversões após implementação de PWA, motiva a análise dessas funcionalidades na plataforma. \citeonline{bansal_seo_2024} aponta queda de 7\% nas conversões para cada segundo adicional de carregamento.
+
+São implementadas: estratégias de cache para redução de tempo de carregamento, funcionalidade offline para navegação no catálogo de cursos, notificações push para engajamento de usuários, otimização de imagens e assets (lazy loading, compressão, formatos modernos) e implementação de CDN para distribuição de conteúdo estático. O monitoramento é realizado através de Core Web Vitals (LCP, FID, CLS) via Google Lighthouse.
+
+\subsubsection{Personalização e Recomendação}
+
+Conforme identificado por \citeonline{nguyen_personalized_2024}, sistemas de recomendação podem impactar significativamente as métricas de conversão. Na plataforma Achievece, é implementado sistema básico de recomendação de cursos baseado em filtragem colaborativa (cursos visualizados por usuários similares), análise de navegação e comportamento, e categorização por tags de conteúdo. A avaliação é realizada via teste A/B comparando versões com e sem recomendações personalizadas.
+
+\subsubsection{SEO e Análise de Fontes de Tráfego}
+
+\citeonline{bansal_seo_2024} destaca a relação entre SEO técnico, velocidade de carregamento e receita. São implementadas otimizações de meta tags, títulos e descrições, melhoria de estrutura de URLs e breadcrumbs, e implementação de schema markup para rich snippets.
+
+Adicionalmente, seguindo a análise de \citeonline{muralidhar_clicks_2024} sobre fontes de tráfego, é realizada análise comparativa do comportamento e performance de diferentes canais: tráfego orgânico, pago, direto, de referência e social.
+
+\subsubsection{Estratégias de Maximização de Receita Recorrente}
+
+Além das estratégias identificadas na literatura, a observação do mercado de e-commerce revela práticas amplamente adotadas por empresas com modelo de assinatura que carecem de estudos acadêmicos sobre sua implementação técnica e efetividade:
+
+\textbf{Upsell:} implementação de ofertas de upgrade de plano durante a jornada de compra (checkout) e pós-compra (para assinantes ativos). O objetivo é observar a taxa de aceitação do upgrade, o timing ótimo para apresentação de ofertas e o impacto na receita média por transação.
+
+\textbf{Ofertas de retenção (cancellation offers):} implementação de fluxo de cancelamento que oferece alternativas ao usuário que inicia o processo de cancelamento, incluindo descontos temporários, pausa da assinatura ou downgrade para plano de menor valor. O objetivo é observar a taxa de retenção de assinantes e o impacto no churn mensal.
+
+\textbf{Recuperação de carrinho abandonado:} implementação de emails automatizados de lembrete com variações de timing (1h, 24h, 48h após abandono) e testes de copy e ofertas.
+
+\subsection{Coleta e Análise de Dados}
+
+Os dados são coletados por meio de ferramentas de analytics integradas à plataforma:
+
+\begin{itemize}
+    \item Google Analytics 4 para análise de comportamento e conversões
+    \item Google Lighthouse para métricas de performance e Core Web Vitals
+    \item Google Search Console para dados de tráfego orgânico e SEO
+    \item GrowthBook para execução e análise de testes A/B
+    \item Lucky Orange para análise comportamental (heatmaps, session recordings, funnels)
+\end{itemize}
+
+As métricas observadas incluem:
+
+\begin{itemize}
+    \item \textbf{Performance:} tempo de carregamento (LCP), interatividade (FID), estabilidade visual (CLS);
+    \item \textbf{Conversão:} taxa de conversão por etapa do funil, taxa de abandono de carrinho, taxa de conclusão de checkout, taxa de recuperação de carrinho;
+    \item \textbf{Receita:} valor médio do pedido (AOV), receita por visitante (RPV), receita total;
+    \item \textbf{Assinaturas:} MRR, taxa de churn, CLTV, ARPU, taxa de conversão de upsell, taxa de retenção via cancellation offers.
+\end{itemize}
+
+A análise estatística utiliza testes de significância (teste t para médias, teste qui-quadrado para proporções) com nível de confiança de 95\%. Os testes A/B são conduzidos com período mínimo de 2 semanas por experimento para garantir significância estatística considerando o volume de tráfego da plataforma.
+
+\section{Limitações Metodológicas}
+
+É importante reconhecer as limitações desta abordagem metodológica:
+
+\begin{itemize}
+    \item A aplicação prática foi realizada em uma única plataforma, com características específicas (e-commerce de cursos online, segmento de educação médica nos EUA), o que limita a generalização dos resultados para outros contextos;
+    \item O período de observação pode não capturar completamente efeitos de longo prazo ou variações anuais;
+    \item Fatores externos (sazonalidade do mercado educacional, campanhas de marketing, mudanças na concorrência, variações macroeconômicas) podem influenciar as métricas observadas, dificultando o isolamento do impacto de cada estratégia implementada;
+    \item O volume de tráfego, embora significativo, pode limitar a detecção de efeitos pequenos em certos pontos de observação.
+\end{itemize}
+
+Essas limitações são inerentes a estudos de aplicação prática em ambientes reais de negócio. Os resultados apresentados devem ser interpretados como observações ilustrativas das estratégias identificadas na literatura e no mercado, não como evidências definitivas de relações causais.
+

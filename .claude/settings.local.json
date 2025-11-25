@@ -4,7 +4,8 @@
       "Bash(tree:*)",
       "Bash(xelatex:*)",
       "Bash(brew install:*)",
-      "Read(//usr/local/**)"
+      "Read(//usr/local/**)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

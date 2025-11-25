@@ -1,0 +1,53 @@
+% ----------------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------------
+\chapter{Introdução}
+\label{ch:introducao}
+
+\section{Contexto e Relevância}
+
+O comércio eletrônico tem se consolidado como uma das principais formas de transação comercial no mundo. Segundo dados da \citeonline{shopify_relatorio_2025}, as vendas globais de e-commerce evoluíram de US\$ 5,13 trilhões em 2022 para projeções de US\$ 6,56 trilhões em 2025, com expectativa de atingir US\$ 8,09 trilhões até 2028. Esse crescimento traz consigo uma série de desafios técnicos para as empresas que desenvolvem e mantêm plataformas de comércio eletrônico, sobretudo em aspectos como desempenho, escalabilidade e experiência do usuário.
+
+Nesse contexto, as decisões técnicas tomadas durante o desenvolvimento dessas plataformas podem influenciar diretamente os resultados das empresas. Escolhas arquiteturais, como a opção entre arquiteturas monolíticas ou baseadas em microsserviços, assim como decisões relacionadas à interface do usuário e à integração de recursos de inteligência artificial, tendem a refletir no comportamento dos usuários e, consequentemente, nas métricas de conversão e receita.
+
+Paralelamente, a diversificação dos modelos de monetização no e-commerce tem ganhado relevância. Além do modelo tradicional de pagamento único por produto, plataformas baseadas em assinaturas recorrentes têm se consolidado em diversos segmentos, desde streaming de conteúdo até software como serviço (SaaS). Nesses modelos, métricas como receita recorrente mensal (MRR), valor do tempo de vida do cliente (CLTV) e taxa de cancelamento (\textit{churn}) tornam-se centrais para a sustentabilidade do negócio.
+
+No mercado de e-commerce, observa-se a adoção de estratégias técnicas específicas para maximização de receita em modelos de assinatura, como: \textit{upsell}, que consiste em oferecer ao cliente um plano ou produto de maior valor durante a jornada de compra; e ofertas de retenção no momento do cancelamento (\textit{cancellation offers}), que buscam recuperar assinantes que iniciam o processo de cancelamento por meio de descontos, pausas temporárias ou alternativas de planos. Essas estratégias, embora amplamente utilizadas por empresas do setor, permanecem pouco exploradas na literatura acadêmica quanto à sua implementação técnica e impacto mensurável na receita.
+
+\section{Motivação e Justificativa}
+
+A motivação para este trabalho surgiu da observação do mercado de e-commerce. Empresas inseridas nesse setor frequentemente se veem diante da necessidade de implementar diversas estratégias técnicas para se manterem competitivas e aumentarem sua receita. No entanto, existe uma dificuldade prática em compreender o real impacto que cada decisão técnica pode ter nos resultados financeiros. Escolher entre diferentes arquiteturas de software, investir em otimizações de interface ou implementar sistemas de recomendação são decisões que demandam recursos, mas cujo retorno nem sempre é claro para as equipes de desenvolvimento e gestores.
+
+Ao analisar a literatura existente, percebe-se que há trabalhos relevantes em áreas específicas. \citeonline{ubur_reviewing_2023} investigou o impacto da migração de arquiteturas monolíticas para microsserviços, demonstrando que cada abordagem possui vantagens em diferentes cenários de carga. No campo da experiência do usuário, estudos como o de \citeonline{muralidhar_clicks_2024} analisaram a jornada do usuário e os fatores que afetam as taxas de conversão. Já na área de inteligência artificial, \citeonline{nguyen_personalized_2024} desenvolveram modelos de recomendação personalizada para plataformas de e-commerce.
+
+Entretanto, esses estudos frequentemente abordam as questões de forma isolada, o que indica que há espaço para uma análise que busque integrar essas diferentes dimensões técnicas e sua relação com os resultados de negócio. Desse modo, este trabalho busca contribuir reunindo e analisando as principais estratégias técnicas encontradas na literatura e discutindo suas possíveis relações com métricas de receita e conversão. Trata-se de uma contribuição modesta, mas que pode auxiliar desenvolvedores e gestores de tecnologia a compreender melhor as opções disponíveis e suas implicações.
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+Este trabalho tem como objetivo analisar o cenário atual do desenvolvimento de plataformas de e-commerce por meio de uma revisão da literatura, buscando identificar e caracterizar as principais estratégias técnicas empregadas e discutir seu potencial impacto na receita e no sucesso das empresas.
+
+\subsection{Objetivos Específicos}
+
+Para alcançar o objetivo geral, foram definidos os seguintes objetivos específicos:
+
+\begin{enumerate}
+    \item Identificar, por meio de revisão bibliográfica, as principais abordagens arquiteturais utilizadas em plataformas de e-commerce, como arquitetura monolítica, microsserviços e orientada a eventos, analisando seus trade-offs conforme apresentados na literatura.
+
+    \item Examinar as estratégias de experiência do usuário (UX) e interface (UI) descritas na literatura, incluindo técnicas como Progressive Web Apps (PWA), otimização mobile e melhorias de performance.
+
+    \item Investigar o papel da inteligência artificial e aprendizado de máquina em plataformas de e-commerce, com foco em sistemas de recomendação e personalização de conteúdo.
+
+    \item Discutir as relações apresentadas na literatura entre decisões técnicas específicas e métricas de conversão e receita.
+
+    \item Identificar, a partir da revisão realizada, oportunidades e direções que possam orientar trabalhos futuros na área.
+\end{enumerate}
+
+\section{Escopo e Delimitações}
+
+Este trabalho concentra-se em quatro dimensões do desenvolvimento de plataformas de e-commerce: arquitetura de software e performance; experiência do usuário e interface; inteligência artificial aplicada; e estratégias de tráfego e conversão, incluindo aspectos de SEO técnico. A pesquisa baseia-se em revisão bibliográfica de artigos científicos, estudos de caso e documentação técnica, com foco em publicações recentes.
+
+Além da revisão, o trabalho apresenta a aplicação prática de algumas dessas técnicas em uma plataforma real de e-commerce baseada em assinaturas, desenvolvida pelo autor. Essa aplicação prática permite ilustrar como estratégias identificadas na literatura, como otimização de performance, melhoria de experiência do usuário e técnicas de maximização de receita recorrente (\textit{upsell} e ofertas de retenção), podem ser implementadas e seus resultados observados em um contexto real de negócio.
+
+É importante ressaltar que este trabalho não se aprofunda em questões de sazonalidade de mercado ou particularidades de tipos específicos de empresas, buscando manter uma abordagem mais geral sobre as estratégias técnicas.
