@@ -1,0 +1,193 @@
+\documentclass{beamer}
+\usepackage[en]{zafu}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\definecolor{hrefcol}{RGB}{0, 58, 112}
+
+% meta-data
+\title{Cenário Atual do Desenvolvimento de Plataformas de E-commerce}
+\subtitle{Estratégias Técnicas e Impacto na Receita das Empresas}
+\author{Danilo Godofredo de Mattos\\Orientadora: Profa. Bárbara Pimenta Caetano}
+\date{2025}
+
+% document body
+\begin{document}
+
+    \maketitle
+
+    % SLIDE 1: Contexto e Problema
+    \begin{frame}{Contexto e Problema}
+        \textbf{Crescimento do E-commerce:}
+        \begin{itemize}
+            \item Vendas globais: US\$ 6,56 trilhões (2025) $\rightarrow$ US\$ 8,09 trilhões (2028)
+            \item Desafios técnicos: performance, escalabilidade, experiência do usuário
+        \end{itemize}
+
+        \vspace{0.5cm}
+
+        \textbf{O Problema:}
+        \begin{itemize}
+            \item Informação técnica dispersa na literatura
+            \item Falta visão integrada: arquitetura + UX + IA
+            \item Falta conexão entre decisões técnicas e impacto financeiro
+        \end{itemize}
+
+        \vspace{0.5cm}
+
+        \textbf{Exemplo Concreto:}
+        \begin{itemize}
+            \item Alibaba.com: implementação de PWA $\rightarrow$ \textbf{+76\% conversões}
+            \item Decisões técnicas têm impacto direto na receita
+        \end{itemize}
+    \end{frame}
+
+    % SLIDE 2: Motivação e Objetivos
+    \begin{frame}{Motivação e Objetivos}
+        \textbf{Motivação:}
+        \begin{itemize}
+            \item Impacto econômico direto de decisões técnicas
+            \item Complexidade das escolhas: arquitetura, PWA, algoritmos de IA
+            \item Lacuna entre pesquisa acadêmica e prática empresarial
+        \end{itemize}
+
+        \vspace{0.3cm}
+
+        \textbf{Objetivo Geral:}
+        \begin{itemize}
+            \item Analisar estratégias técnicas em e-commerce e avaliar impacto na receita
+        \end{itemize}
+
+        \vspace{0.3cm}
+
+        \textbf{Objetivos Específicos:}
+        \begin{enumerate}
+            \item Mapear estratégias arquiteturais e trade-offs
+            \item Analisar estratégias de UX/UI para conversão
+            \item Avaliar papel da IA e ML
+            \item \textbf{Correlacionar decisões técnicas com receita}
+            \item Identificar lacunas e oportunidades de pesquisa
+        \end{enumerate}
+    \end{frame}
+
+    % SLIDE 3: Exemplo Prático
+    \begin{frame}{Exemplo Prático}
+        \textbf{Plataforma Achievece:}
+        \begin{itemize}
+            \item E-commerce de cursos online (educação médica, EUA)
+            \item 30 mil visitantes/mês, receita: US\$ 2.500/dia
+            \item Modelo híbrido: pagamento único + assinaturas
+        \end{itemize}
+
+        \vspace{0.3cm}
+
+        \textbf{Estrutura dos Testes (A/B Testing):}
+        \begin{itemize}
+            \item Divisão aleatória de tráfego
+            \item Significância estatística (95\% confiança)
+            \item Ferramentas: GrowthBook, Google Analytics, Lighthouse
+        \end{itemize}
+
+        \vspace{0.3cm}
+
+        \textbf{Dimensões de Testes:}
+        \begin{enumerate}
+            \item \textbf{Performance:} Core Web Vitals (LCP, FID, CLS)
+            \item \textbf{UX:} Redesign checkout, formulários, indicadores
+            \item \textbf{Retenção:} Upsell, ofertas de cancelamento, timing
+        \end{enumerate}
+
+        \vspace{0.2cm}
+
+        \textbf{Métricas:} Taxa de conversão, MRR, CLTV, churn, RPV
+    \end{frame}
+
+    % SLIDE 4: Cronograma
+    \begin{frame}{Cronograma e Considerações Finais}
+        \textbf{Cronograma 2025:}
+        \begin{itemize}
+            \item \textbf{1º Trimestre:} Revisão bibliográfica, protocolos de testes
+            \item \textbf{2º Trimestre:} Execução dos testes, coleta de dados
+            \item \textbf{3º Trimestre:} Análise estatística, escrita do trabalho
+            \item \textbf{4º Trimestre:} Revisão, ajustes finais, defesa
+        \end{itemize}
+
+        \vspace{0.5cm}
+
+        \textbf{Expectativa:}
+        \begin{itemize}
+            \item Apresentar possíveis soluções técnicas que possam contribuir para o aumento da receita de plataformas de e-commerce
+            \item Oferecer orientação prática baseada em evidências da literatura e exemplo real
+        \end{itemize}
+
+        \vspace{0.5cm}
+
+        \centering
+        \textbf{Obrigado pela atenção!}
+    \end{frame}
+
+    % SLIDE 5: Revisão Bibliográfica
+    \begin{frame}{Revisão Bibliográfica}
+        \textbf{12 artigos recentes (2023-2025) em 4 eixos temáticos:}
+
+        \vspace{0.3cm}
+
+        \textbf{1. Arquitetura e Performance}
+        \begin{itemize}
+            \item Ubur (2023): event-driven vs monolítico
+            \item Zhao et al. (2024): mapeamento de 109 estudos
+            \item Contexto determina a melhor arquitetura
+        \end{itemize}
+
+        \textbf{2. UX e Interface}
+        \begin{itemize}
+            \item Impacto de UX/UI nas conversões
+            \item Otimização mobile e SEO
+            \item Casos PWA: Alibaba.com (+76\%)
+        \end{itemize}
+
+        \textbf{3. Inteligência Artificial}
+        \begin{itemize}
+            \item IA generativa (Stamkou et al., 2025)
+            \item Sistema H\&M: LightGBM (MAP@50=0,06) vs DNN (0,02)
+        \end{itemize}
+
+        \textbf{4. Métricas e Conversão}
+        \begin{itemize}
+            \item Análise de jornada do usuário (Muralidhar \& Lakkanna, 2024)
+            \item Gargalos no checkout e otimização por fonte de tráfego
+        \end{itemize}
+    \end{frame}
+
+    % SLIDE 6: Resultados Esperados
+    \begin{frame}{Resultados Esperados}
+        \textbf{1. Framework de Análise Integrada}
+        \begin{itemize}
+            \item Conectar arquitetura + UX + IA com métricas de negócio
+            \item Orientar decisões baseadas em evidências
+        \end{itemize}
+
+        \vspace{0.3cm}
+
+        \textbf{2. Evidências Quantitativas}
+        \begin{itemize}
+            \item Impacto real de otimizações (ex: LCP 3s $\rightarrow$ 1.5s)
+            \item Efetividade de estratégias de retenção em assinaturas
+            \item Relação entre Core Web Vitals e conversão
+        \end{itemize}
+
+        \vspace{0.3cm}
+
+        \textbf{3. Identificação de Lacunas}
+        \begin{itemize}
+            \item Falta de frameworks integrados
+            \item Estudos de longo prazo sobre ROI de IA
+            \item Benchmarks arquiteturais padronizados
+            \item Estratégias de monetização via assinatura
+            \item Relação quantitativa: decisões técnicas $\leftrightarrow$ receita
+        \end{itemize}
+    \end{frame}
+
+    \QApage
+
+\end{document}
