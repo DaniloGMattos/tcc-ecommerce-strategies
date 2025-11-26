@@ -4,36 +4,228 @@
 \chapter{Análise e Discussão}
 \label{ch:analise}
 
-% TODO: Este capítulo será desenvolvido posteriormente
+Este capítulo apresenta a análise dos resultados observados na aplicação prática das estratégias técnicas identificadas na revisão bibliográfica. As observações são discutidas com base na literatura revisada, considerando as limitações de um estudo realizado em uma empresa em funcionamento.
 
-\section{Panorama Geral das Estratégias Técnicas}
+\section{Panorama Geral}
 
-\section{Relação entre Arquitetura e Performance}
+A aplicação prática na plataforma Achievece permitiu observar o comportamento de diversas estratégias técnicas em um contexto real de e-commerce. As alterações descritas neste capítulo foram implementadas ao longo de aproximadamente um ano de desenvolvimento, e os dados apresentados representam recortes temporais selecionados por sua relevância em relação aos temas estudados na revisão bibliográfica.
 
-\subsection{Comparação de Abordagens Arquiteturais}
+Conforme destacado nas limitações metodológicas, a maioria das estratégias foi implementada de forma simultânea ou em períodos próximos, o que dificulta a atribuição isolada de resultados a cada técnica específica. No entanto, algumas observações podem ser destacadas e discutidas em relação aos achados da literatura.
 
-\subsection{Impacto na Escalabilidade}
+De modo geral, o conjunto de estratégias implementadas contribuiu para melhorias nas métricas de receita e conversão da plataforma. A seguir, são apresentadas as observações organizadas por eixo temático, seguindo a estrutura estabelecida na metodologia.
 
-\section{UX/UI e Conversões: Análise Integrada}
+\section{Arquitetura e Estabilidade}
 
-\subsection{Fatores Críticos de Sucesso}
+A migração de WordPress (monolítico) para Next.js com arquitetura serverless representa uma das mudanças mais significativas na plataforma. A literatura discute os trade-offs entre arquiteturas monolíticas e distribuídas, apontando que cada abordagem possui vantagens em diferentes cenários de carga \cite{ubur_reviewing_2023}.
 
-\subsection{PWA: Caso de Sucesso Alibaba.com}
+Na Achievece, a nova arquitetura permitiu que a plataforma lidasse com picos de usuários sem problemas. Desde a migração, não houve indisponibilidade, o que contrasta com as dificuldades anteriores em manter múltiplos usuários ativos simultaneamente no WordPress.
 
-\subsection{Mobile como Prioridade}
+Essa estabilidade contribui para os resultados de receita, uma vez que uma plataforma disponível é pré-requisito para qualquer conversão. No entanto, é difícil atribuir um percentual específico do aumento de receita à mudança arquitetural, pois a estabilidade impacta outras métricas de forma encadeada.
 
-\section{Inteligência Artificial e ROI}
+\section{Experiência do Usuário e Interface}
 
-\subsection{Sistemas de Recomendação: Análise Crítica}
+As otimizações de UX/UI na plataforma Achievece foram orientadas pelo objetivo de aumentar as vendas de produtos por assinatura. Conforme descrito na metodologia, a reestruturação da página principal de vendas posicionou os produtos de assinatura no topo, enquanto os cursos de pagamento único foram reposicionados para seções inferiores.
 
-\subsection{IA Generativa: Potencial e Limitações}
+Estudos mostram que 70\% da variância nas taxas de conversão pode ser explicada por fatores de usabilidade \cite{nawir_impact_2024}. Não é possível isolar o impacto específico da reorganização da interface, mas a mudança está alinhada com as recomendações da literatura sobre hierarquia visual e posicionamento de elementos.
 
-\subsection{Personalização e Aumento de Receita}
+A Figura \ref{fig:achievece-old} apresenta a interface anterior da plataforma, onde os produtos de pagamento único eram exibidos como primeira seção abaixo do banner, com espaço limitado para comunicar os benefícios das assinaturas.
 
-\section{Métricas de Conversão: Insights e Padrões}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.9\textwidth]{galery/achievece-old.png}
+\caption{Interface anterior da Achievece: produto de pagamento único em destaque}
+\label{fig:achievece-old}
+\fonte{Captura de tela da plataforma Achievece (2024).}
+\end{figure}
 
-\subsection{Funil de Conversão Otimizado}
+A nova interface, ilustrada nas Figuras \ref{fig:achievece-new1} e \ref{fig:achievece-new2}, implementou mudanças significativas na hierarquia visual. Na parte superior (Figura \ref{fig:achievece-new1}), a página passou a apresentar informações relevantes de forma mais clara: proposta de valor objetiva, lista de benefícios com ícones, credenciais de acreditação (ACPE, CE Broker, CPE Monitor), e personalização por estado e profissão do usuário. A navegação foi reorganizada com a aba ``Plans'' em posição de destaque.
 
-\subsection{Abandono de Carrinho}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.9\textwidth]{galery/achievece-new-part1.png}
+\caption{Nova interface da Achievece: informações relevantes e personalização por estado/profissão}
+\label{fig:achievece-new1}
+\fonte{Captura de tela da plataforma Achievece (2025).}
+\end{figure}
 
-\section{Síntese: Decisões Técnicas x Impacto Financeiro}
+A Figura \ref{fig:achievece-new2} mostra a seção de planos de assinatura, agora posicionada como uma das primeiras seções da página. Os três planos são apresentados lado a lado com comparação visual clara de benefícios, preços promocionais destacados e indicação do plano mais popular. Essa disposição facilita a comparação entre opções e direciona a atenção do usuário para os produtos de assinatura.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.9\textwidth]{galery/achievece-new-part2.png}
+\caption{Nova interface da Achievece: planos de assinatura em destaque com comparação visual}
+\label{fig:achievece-new2}
+\fonte{Captura de tela da plataforma Achievece (2025).}
+\end{figure}
+
+\section{Progressive Web App e Performance}
+
+A implementação de funcionalidades PWA na Achievece focou em otimizações de experiência mobile e performance de carregamento. A literatura aponta queda de 7\% nas conversões para cada segundo adicional de carregamento \cite{bansal_seo_2024}.
+
+As melhorias em Core Web Vitals (LCP, FID, CLS) contribuem para a experiência do usuário e para as métricas de conversão. O caso do Alibaba.com, que apresentou aumento de 76\% nas conversões após implementação de PWA, serve como referência do potencial dessas tecnologias, embora cada contexto tenha suas particularidades.
+
+A Figura \ref{fig:lighthouse} apresenta as métricas de performance da Achievece após a migração. Os dados foram coletados pelo Vercel Speed Insights, que mede a experiência real dos usuários. A plataforma obteve score de 95, com LCP de 2,92 segundos, INP de 112ms e CLS de 0,07. Outras métricas incluem FCP de 1,55 segundos, FID de 5ms e TTFB de 0,48 segundos.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.4\textwidth]{galery/lighthours-percebida.png}
+\caption{Métricas de Core Web Vitals percebidas pelos usuários reais da plataforma}
+\label{fig:lighthouse}
+\fonte{Vercel Speed Insights -- Achievece (2025).}
+\end{figure}
+
+Cabe ressaltar que não foi possível apresentar uma comparação direta com as métricas anteriores à mudança de arquitetura. Questões internas da empresa resultaram na perda dos dados históricos de performance da plataforma em WordPress, impossibilitando uma análise comparativa antes/depois. Dessa forma, os valores apresentados representam apenas o estado atual da plataforma após as otimizações implementadas.
+
+\section{Personalização de Conteúdo}
+
+A personalização na Achievece foi implementada de forma manual, criando páginas específicas para cada profissão médica e estado dos EUA. Essa abordagem alcança objetivos similares aos sistemas automatizados de recomendação descritos na literatura \cite{nguyen_personalized_2024}.
+
+O desafio de gerar muitas páginas individualizadas sem repetição de código foi resolvido com uma arquitetura que permite criação dinâmica de conteúdo. A personalização pode ser alcançada por diferentes caminhos técnicos, e a escolha entre automação via IA ou curadoria manual depende dos recursos disponíveis.
+
+Diferente de sistemas de recomendação tradicionais, que buscam aumentar tempo de navegação, a personalização na Achievece foi orientada para conversão. O objetivo é garantir que as ofertas estejam alinhadas com os requisitos de cada estado e profissão. O impacto dessa estratégia reflete-se nos resultados de conversão apresentados na síntese deste capítulo.
+
+\section{SEO e Novos Canais de Descoberta}
+
+A reestruturação do SEO técnico da Achievece incluiu otimizações tradicionais e também considerou o ranqueamento em plataformas de chat baseadas em IA. A literatura destaca a relação entre SEO técnico, velocidade de carregamento e receita \cite{bansal_seo_2024}.
+
+Uma das principais implementações foi a adoção de dados estruturados no formato JSON-LD (\textit{JavaScript Object Notation for Linked Data}) em todas as páginas. O JSON-LD é um formato de marcação que permite comunicar aos mecanismos de busca informações estruturadas sobre o conteúdo da página, como preços, avaliações e perguntas frequentes. Essa marcação facilita a interpretação do conteúdo por algoritmos, sendo relevante para sistemas de IA que buscam respostas para consultas de usuários.
+
+As implementações de SEO técnico na plataforma incluíram:
+
+\begin{itemize}
+    \item \textbf{Schema de Organização}: dados estruturados com avaliação agregada, número de reviews e informações institucionais;
+    \item \textbf{Schema de Produto}: informações de preços, disponibilidade e descrições em cursos e pacotes;
+    \item \textbf{Schema de FAQ}: perguntas e respostas estruturadas nas páginas de ajuda, facilitando respostas diretas por sistemas de IA;
+    \item \textbf{Schema de Artigo}: metadados de publicação, autoria e tempo de leitura em posts do blog;
+    \item \textbf{Geração dinâmica de sitemap}: mais de 100 páginas específicas por estado e profissão, com datas de modificação atualizadas;
+    \item \textbf{Metadados específicos}: palavras-chave de nicho relacionadas a educação continuada e requisitos estaduais de licenciamento.
+\end{itemize}
+
+A Figura \ref{fig:seo-jul} apresenta o tráfego proveniente de plataformas de chat baseadas em IA (chatgpt.com) durante o mês de julho de 2025, antes da implementação completa das otimizações de SEO. O total de usuários ativos provenientes dessa fonte foi de 54 no período.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]{galery/seo-search-console-jul.png}
+\caption{Tráfego proveniente de chatgpt.com em julho de 2025 (antes das otimizações)}
+\label{fig:seo-jul}
+\fonte{Google Analytics -- Achievece (2025).}
+\end{figure}
+
+A Figura \ref{fig:seo-ago} apresenta o mesmo relatório para o mês de agosto de 2025, após a implementação das otimizações de dados estruturados. O total de usuários ativos provenientes de chatgpt.com foi de 109, representando um aumento de aproximadamente 102\% em relação ao mês anterior.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.95\textwidth]{galery/seo-search-console-agosto.png}
+\caption{Tráfego proveniente de chatgpt.com em agosto de 2025 (após otimizações)}
+\label{fig:seo-ago}
+\fonte{Google Analytics -- Achievece (2025).}
+\end{figure}
+
+É importante ressaltar que esse aumento não pode ser atribuído exclusivamente às otimizações de SEO implementadas. Fatores de sazonalidade, como variações naturais no comportamento de busca dos usuários ao longo do ano, não puderam ser isolados na análise. Além disso, o próprio crescimento da adoção de plataformas de IA como ferramenta de busca pode ter contribuído para o aumento observado, independentemente das mudanças realizadas na plataforma.
+
+\section{Estratégias de Maximização de Receita Recorrente}
+
+\subsection{Ofertas de Retenção (Cancellation Offers)}
+
+Dentre as estratégias implementadas, as ofertas de retenção no fluxo de cancelamento representam um dos pontos de observação que mais se aproxima de uma análise isolada, uma vez que afeta especificamente os usuários que iniciam o processo de cancelamento.
+
+A Figura \ref{fig:cancellation-offer} ilustra a implementação dessa estratégia na plataforma Achievece. Quando um assinante inicia o processo de cancelamento, é apresentado um modal com uma oferta especial: a possibilidade de pular a próxima cobrança e manter o acesso gratuitamente por mais um ciclo de faturamento. A interface exibe claramente o valor economizado, os detalhes do plano atual e a data da próxima cobrança, além de manter visível a opção de prosseguir com o cancelamento para usuários que desejam encerrar a assinatura.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.5\textwidth]{galery/cancellation-offer.png}
+\caption{Modal de oferta de retenção exibido durante o fluxo de cancelamento}
+\label{fig:cancellation-offer}
+\fonte{Captura de tela da plataforma Achievece (2025).}
+\end{figure}
+
+Os dados observados ao longo de três meses indicam que a implementação dessa estratégia reduziu consistentemente em aproximadamente 30\% a intenção de cancelamento dos usuários. Esse resultado é significativo para o modelo de assinatura, pois a redução do churn impacta diretamente o MRR (\textit{Monthly Recurring Revenue}) e, consequentemente, o CLTV (\textit{Customer Lifetime Value}) dos assinantes.
+
+\subsection{Upsell}
+
+A estratégia de upsell na plataforma Achievece foi implementada com o objetivo de migrar usuários de produtos de pagamento único para assinaturas recorrentes, aumentando assim a receita recorrente da empresa. A Figura \ref{fig:upsell} ilustra a implementação dessa funcionalidade.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.9\textwidth]{galery/upsell.png}
+\caption{Página de upsell exibida após a compra de um produto de pagamento único}
+\label{fig:upsell}
+\fonte{Captura de tela da plataforma Achievece (2025).}
+\end{figure}
+
+A oferta de upsell é apresentada ao usuário após a conclusão de uma compra de produto avulso. A página utiliza elementos de urgência (contador regressivo) e destaca o desconto oferecido (60\% no exemplo apresentado), além de listar benefícios como economia de tempo e dinheiro, e garantias de satisfação. O usuário pode aceitar a oferta com um clique ou recusar e prosseguir normalmente.
+
+Cabe ressaltar que não foi possível observar métricas consistentes dessa funcionalidade devido ao pouco tempo de implementação. A estratégia foi lançada recentemente e ainda não acumulou dados suficientes para uma análise estatisticamente relevante. A expectativa é que, com maior tempo de observação, seja possível quantificar a taxa de conversão do upsell e seu impacto na migração de usuários para produtos de assinatura.
+
+\section{Síntese das Observações}
+
+As observações realizadas na plataforma Achievece ilustram como as estratégias técnicas identificadas na literatura podem ser aplicadas em um contexto real de e-commerce. A Tabela \ref{tab:sintese} resume as principais estratégias implementadas, sua base na literatura revisada e as observações correspondentes.
+
+\begin{table}[htb]
+\centering
+\caption{Síntese das estratégias implementadas e observações}
+\label{tab:sintese}
+\begin{tabular}{p{3cm}p{4.5cm}p{5.5cm}}
+\hline
+\textbf{Estratégia} & \textbf{Base na Literatura} & \textbf{Observação na Achievece} \\
+\hline
+Migração arquitetural & Trade-offs monolítico vs. distribuído \cite{ubur_reviewing_2023} & Eliminação de indisponibilidade após migração para serverless \\
+\hline
+Otimização UX/UI & 70\% da variância em conversões explicada por usabilidade \cite{nawir_impact_2024} & Aumento de 74\% no AOV de assinaturas; +105\% em novas vendas da categoria \\
+\hline
+Performance (PWA) & Queda de 7\% nas conversões por segundo adicional de carregamento \cite{bansal_seo_2024} & Score de 95 no Vercel Speed Insights; LCP de 2,92s \\
+\hline
+Personalização & Sistemas de recomendação aumentam conversões \cite{nguyen_personalized_2024} & Páginas por estado/profissão; impacto refletido nos resultados agregados \\
+\hline
+SEO para IA & Relação entre SEO técnico e receita \cite{bansal_seo_2024} & +102\% no tráfego de chatgpt.com (jul-ago 2025) \\
+\hline
+Ofertas de retenção & Práticas de mercado em SaaS & Redução de 30\% na intenção de cancelamento \\
+\hline
+Upsell & Práticas de mercado em SaaS & Implementado; métricas em observação \\
+\hline
+\end{tabular}
+\fonte{Elaborado pelo autor.}
+\end{table}
+
+A Tabela \ref{tab:aov-assinatura} apresenta o resultado agregado das mudanças implementadas, comparando o desempenho de diferentes categorias de produtos.
+
+\begin{table}[htb]
+\centering
+\caption{Variação no valor médio de pedido (AOV) e participação de novas vendas por categoria de produto}
+\label{tab:aov-assinatura}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Categoria} & \textbf{Variação AOV} & \textbf{Variação AOV (\%)} & \textbf{Var. Novas Vendas} & \textbf{Var. Novas Vendas (\%)} \\
+\hline
+Todas as vendas & \$8,64 & 17\% & -- & -- \\
+Novas vendas & \$6,36 & 13\% & -- & -- \\
+Pacotes & \$33,19 & 53\% & 6\% & 15\% \\
+Assinaturas & \$65,05 & 74\% & 9\% & 105\% \\
+Avulsos & -\$9,03 & -23\% & -14\% & -28\% \\
+Planos & \$41,23 & 63\% & 14\% & 29\% \\
+\hline
+\end{tabular}
+\fonte{Dados da plataforma Achievece (2025).}
+\end{table}
+
+Os resultados indicam que as categorias de produtos por assinatura (\textit{memberships}) apresentaram o maior crescimento, com aumento de 74\% no valor médio de pedido e crescimento de 105\% na participação de novas vendas. Em contrapartida, os produtos de venda avulsa (\textit{a la carte}) apresentaram redução de 23\% no AOV e queda de 28\% na participação de novas vendas.
+
+Essa inversão nos padrões de venda reflete o efeito combinado das estratégias implementadas: a migração arquitetural que garantiu estabilidade, as otimizações de UX/UI que reposicionaram os produtos de assinatura em destaque, as melhorias de performance via PWA, e a personalização de conteúdo por estado e profissão. Embora não seja possível isolar a contribuição individual de cada estratégia, os dados sugerem que o conjunto de mudanças influenciou as decisões de compra dos usuários, direcionando-os para as opções de maior recorrência.
+
+\subsection{Dificuldades de Atribuição}
+
+Conforme antecipado nas limitações metodológicas, a principal dificuldade na análise dos resultados é a atribuição de impacto a estratégias específicas. Em uma empresa em funcionamento, múltiplas variáveis mudam simultaneamente, e os efeitos se sobrepõem.
+
+Por exemplo, a melhoria nas métricas de conversão pode ser resultado da combinação de: maior estabilidade da plataforma (arquitetura), melhor performance de carregamento (PWA), reorganização da interface (UX/UI), e otimizações de SEO que trouxeram tráfego mais qualificado. Isolar a contribuição de cada fator exigiria um ambiente controlado que não é viável em uma operação comercial real.
+
+\subsection{Alinhamento com a Literatura}
+
+Apesar das limitações, as observações na Achievece estão alinhadas com a literatura revisada:
+
+\begin{itemize}
+    \item A relação entre arquitetura e estabilidade \cite{ubur_reviewing_2023} se confirma com a migração para serverless;
+    \item O impacto de UX/UI nas conversões \cite{nawir_impact_2024} é consistente com as melhorias observadas;
+    \item A importância de performance e SEO para receita \cite{bansal_seo_2024} se reflete nas métricas da plataforma;
+    \item As estratégias de retenção demonstram efetividade mensurável (30\% de redução na intenção de cancelamento).
+\end{itemize}
+

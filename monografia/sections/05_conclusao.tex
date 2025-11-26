@@ -4,22 +4,77 @@
 \chapter{Conclusão}
 \label{ch:conclusao}
 
-% TODO: Este capítulo será desenvolvido posteriormente
+Este capítulo apresenta as conclusões do trabalho, retomando os objetivos propostos e discutindo em que medida foram alcançados. São apresentadas também as limitações identificadas durante a pesquisa e sugestões para trabalhos futuros.
 
-\section{Principais Contribuições}
+\section{Retomada dos Objetivos}
 
-\section{Respostas aos Objetivos Específicos}
+O objetivo geral deste trabalho foi analisar o cenário atual do desenvolvimento de plataformas de e-commerce, buscando identificar estratégias técnicas e discutir seu potencial impacto na receita das empresas. Para isso, foram estabelecidos cinco objetivos específicos, cujo alcance é discutido a seguir.
 
-\section{Lacunas Identificadas}
+O primeiro objetivo, de identificar abordagens arquiteturais utilizadas em e-commerce, foi parcialmente atendido. A revisão bibliográfica permitiu mapear discussões sobre arquiteturas monolíticas versus distribuídas \cite{ubur_reviewing_2023}. A aplicação prática na Achievece ilustrou a migração de WordPress para Next.js com arquitetura serverless, com melhorias na estabilidade. No entanto, a literatura apresentou poucos estudos quantitativos relacionando escolhas arquiteturais com métricas de receita.
+
+O segundo objetivo, de examinar estratégias de UX/UI, foi atendido de forma satisfatória. Foram identificados estudos que relacionam usabilidade com taxas de conversão, indicando que 70\% da variância nas conversões pode ser explicada por fatores de usabilidade \cite{nawir_impact_2024}. Na aplicação prática, a reorganização da interface resultou em aumento de 74\% no AOV de assinaturas e crescimento de 105\% na participação de novas vendas dessa categoria.
+
+O terceiro objetivo, de investigar o papel da IA em e-commerce, foi parcialmente atendido. A revisão identificou trabalhos sobre sistemas de recomendação \cite{nguyen_personalized_2024} e sobre IA generativa aplicada a e-commerce. Na Achievece, a personalização foi implementada de forma manual, sem uso de algoritmos de IA, o que limitou a análise prática desse objetivo.
+
+O quarto objetivo, de discutir relações entre decisões técnicas e métricas de receita, foi o mais desafiador. A literatura revisada apresenta evidências fragmentadas dessa relação, e a aplicação prática enfrentou dificuldades de atribuição devido à implementação simultânea de múltiplas estratégias. Os dados observados sugerem correlação entre o conjunto de mudanças e melhorias nas métricas, mas não permitem estabelecer causalidade isolada.
+
+O quinto objetivo, de identificar oportunidades para trabalhos futuros, foi atendido e é detalhado na seção correspondente deste capítulo.
+
+\section{Principais Observações}
+
+A partir da revisão bibliográfica e da aplicação prática, algumas observações podem ser destacadas:
+
+\begin{itemize}
+    \item A estabilidade da plataforma, após a migração para arquitetura serverless, mostrou-se pré-requisito para qualquer estratégia de conversão. Uma plataforma indisponível não converte.
+
+    \item As métricas de performance (Core Web Vitals) alcançadas foram satisfatórias, com score de 95 no Vercel Speed Insights. A ausência de dados históricos impediu uma análise comparativa.
+
+    \item A reorganização da interface, posicionando produtos de assinatura em destaque, coincidiu com aumento de 74\% no AOV dessa categoria e crescimento de 105\% na participação de novas vendas. O AOV geral da plataforma aumentou 17\%.
+
+    \item As otimizações de SEO técnico, incluindo dados estruturados JSON-LD, coincidiram com aumento de 102\% no tráfego proveniente de plataformas de IA (chatgpt.com) entre julho e agosto de 2025.
+
+    \item A estratégia de ofertas de retenção no fluxo de cancelamento apresentou resultado mensurável: redução de 30\% na intenção de cancelamento. Por afetar um momento específico da jornada do usuário, essa foi a estratégia com atribuição mais clara.
+
+    \item A dificuldade de atribuição de resultados a estratégias específicas confirmou-se como desafio central em estudos realizados em ambientes de produção.
+\end{itemize}
 
 \section{Limitações do Estudo}
 
+Este trabalho possui limitações que devem ser consideradas na interpretação dos resultados:
+
+A principal limitação é a impossibilidade de isolar o impacto de cada estratégia. Por se tratar de uma empresa em funcionamento, as mudanças foram implementadas em períodos próximos, sem grupo de controle. Não foi possível aplicar testes A/B devido a questões operacionais da empresa, o que impede afirmações de causalidade entre estratégias específicas e resultados observados.
+
+A perda de dados históricos da plataforma anterior em WordPress limitou a análise comparativa, especialmente para métricas de performance. Sem linha de base, não é possível quantificar a melhoria proporcionada pela nova arquitetura.
+
+Os recortes temporais apresentados, embora selecionados de um período de aproximadamente um ano de desenvolvimento, podem ser insuficientes para capturar efeitos de longo prazo ou variações sazonais. Resultados observados podem não se sustentar ao longo do tempo.
+
+A amostra de um único caso (plataforma Achievece) limita a generalização dos achados. Plataformas de outros segmentos, tamanhos ou públicos podem apresentar comportamentos distintos.
+
+Por fim, a revisão bibliográfica, embora tenha buscado abranger trabalhos relevantes, não seguiu protocolo formal de revisão sistemática, o que pode ter resultado em viés de seleção dos artigos analisados.
+
 \section{Trabalhos Futuros}
 
-\subsection{Pesquisa Aplicada}
+Com base nas lacunas identificadas na literatura e nas limitações deste estudo, sugerem-se as seguintes direções para trabalhos futuros:
 
-\subsection{Estudos Longitudinais}
+\textbf{Estudos com grupos de controle}: Pesquisas que implementem testes A/B para isolar o impacto de estratégias específicas em métricas de conversão e receita.
 
-\subsection{Frameworks e Ferramentas}
+\textbf{Análises longitudinais}: Estudos que acompanhem plataformas por períodos mais longos, capturando efeitos de sazonalidade e permitindo observar a sustentabilidade dos resultados ao longo do tempo.
+
+\textbf{Comparações entre segmentos}: Pesquisas que comparem o impacto de estratégias em diferentes tipos de e-commerce (B2B, B2C, assinaturas, marketplace).
+
+\textbf{Frameworks de atribuição}: Desenvolvimento de metodologias para atribuir resultados a estratégias específicas em ambientes com múltiplas variáveis.
+
+\textbf{Integração de IA em personalização}: Estudos que comparem personalização manual versus automatizada por algoritmos de IA.
+
+\textbf{Ambientes controlados em empresas reais}: Uma direção relevante para trabalhos futuros seria a criação de condições que permitam maior controle experimental dentro de empresas em funcionamento. Isso exigiria: (i) alocação de recursos específicos da empresa para pesquisa, separando iniciativas experimentais das demandas operacionais do dia a dia; (ii) definição de períodos dedicados à análise, evitando que decisões de negócio urgentes interfiram no cronograma de observação; (iii) implementação de infraestrutura para testes A/B desde o início do projeto, e não como adaptação posterior; e (iv) comprometimento da liderança em priorizar a coleta de dados mesmo quando isso implique atrasar lançamentos de funcionalidades. Este trabalho evidenciou que, em ambientes onde a operação comercial é prioritária, as demandas de curto prazo frequentemente comprometem o rigor metodológico. Considerando que os resultados observados sugerem impacto positivo nas métricas de receita, investir em estrutura para estudos mais controlados pode se justificar financeiramente, uma vez que permitiria identificar com precisão quais estratégias geram maior retorno e direcionar recursos de forma mais eficiente.
 
 \section{Considerações Finais}
+
+Este trabalho buscou contribuir para a compreensão das relações entre estratégias técnicas e resultados de negócio em plataformas de e-commerce. É uma contribuição modesta, que combina revisão bibliográfica com observações de uma aplicação prática.
+
+Os resultados na Achievece, embora limitados pelas dificuldades de atribuição discutidas, sugerem que o conjunto de estratégias implementadas contribuiu para melhorias nas métricas de receita, com destaque para o crescimento nas vendas de produtos por assinatura.
+
+A principal contribuição deste trabalho é mostrar a complexidade envolvida na análise do impacto de decisões técnicas em métricas de negócio. A literatura oferece evidências fragmentadas, e a prática empresarial raramente permite o isolamento de variáveis necessário para conclusões definitivas.
+
+Para desenvolvedores e gestores de tecnologia, espera-se que este trabalho ofereça um panorama das estratégias disponíveis e suas possíveis implicações.
+

@@ -4,32 +4,7 @@
 \chapter{Metodologia}
 \label{ch:metodologia}
 
-Este capítulo descreve a metodologia adotada para o desenvolvimento do trabalho, que combina revisão bibliográfica com aplicação prática das estratégias identificadas.
-
-\section{Tipo de Pesquisa}
-
-Este trabalho caracteriza-se como pesquisa exploratória de natureza aplicada. A abordagem exploratória justifica-se pela necessidade de compreender o cenário atual das estratégias técnicas em e-commerce e suas relações com métricas de receita. A natureza aplicada decorre da intenção de não apenas mapear o conhecimento existente, mas também demonstrar a aplicação prática de algumas dessas estratégias em um contexto real de negócio.
-
-\section{Revisão Bibliográfica}
-
-A primeira etapa do trabalho consistiu em uma revisão bibliográfica para identificar e analisar as principais estratégias técnicas empregadas no desenvolvimento de plataformas de e-commerce.
-
-\subsection{Critérios de Seleção}
-
-A busca por trabalhos foi realizada em bases como Google Scholar, ResearchGate, arXiv e repositórios de estudos de caso técnicos. Os termos de busca incluíram combinações de palavras-chave relacionadas a arquitetura de software para e-commerce, experiência do usuário em plataformas de comércio eletrônico, sistemas de recomendação, otimização de conversão e Progressive Web Apps.
-
-Os critérios para inclusão dos trabalhos foram: (i) abordar pelo menos uma das quatro dimensões definidas no escopo (arquitetura e performance, UX/UI, inteligência artificial, ou tráfego e conversão); (ii) apresentar dados empíricos, estudos de caso ou análises sistemáticas; e (iii) ter relevância para o contexto de plataformas de e-commerce. Foram priorizadas publicações recentes (2023-2025), embora trabalhos anteriores tenham sido incluídos quando apresentavam contribuições relevantes.
-
-\subsection{Organização da Análise}
-
-Os 12 trabalhos selecionados foram organizados em quatro eixos temáticos, permitindo uma análise estruturada das diferentes dimensões técnicas:
-
-\begin{itemize}
-    \item \textbf{Arquitetura e Performance:} estudos sobre escolhas arquiteturais (monolítico, microsserviços, servidores distribuídos) e seu impacto no desempenho;
-    \item \textbf{Experiência do Usuário:} trabalhos sobre otimização de interface, performance de carregamento, SEO técnico e Progressive Web Apps;
-    \item \textbf{Inteligência Artificial:} pesquisas sobre sistemas de recomendação, IA generativa e personalização;
-    \item \textbf{Métricas e Conversão:} análises sobre jornada do usuário, fontes de tráfego e otimização de funil de vendas.
-\end{itemize}
+Este capítulo descreve a metodologia adotada para a aplicação prática das estratégias identificadas na revisão bibliográfica.
 
 \section{Aplicação Prática}
 
@@ -37,9 +12,13 @@ Além da revisão bibliográfica, este trabalho apresenta a aplicação prática
 
 \subsection{Contexto da Plataforma}
 
-A aplicação prática foi realizada na Achievece, uma plataforma de e-commerce de cursos online especializada em educação continuada para médicos nos Estados Unidos. A plataforma apresenta volume médio de aproximadamente 30 mil visitantes mensais e receita diária na ordem de US\$ 2.500. A Achievece opera com modelo de negócio híbrido, oferecendo tanto cursos com pagamento único quanto planos de assinatura recorrente, permitindo análise de estratégias específicas para ambos os modelos de monetização.
+A aplicação prática foi realizada na Achievece, uma plataforma de e-commerce de cursos online especializada em educação continuada para médicos nos Estados Unidos. A empresa é consolidada e bem referenciada no setor de educação médica, com amplo reconhecimento no mercado americano. A plataforma apresenta volume médio de aproximadamente 30 mil visitantes mensais e receita diária na ordem de US\$ 2.500, oferecendo um catálogo de mais de 700 cursos. A Achievece opera com modelo de negócio híbrido, disponibilizando tanto cursos com pagamento único quanto planos de assinatura recorrente, permitindo análise de estratégias específicas para ambos os modelos de monetização.
 
-A escolha dessa plataforma justifica-se por: (i) acesso autorizado aos dados de analytics e métricas de negócio; (ii) possibilidade de implementação controlada de modificações técnicas; (iii) volume de tráfego suficiente para análise estatística significativa; (iv) representatividade do segmento de e-learning no mercado americano; e (v) diversidade de modelos de monetização que permite análise comparativa.
+Um aspecto relevante para este trabalho é que a plataforma passou por uma migração arquitetural significativa: de uma estrutura monolítica baseada em WordPress para uma arquitetura moderna utilizando Next.js. Essa decisão foi motivada por limitações de performance, uma vez que a plataforma, com seu extenso catálogo de cursos, apresentava dificuldades em manter múltiplos usuários ativos simultaneamente sem degradação significativa no tempo de resposta. Essa migração conecta-se diretamente com as discussões apresentadas por \cite{ubur_reviewing_2023} sobre os trade-offs entre arquiteturas monolíticas e distribuídas, e permite observar na prática os impactos de decisões arquiteturais nas métricas de performance e, consequentemente, na experiência do usuário e conversão.
+
+A escolha dessa plataforma justifica-se por: (i) acesso completo aos dados de analytics e métricas de negócio; (ii) possibilidade de implementação controlada de modificações técnicas; (iii) volume de tráfego suficiente para análise estatística significativa; (iv) representatividade do segmento de e-learning no mercado americano; (v) diversidade de modelos de monetização que permite análise comparativa; e (vi) histórico de migração arquitetural que possibilita análise de impacto em performance.
+
+É relevante mencionar que o autor deste trabalho atua como responsável técnico da Achievece há mais de dois anos, sendo responsável pela implementação de todas as estratégias técnicas descritas neste capítulo. Essa posição permite não apenas acesso privilegiado aos dados e à infraestrutura da plataforma, mas também conhecimento aprofundado das decisões técnicas e de negócio que motivaram cada implementação. O acesso aos dados e sua divulgação neste trabalho foram devidamente alinhados com as demais lideranças da empresa.
 
 \subsection{Estratégias Implementadas}
 
@@ -47,35 +26,39 @@ Com base nas oportunidades identificadas na revisão bibliográfica e na observa
 
 \subsubsection{Otimizações de Interface e Experiência do Usuário}
 
-A literatura revisada indica relação direta entre experiência do usuário e taxas de conversão. \citeonline{nawir_impact_2024} demonstram que 70\% da variância nas taxas de conversão pode ser explicada por fatores de usabilidade, enquanto \citeonline{muralidhar_clicks_2024} identificam gargalos entre o interesse do usuário e a conclusão da transação.
+A literatura revisada indica relação direta entre experiência do usuário e taxas de conversão. \cite{nawir_impact_2024} demonstram que 70\% da variância nas taxas de conversão pode ser explicada por fatores de usabilidade, enquanto \cite{muralidhar_clicks_2024} identificam gargalos entre o interesse do usuário e a conclusão da transação.
 
-Na plataforma Achievece, são implementados testes A/B controlados utilizando a ferramenta GrowthBook para avaliar o impacto de modificações de UI/UX. As variações incluem: redesign do processo de checkout (redução de etapas, otimização de formulários), modificações na página de detalhes do produto, variações de design responsivo para dispositivos móveis e testes de copy e messaging.
+Na plataforma Achievece, um dos objetivos centrais era aumentar as vendas de produtos por assinatura. Dado que a empresa já possuía um fluxo consolidado de vendas de cursos com pagamento único --- resultado de sua reputação estabelecida no mercado de educação médica ---, a oportunidade identificada estava em potencializar o modelo de receita recorrente. Com base na experiência de especialistas de marketing da empresa, foi realizada uma reestruturação completa da interface da página principal de vendas: os produtos por assinatura passaram a ocupar posição de destaque no topo da página, enquanto os cursos de pagamento único foram reposicionados para seções inferiores. Além disso, foram implementadas mudanças na comunicação textual do site para enfatizar os benefícios do modelo de assinatura.
+
+Outras modificações de UI/UX foram implementadas conforme oportunidades identificadas, incluindo ajustes no processo de checkout e na página de detalhes do produto. No entanto, não foi possível conduzir testes A/B controlados devido a questões operacionais da empresa, o que representa uma limitação metodológica discutida neste trabalho.
 
 \subsubsection{Progressive Web App e Otimizações de Performance}
 
-O caso documentado do Alibaba.com, que apresentou aumento de 76\% nas conversões após implementação de PWA, motiva a análise dessas funcionalidades na plataforma. \citeonline{bansal_seo_2024} aponta queda de 7\% nas conversões para cada segundo adicional de carregamento.
+O caso documentado do Alibaba.com, que apresentou aumento de 76\% nas conversões após implementação de PWA, motiva a análise dessas funcionalidades na plataforma. \cite{bansal_seo_2024} aponta queda de 7\% nas conversões para cada segundo adicional de carregamento.
 
-São implementadas: estratégias de cache para redução de tempo de carregamento, funcionalidade offline para navegação no catálogo de cursos, notificações push para engajamento de usuários, otimização de imagens e assets (lazy loading, compressão, formatos modernos) e implementação de CDN para distribuição de conteúdo estático. O monitoramento é realizado através de Core Web Vitals (LCP, FID, CLS) via Google Lighthouse.
+Na plataforma Achievece, a implementação de PWA concentrou-se nas otimizações de experiência mobile e performance de carregamento. Funcionalidades como notificações push não foram habilitadas por decisões estratégicas internas da empresa. As otimizações implementadas incluem: estratégias de cache para redução de tempo de carregamento, otimização de imagens e assets (lazy loading, compressão, formatos modernos) e implementação de CDN para distribuição de conteúdo estático. O monitoramento é realizado através de Core Web Vitals (LCP, FID, CLS) via Google Lighthouse.
 
 \subsubsection{Personalização e Recomendação}
 
-Conforme identificado por \citeonline{nguyen_personalized_2024}, sistemas de recomendação podem impactar significativamente as métricas de conversão. Na plataforma Achievece, é implementado sistema básico de recomendação de cursos baseado em filtragem colaborativa (cursos visualizados por usuários similares), análise de navegação e comportamento, e categorização por tags de conteúdo. A avaliação é realizada via teste A/B comparando versões com e sem recomendações personalizadas.
+Conforme identificado por \cite{nguyen_personalized_2024}, sistemas de recomendação e personalização podem impactar significativamente as métricas de conversão. Na plataforma Achievece, a estratégia de personalização foi implementada de forma manual, aproveitando a equipe dedicada à área de conteúdo que a empresa possui. As principais páginas foram individualizadas de acordo com a profissão médica e o estado de atuação dos usuários nos Estados Unidos, alcançando assim objetivos similares aos que poderiam ser obtidos com sistemas automatizados de IA.
+
+O desafio técnico nessa abordagem está relacionado à geração de páginas individualizadas em grande quantidade sem repetição de código, exigindo uma arquitetura que permita a criação dinâmica de conteúdo personalizado de forma escalável. Essa implementação demonstra que a personalização pode ser alcançada por diferentes caminhos técnicos, dependendo dos recursos disponíveis na organização.
 
 \subsubsection{SEO e Análise de Fontes de Tráfego}
 
-\citeonline{bansal_seo_2024} destaca a relação entre SEO técnico, velocidade de carregamento e receita. São implementadas otimizações de meta tags, títulos e descrições, melhoria de estrutura de URLs e breadcrumbs, e implementação de schema markup para rich snippets.
+\cite{bansal_seo_2024} destaca a relação entre SEO técnico, velocidade de carregamento e receita. Na plataforma Achievece, todo o SEO técnico foi reestruturado, incluindo otimizações de meta tags, títulos e descrições, melhoria de estrutura de URLs e breadcrumbs, e implementação de schema markup para rich snippets.
 
-Adicionalmente, seguindo a análise de \citeonline{muralidhar_clicks_2024} sobre fontes de tráfego, é realizada análise comparativa do comportamento e performance de diferentes canais: tráfego orgânico, pago, direto, de referência e social.
+Um aspecto relevante dessa reestruturação é a consideração do ranqueamento em plataformas de chat baseadas em IA. Em 2025, essas plataformas já representam uma forma significativa de como usuários buscam por conteúdo, o que demanda adaptações nas estratégias tradicionais de SEO para garantir visibilidade também nesses novos canais de descoberta.
+
+Adicionalmente, seguindo a análise de \cite{muralidhar_clicks_2024} sobre fontes de tráfego, é realizada análise comparativa do comportamento e performance de diferentes canais: tráfego orgânico, pago, direto, de referência e social.
 
 \subsubsection{Estratégias de Maximização de Receita Recorrente}
 
-Além das estratégias identificadas na literatura, a observação do mercado de e-commerce revela práticas amplamente adotadas por empresas com modelo de assinatura que carecem de estudos acadêmicos sobre sua implementação técnica e efetividade:
+Além das estratégias identificadas na literatura, a observação do mercado de e-commerce revela práticas amplamente adotadas por empresas com modelo de assinatura. Há espaço para estudo dessas implementações e observação do seu impacto na receita:
 
 \textbf{Upsell:} implementação de ofertas de upgrade de plano durante a jornada de compra (checkout) e pós-compra (para assinantes ativos). O objetivo é observar a taxa de aceitação do upgrade, o timing ótimo para apresentação de ofertas e o impacto na receita média por transação.
 
 \textbf{Ofertas de retenção (cancellation offers):} implementação de fluxo de cancelamento que oferece alternativas ao usuário que inicia o processo de cancelamento, incluindo descontos temporários, pausa da assinatura ou downgrade para plano de menor valor. O objetivo é observar a taxa de retenção de assinantes e o impacto no churn mensal.
-
-\textbf{Recuperação de carrinho abandonado:} implementação de emails automatizados de lembrete com variações de timing (1h, 24h, 48h após abandono) e testes de copy e ofertas.
 
 \subsection{Coleta e Análise de Dados}
 
@@ -83,22 +66,21 @@ Os dados são coletados por meio de ferramentas de analytics integradas à plata
 
 \begin{itemize}
     \item Google Analytics 4 para análise de comportamento e conversões
-    \item Google Lighthouse para métricas de performance e Core Web Vitals
+    \item Google Lighthouse e Vercel Speed Insights para métricas de performance e Core Web Vitals
     \item Google Search Console para dados de tráfego orgânico e SEO
-    \item GrowthBook para execução e análise de testes A/B
     \item Lucky Orange para análise comportamental (heatmaps, session recordings, funnels)
 \end{itemize}
 
 As métricas observadas incluem:
 
 \begin{itemize}
-    \item \textbf{Performance:} tempo de carregamento (LCP), interatividade (FID), estabilidade visual (CLS);
-    \item \textbf{Conversão:} taxa de conversão por etapa do funil, taxa de abandono de carrinho, taxa de conclusão de checkout, taxa de recuperação de carrinho;
+    \item \textbf{Performance:} tempo de carregamento (LCP), interatividade (FID/INP), estabilidade visual (CLS);
+    \item \textbf{Conversão:} taxa de conversão por etapa do funil, taxa de conclusão de checkout;
     \item \textbf{Receita:} valor médio do pedido (AOV), receita por visitante (RPV), receita total;
     \item \textbf{Assinaturas:} MRR, taxa de churn, CLTV, ARPU, taxa de conversão de upsell, taxa de retenção via cancellation offers.
 \end{itemize}
 
-A análise estatística utiliza testes de significância (teste t para médias, teste qui-quadrado para proporções) com nível de confiança de 95\%. Os testes A/B são conduzidos com período mínimo de 2 semanas por experimento para garantir significância estatística considerando o volume de tráfego da plataforma.
+A análise dos dados é predominantemente descritiva, comparando métricas ao longo do tempo. Devido às limitações operacionais mencionadas, não foi possível aplicar testes de significância estatística com grupos de controle.
 
 \section{Limitações Metodológicas}
 
@@ -107,8 +89,10 @@ A análise estatística utiliza testes de significância (teste t para médias, 
 \begin{itemize}
     \item A aplicação prática foi realizada em uma única plataforma, com características específicas (e-commerce de cursos online, segmento de educação médica nos EUA), o que limita a generalização dos resultados para outros contextos;
     \item O período de observação pode não capturar completamente efeitos de longo prazo ou variações anuais;
-    \item Fatores externos (sazonalidade do mercado educacional, campanhas de marketing, mudanças na concorrência, variações macroeconômicas) podem influenciar as métricas observadas, dificultando o isolamento do impacto de cada estratégia implementada;
-    \item O volume de tráfego, embora significativo, pode limitar a detecção de efeitos pequenos em certos pontos de observação.
+    \item Fatores externos (sazonalidade do mercado educacional, campanhas de marketing, mudanças na concorrência, variações macroeconômicas) podem influenciar as métricas observadas;
+    \item O volume de tráfego, embora significativo, pode limitar a detecção de efeitos pequenos em certos pontos de observação;
+    \item Por se tratar de uma empresa em pleno funcionamento, as decisões de implementação são influenciadas por fatores de negócio e tempo disponível, não sendo possível seguir um cronograma puramente acadêmico;
+    \item Nenhuma das técnicas implementadas pôde ser observada em isolamento completo, uma vez que múltiplas estratégias foram aplicadas de forma simultânea ou em períodos próximos, conforme as demandas operacionais da empresa.
 \end{itemize}
 
 Essas limitações são inerentes a estudos de aplicação prática em ambientes reais de negócio. Os resultados apresentados devem ser interpretados como observações ilustrativas das estratégias identificadas na literatura e no mercado, não como evidências definitivas de relações causais.
