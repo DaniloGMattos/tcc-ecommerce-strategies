@@ -16,7 +16,378 @@ A aplicação prática foi realizada na Achievece (achievece.com), uma plataform
 
 Um aspecto relevante para este trabalho é que a plataforma passou por uma migração arquitetural significativa: de uma estrutura monolítica baseada em \textit{WordPress} para uma arquitetura moderna utilizando \textit{Next.js}. Essa decisão foi motivada por limitações de performance, uma vez que a plataforma, com seu extenso catálogo de cursos, apresentava dificuldades em manter múltiplos usuários ativos simultaneamente sem degradação significativa no tempo de resposta. Essa migração conecta-se diretamente com as discussões apresentadas por \cite{ubur_reviewing_2023} sobre os \textit{trade-offs} entre arquiteturas monolíticas e distribuídas, e permite observar na prática os impactos de decisões arquiteturais nas métricas de performance e, consequentemente, na experiência do usuário e conversão.
 
-A escolha dessa plataforma justifica-se por: (i) acesso completo aos dados de \textit{analytics} e métricas de negócio; (ii) possibilidade de implementação controlada de modificações técnicas; (iii) volume de tráfego suficiente para análise estatística significativa; (iv) representatividade do segmento de \textit{e-learning} no mercado americano; (v) diversidade de modelos de monetização que permite análise comparativa; e (vi) histórico de migração arquitetural que possibilita análise de impacto em performance.
+\subsubsection{Arquitetura Anterior (\textit{WordPress})}
+
+A arquitetura anterior da Achievece era baseada em \textit{WordPress}, uma plataforma monolítica que concentra \textit{frontend}, \textit{backend} e banco de dados em uma única estrutura. O sistema utilizava \textit{plugins} como WooCommerce para e-commerce e LearnDash para o LMS (\textit{Learning Management System}), todos conectados a um banco de dados MySQL central. A Figura \ref{fig:arquitetura-antiga} ilustra essa estrutura.
+
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}[
+    node distance=0.8cm,
+    box/.style={rectangle, draw, rounded corners, minimum width=2.5cm, minimum height=0.8cm, align=center, font=\small},
+    bigbox/.style={rectangle, draw, dashed, rounded corners, inner sep=0.4cm},
+    arrow/.style={->, >=stealth, thick}
+]
+    % Usuário
+    \node[box, fill=blue!20] (user) {Usuário};
+
+    % WordPress monolítico
+    \node[box, fill=orange!30, below=1.2cm of user] (wp) {\textit{WordPress}\\(PHP)};
+    \node[box, fill=orange!20, below=0.6cm of wp] (woo) {WooCommerce};
+    \node[box, fill=orange!20, left=0.3cm of woo] (ld) {LearnDash};
+    \node[box, fill=orange!20, right=0.3cm of woo] (plugins) {Outros \textit{Plugins}};
+
+    % Banco de dados
+    \node[box, fill=green!20, below=1.2cm of woo] (mysql) {MySQL};
+
+    % Servidor
+    \node[box, fill=gray!20, below=0.6cm of mysql] (server) {Servidor\\Tradicional};
+
+    % Container WordPress
+    \begin{scope}[on background layer]
+        \node[bigbox, fill=orange!5, fit=(wp)(woo)(ld)(plugins), label=above:{\small Arquitetura Monolítica}] {};
+    \end{scope}
+
+    % Setas
+    \draw[arrow] (user) -- (wp);
+    \draw[arrow] (wp) -- (woo);
+    \draw[arrow] (wp) -- (ld);
+    \draw[arrow] (wp) -- (plugins);
+    \draw[arrow] (woo) -- (mysql);
+    \draw[arrow] (ld) -- (mysql);
+    \draw[arrow] (plugins) -- (mysql);
+    \draw[arrow] (mysql) -- (server);
+\end{tikzpicture}
+\caption{Arquitetura anterior da Achievece baseada em \textit{WordPress}}
+\label{fig:arquitetura-antiga}
+\fonte{Elaborado pelo autor.}
+\end{figure}
+
+Essa arquitetura apresentava limitações que motivaram a migração. O acoplamento entre componentes dificultava manutenção e escalabilidade. A dependência de \textit{plugins} de terceiros trazia atualizações frequentes e potenciais incompatibilidades. A performance degradava com múltiplos acessos simultâneos, devido à natureza síncrona do PHP. Além disso, era difícil implementar otimizações modernas de \textit{frontend} como renderização híbrida e \textit{code splitting}.
+
+\subsubsection{Arquitetura Atual (\textit{Next.js} + Contentful)}
+
+A nova arquitetura adota o padrão \textit{headless}, separando o \textit{frontend} do gerenciamento de conteúdo. A escolha do \textit{Next.js} como \textit{framework} de \textit{frontend} foi baseada em uma análise comparativa com a arquitetura anterior em \textit{WordPress}, considerando os requisitos específicos da plataforma Achievece.
+
+\textbf{Justificativa da escolha do \textit{Next.js}:} A decisão de migrar para \textit{Next.js} foi motivada por três fatores principais identificados durante a operação da plataforma em \textit{WordPress}:
+
+\begin{enumerate}
+    \item \textbf{Problemas de escalabilidade:} A arquitetura monolítica em PHP apresentava degradação de performance com acessos simultâneos. Com mais de 700 cursos e 30 mil visitantes mensais, era frequente observar lentidão durante campanhas de \textit{marketing} ou horários de pico. O \textit{Next.js} na Vercel oferece escalabilidade automática via funções \textit{serverless}, onde cada requisição é processada de forma isolada e o sistema escala horizontalmente conforme a demanda.
+
+    \item \textbf{Flexibilidade de renderização:} O \textit{WordPress} renderiza todas as páginas no servidor a cada requisição. Para um catálogo extenso de cursos que muda com pouca frequência, isso representa processamento desnecessário. O \textit{Next.js} permite escolher a estratégia de renderização por página: \textit{Static Site Generation} (SSG) para páginas estáticas, \textit{Incremental Static Regeneration} (ISR) para conteúdo que atualiza periodicamente, e \textit{Server-Side Rendering} (SSR) para dados em tempo real.
+
+    \item \textbf{Experiência de desenvolvimento:} A manutenção do \textit{WordPress} dependia de \textit{plugins} de terceiros (WooCommerce, LearnDash) com atualizações frequentes e potenciais incompatibilidades. O \textit{Next.js} com TypeScript oferece tipagem estática, melhor \textit{tooling} de desenvolvimento e controle total sobre o código, facilitando a implementação de funcionalidades específicas do negócio.
+\end{enumerate}
+
+O Quadro \ref{quad:comparativo-wp-next} apresenta uma comparação entre as duas tecnologias nos aspectos mais relevantes para a plataforma.
+
+\begin{quadro}[htb]
+\centering
+\caption{Comparativo entre \textit{WordPress} e \textit{Next.js} para a Achievece}
+\label{quad:comparativo-wp-next}
+\begin{tabular}{|p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Aspecto} & \textbf{\textit{WordPress}} & \textbf{\textit{Next.js}} \\
+\hline
+Renderização & Servidor (PHP) a cada requisição & Híbrida: SSR, SSG, ISR conforme necessidade da página \\
+\hline
+Escalabilidade & Vertical (aumentar recursos do servidor) & Horizontal automática via \textit{serverless} \\
+\hline
+Performance \textit{frontend} & Limitada pela arquitetura monolítica e \textit{plugins} & Otimizada com \textit{code splitting}, \textit{lazy loading} e \textit{React Server Components} \\
+\hline
+Gerenciamento de conteúdo & Integrado (acoplado ao código) & Desacoplado via CMS \textit{headless} (Contentful) \\
+\hline
+Manutenção & Dependência de \textit{plugins} de terceiros & Controle total do código e dependências \\
+\hline
+Custo de infraestrutura & Servidor dedicado 24/7 & Modelo \textit{pay-per-use} (execução sob demanda) \\
+\hline
+\end{tabular}
+\fonte{Elaborado pelo autor.}
+\end{quadro}
+
+A principal motivação para a migração foi a limitação de escalabilidade da arquitetura anterior. Com um catálogo de mais de 700 cursos e aproximadamente 30 mil visitantes mensais, a plataforma em \textit{WordPress} apresentava degradação de performance em momentos de maior acesso simultâneo. A arquitetura \textit{serverless} do \textit{Next.js} na Vercel resolve esse problema ao escalar automaticamente conforme a demanda, sem necessidade de provisionamento manual de recursos.
+
+O \textit{Next.js} também oferece recursos que não estavam disponíveis na arquitetura anterior. O \textit{Incremental Static Regeneration} (ISR) permite regenerar páginas estáticas sob demanda, o que é útil para um catálogo extenso de cursos. Os \textit{React Server Components} reduzem o JavaScript enviado ao cliente, melhorando o tempo de carregamento. O componente \texttt{next/image} otimiza imagens automaticamente, e as \textit{Edge Functions} permitem executar lógica próxima ao usuário geograficamente.
+
+\textbf{Integração com Contentful:} O Contentful foi adotado como CMS \textit{headless}, seguindo o padrão de arquitetura \textit{Jamstack}. Diferentemente do \textit{WordPress}, onde conteúdo e código estão acoplados no mesmo sistema, o Contentful funciona como um repositório de conteúdo independente, acessível via API.
+
+Na prática, a equipe de conteúdo da Achievece utiliza a interface administrativa do Contentful para gerenciar as informações dos cursos (títulos, descrições, preços, categorias), páginas institucionais, artigos do blog e imagens. Quando um conteúdo é publicado ou atualizado, o Contentful envia um \textit{webhook} para a Vercel, que dispara a revalidação das páginas afetadas via ISR. Com isso, alterações de conteúdo aparecem no site em segundos, sem precisar fazer \textit{deploy} de código.
+
+O \textit{Next.js} consome os dados do Contentful de duas formas: em tempo de \textit{build}, para páginas que raramente mudam, ou em tempo de execução com \textit{cache} e revalidação, para páginas de catálogo que atualizam com mais frequência. Essa flexibilidade é uma das vantagens do \textit{Next.js} sobre o \textit{WordPress}.
+
+A comunicação entre \textit{frontend} e \textit{backend} utiliza \textit{Server Actions} do \textit{Next.js}, que permitem chamadas de função diretamente dos componentes React para o servidor, eliminando a necessidade de endpoints REST tradicionais e proporcionando tipagem \textit{end-to-end} com TypeScript. Para gerenciamento de estado e \textit{cache} no cliente, é utilizado o \textit{TanStack Query}, que automatiza revalidação de dados e otimiza a experiência do usuário.
+
+A Figura \ref{fig:fluxo-contentful} ilustra o fluxo de dados entre Contentful e \textit{Next.js}:
+
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}[
+    node distance=0.8cm,
+    box/.style={rectangle, draw, rounded corners, minimum width=2.8cm, minimum height=0.9cm, align=center, font=\small},
+    smallbox/.style={rectangle, draw, rounded corners, minimum width=2cm, minimum height=0.6cm, align=center, font=\scriptsize},
+    arrow/.style={->, >=stealth, thick},
+    label/.style={font=\scriptsize, fill=white, inner sep=1pt}
+]
+    % Contentful
+    \node[box, fill=yellow!30] (contentful) {Contentful\\(CMS \textit{Headless})};
+
+    % Tipos de conteúdo
+    \node[smallbox, fill=yellow!15, right=0.5cm of contentful] (cursos) {Cursos};
+    \node[smallbox, fill=yellow!15, above=0.2cm of cursos] (paginas) {Páginas};
+    \node[smallbox, fill=yellow!15, below=0.2cm of cursos] (assets) {\textit{Assets}};
+
+    % API / Server Actions
+    \node[box, fill=orange!25, below=1.5cm of contentful] (graphql) {API Contentful\\+ \textit{Server Actions}};
+
+    % Next.js
+    \node[box, fill=cyan!30, below=1.5cm of graphql] (nextjs) {\textit{Next.js}};
+
+    % Estratégias de renderização
+    \node[smallbox, fill=cyan!15, right=0.5cm of nextjs] (ssg) {SSG\\(\textit{Build time})};
+    \node[smallbox, fill=cyan!15, above=0.2cm of ssg] (isr) {ISR\\(\textit{On-demand})};
+    \node[smallbox, fill=cyan!15, below=0.2cm of ssg] (ssr) {SSR\\(\textit{Runtime})};
+
+    % Vercel
+    \node[box, fill=purple!20, below=1.5cm of nextjs] (vercel) {Vercel\\(CDN + \textit{Edge})};
+
+    % Usuário
+    \node[box, fill=blue!20, below=1cm of vercel] (user) {Usuário};
+
+    % Webhook
+    \node[smallbox, fill=gray!20, left=1.5cm of graphql] (webhook) {\textit{Webhook}\\(atualização)};
+
+    % Setas
+    \draw[arrow] (contentful) -- (graphql);
+    \draw[arrow] (graphql) -- (nextjs);
+    \draw[arrow] (nextjs) -- (vercel);
+    \draw[arrow] (vercel) -- (user);
+    \draw[arrow] (contentful) -| (webhook);
+    \draw[arrow] (webhook) |- node[label, pos=0.7] {Revalidação} (vercel);
+
+    % Conexões dos tipos
+    \draw[-, dashed, gray] (contentful) -- (paginas);
+    \draw[-, dashed, gray] (contentful) -- (cursos);
+    \draw[-, dashed, gray] (contentful) -- (assets);
+
+    % Conexões das estratégias
+    \draw[-, dashed, gray] (nextjs) -- (isr);
+    \draw[-, dashed, gray] (nextjs) -- (ssg);
+    \draw[-, dashed, gray] (nextjs) -- (ssr);
+\end{tikzpicture}
+\caption{Fluxo de dados entre Contentful e \textit{Next.js} na Achievece}
+\label{fig:fluxo-contentful}
+\fonte{Elaborado pelo autor.}
+\end{figure}
+
+Essa separação entre gerenciamento de conteúdo e apresentação permite que alterações de conteúdo (novos cursos, atualizações de preços, textos promocionais) sejam publicadas sem necessidade de \textit{deploy} de código. O Contentful envia \textit{webhooks} para a Vercel quando há alterações, disparando revalidação das páginas afetadas via ISR. Para a equipe de conteúdo, isso representa autonomia para publicar mudanças em minutos, enquanto a equipe técnica mantém controle sobre a arquitetura e performance da aplicação.
+
+A Figura \ref{fig:arquitetura-nova} ilustra a arquitetura atual:
+
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}[
+    node distance=0.6cm,
+    box/.style={rectangle, draw, rounded corners, minimum width=2.2cm, minimum height=0.7cm, align=center, font=\small},
+    bigbox/.style={rectangle, draw, dashed, rounded corners, inner sep=0.3cm},
+    arrow/.style={->, >=stealth, thick},
+    doublearrow/.style={<->, >=stealth, thick}
+]
+    % Usuário
+    \node[box, fill=blue!20] (user) {Usuário};
+
+    % CDN/Vercel
+    \node[box, fill=purple!20, below=0.8cm of user] (vercel) {Vercel\\(CDN + \textit{Edge})};
+
+    % Next.js
+    \node[box, fill=cyan!30, below=0.8cm of vercel] (nextjs) {\textit{Next.js}\\(\textit{App Router})};
+
+    % Contentful e Lambda lado a lado
+    \node[box, fill=yellow!30, below left=1cm and 0.5cm of nextjs] (contentful) {Contentful\\(CMS \textit{Headless})};
+    \node[box, fill=red!20, below right=1cm and 0.5cm of nextjs] (lambda) {AWS Lambda\\(\textit{Serverless})};
+
+    % Banco de dados
+    \node[box, fill=green!20, below=0.8cm of lambda] (db) {PostgreSQL\\(Prisma ORM)};
+
+    % GraphQL label
+    \node[font=\scriptsize, below left=0.3cm and -0.3cm of nextjs] (gql) {\textit{GraphQL}};
+
+    % API label
+    \node[font=\scriptsize, below right=0.3cm and -0.2cm of nextjs] (api) {REST API};
+
+    % Container Frontend
+    \begin{scope}[on background layer]
+        \node[bigbox, fill=cyan!5, fit=(vercel)(nextjs), label=above:{\small \textit{Frontend Serverless}}] {};
+    \end{scope}
+
+    % Container Backend
+    \begin{scope}[on background layer]
+        \node[bigbox, fill=red!5, fit=(lambda)(db), label=below right:{\small \textit{Backend}}] {};
+    \end{scope}
+
+    % Setas
+    \draw[arrow] (user) -- (vercel);
+    \draw[doublearrow] (vercel) -- (nextjs);
+    \draw[arrow] (nextjs) -- (contentful);
+    \draw[doublearrow] (nextjs) -- (lambda);
+    \draw[doublearrow] (lambda) -- (db);
+    \draw[arrow] (contentful) -- +(-1.5,0) |- node[pos=0.25, left, font=\scriptsize] {\textit{Webhook}} (vercel);
+\end{tikzpicture}
+\caption{Arquitetura atual da Achievece com \textit{Next.js} e Contentful}
+\label{fig:arquitetura-nova}
+\fonte{Elaborado pelo autor.}
+\end{figure}
+
+As principais vantagens observadas com a nova arquitetura incluem: escalabilidade automática via \textit{serverless} (sem necessidade de gerenciar servidores); melhor performance com renderização otimizada por página; separação de responsabilidades entre conteúdo (Contentful) e lógica de negócio (Lambda); facilidade de implementação de funcionalidades modernas como \textit{Incremental Static Regeneration} (ISR) para páginas de catálogo; e integração simplificada com serviços de terceiros via APIs.
+
+Para facilitar a compreensão da transformação arquitetural realizada, a Figura \ref{fig:comparativo-arquiteturas} apresenta uma comparação visual lado a lado entre as duas arquiteturas:
+
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    box/.style={rectangle, draw, rounded corners, minimum width=1.8cm, minimum height=0.55cm, align=center, font=\tiny},
+    smallbox/.style={rectangle, draw, rounded corners, minimum width=1.2cm, minimum height=0.4cm, align=center, font=\tiny},
+    bigbox/.style={rectangle, draw, dashed, rounded corners, inner sep=0.2cm},
+    arrow/.style={->, >=stealth, thick},
+    title/.style={font=\small\bfseries}
+]
+    % ===== ARQUITETURA ANTIGA (ESQUERDA) =====
+    \node[title] at (-4, 3.5) {Antes: \textit{WordPress}};
+
+    % Usuário
+    \node[box, fill=blue!20] (user1) at (-4, 2.5) {Usuário};
+
+    % WordPress monolítico
+    \node[box, fill=orange!30] (wp) at (-4, 1.3) {\textit{WordPress}\\(PHP)};
+    \node[smallbox, fill=orange!20] (woo) at (-5, 0.3) {WooCommerce};
+    \node[smallbox, fill=orange!20] (ld) at (-4, 0.3) {LearnDash};
+    \node[smallbox, fill=orange!20] (plugins) at (-3, 0.3) {\textit{Plugins}};
+
+    % MySQL
+    \node[box, fill=green!20] (mysql) at (-4, -0.8) {MySQL};
+
+    % Servidor
+    \node[box, fill=gray!30] (server) at (-4, -1.8) {Servidor\\Dedicado};
+
+    % Container
+    \begin{scope}[on background layer]
+        \node[bigbox, fill=orange!5, fit=(wp)(woo)(ld)(plugins)] {};
+    \end{scope}
+
+    % Setas
+    \draw[arrow] (user1) -- (wp);
+    \draw[arrow] (wp) -- (woo);
+    \draw[arrow] (wp) -- (ld);
+    \draw[arrow] (wp) -- (plugins);
+    \draw[arrow] (woo) -- (mysql);
+    \draw[arrow] (mysql) -- (server);
+
+    % ===== SETA DE MIGRAÇÃO =====
+    \draw[->, ultra thick, red!60] (-1.5, 0.5) -- node[above, font=\scriptsize] {Migração} (0.5, 0.5);
+
+    % ===== ARQUITETURA NOVA (DIREITA) =====
+    \node[title] at (4, 3.5) {Depois: \textit{Next.js} + Contentful};
+
+    % Usuário
+    \node[box, fill=blue!20] (user2) at (4, 2.5) {Usuário};
+
+    % Vercel/CDN
+    \node[box, fill=purple!20] (vercel) at (4, 1.5) {Vercel (CDN)};
+
+    % Next.js
+    \node[box, fill=cyan!30] (nextjs) at (4, 0.5) {\textit{Next.js}\\(\textit{Server Actions})};
+
+    % Serviços externos lado a lado
+    \node[box, fill=yellow!30] (contentful) at (2.3, -0.6) {Contentful\\(CMS)};
+    \node[box, fill=green!20] (postgres) at (4, -0.6) {PostgreSQL\\(Prisma)};
+    \node[box, fill=orange!20] (stripe) at (5.7, -0.6) {Stripe};
+
+    % Serverless
+    \node[box, fill=red!15] (lambda) at (4, -1.7) {AWS Lambda\\(\textit{Async})};
+
+    % Container Frontend
+    \begin{scope}[on background layer]
+        \node[bigbox, fill=cyan!5, fit=(vercel)(nextjs), label={[font=\tiny]above right:\textit{Serverless}}] {};
+    \end{scope}
+
+    % Setas
+    \draw[arrow] (user2) -- (vercel);
+    \draw[arrow] (vercel) -- (nextjs);
+    \draw[arrow] (nextjs) -- (contentful);
+    \draw[arrow] (nextjs) -- (postgres);
+    \draw[arrow] (nextjs) -- (stripe);
+    \draw[arrow] (stripe) -- (lambda);
+    \draw[arrow, dashed] (contentful) -- +(-0.8,0) |- node[pos=0.2, left, font=\tiny] {\textit{Webhook}} (vercel);
+
+\end{tikzpicture}
+\caption{Comparação visual entre a arquitetura anterior (\textit{WordPress}) e a atual (\textit{Next.js} + Contentful)}
+\label{fig:comparativo-arquiteturas}
+\fonte{Elaborado pelo autor.}
+\end{figure}
+
+A comparação visual evidencia as principais diferenças: na arquitetura anterior, todos os componentes estavam acoplados em uma única estrutura monolítica, com processamento centralizado em um servidor dedicado. Na arquitetura atual, as responsabilidades são distribuídas entre serviços especializados: o Contentful gerencia o conteúdo editorial (cursos, páginas, materiais), o PostgreSQL armazena dados transacionais (usuários, compras, assinaturas), o Stripe processa pagamentos, e o \textit{Next.js} na Vercel orquestra todas essas integrações de forma \textit{serverless}.
+
+Para melhor compreensão dos componentes e suas interações, a Figura \ref{fig:arquitetura-detalhada} apresenta uma visão detalhada da arquitetura técnica implementada:
+
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}[
+    node distance=0.6cm,
+    box/.style={rectangle, draw, rounded corners, minimum width=2.4cm, minimum height=0.7cm, align=center, font=\scriptsize},
+    smallbox/.style={rectangle, draw, rounded corners, minimum width=1.8cm, minimum height=0.5cm, align=center, font=\tiny},
+    arrow/.style={->, >=stealth, thick},
+    label/.style={font=\tiny, fill=white, inner sep=2pt}
+]
+    % Linha 1: Usuário
+    \node[box, fill=blue!20] (user) at (0, 4) {Usuário\\(Browser)};
+
+    % Linha 2: Vercel
+    \node[box, fill=purple!20] (vercel) at (0, 2.5) {Vercel\\(CDN + \textit{Edge})};
+
+    % Linha 3: Next.js com tecnologias
+    \node[box, fill=cyan!30, minimum width=3.5cm] (nextjs) at (0, 1) {\textit{Next.js 14} (\textit{App Router})\\+ \textit{Server Actions} + \textit{TanStack Query}};
+
+    % Linha 4: Serviços (lado a lado)
+    \node[box, fill=green!20] (prisma) at (-3.5, -0.8) {Prisma ORM};
+    \node[box, fill=yellow!30] (contentful) at (0, -0.8) {Contentful\\(CMS)};
+    \node[box, fill=orange!25] (stripe) at (3.5, -0.8) {Stripe\\(Pagamentos)};
+
+    % Linha 5: Banco e Lambda
+    \node[box, fill=green!30] (postgres) at (-3.5, -2.5) {PostgreSQL\\(AWS RDS)};
+    \node[box, fill=red!20] (lambda) at (3.5, -2.5) {AWS Lambda\\(\textit{Async Jobs})};
+
+    % Setas do fluxo principal
+    \draw[arrow] (user) -- node[label, right] {requisição} (vercel);
+    \draw[arrow] (vercel) -- node[label, right] {roteia} (nextjs);
+
+    % Setas do Next.js para serviços
+    \draw[arrow] (nextjs) -- node[label, left, pos=0.3] {dados} (prisma);
+    \draw[<->, >=stealth, thick] (nextjs) -- node[label, right, pos=0.6] {conteúdo} (contentful);
+    \draw[arrow] (nextjs) -- node[label, right, pos=0.3] {pagamento} (stripe);
+
+    % Setas de banco e lambda
+    \draw[arrow] (prisma) -- node[label, left] {lê/escreve} (postgres);
+    \draw[arrow] (stripe) -- node[label, right] {dispara} (lambda);
+    \draw[arrow] (lambda) -- node[label, below] {processa} (postgres);
+
+    % Webhook do Contentful (revalidação ISR)
+    \draw[arrow, dashed] (contentful) -- +(0, 2.2) -| (vercel);
+
+\end{tikzpicture}
+\caption{Arquitetura detalhada da Achievece: componentes e integrações}
+\label{fig:arquitetura-detalhada}
+\fonte{Elaborado pelo autor.}
+\end{figure}
+
+Nessa arquitetura, o \textit{Next.js} atua como camada central, orquestrando as comunicações entre os diferentes serviços. Os \textit{Server Actions} substituem a necessidade de APIs REST tradicionais, permitindo que funções executadas no servidor sejam chamadas diretamente dos componentes React, com tipagem \textit{end-to-end} via TypeScript. O \textit{TanStack Query} gerencia o estado das requisições no cliente, implementando \textit{cache}, revalidação automática e estados de carregamento de forma declarativa.
+
+A separação entre Contentful (conteúdo editorial) e PostgreSQL (dados transacionais) segue o princípio de responsabilidade única: o CMS \textit{headless} é utilizado para conteúdo gerenciado pela equipe editorial (cursos, páginas, materiais), enquanto o banco de dados relacional, hospedado na AWS RDS, armazena dados de usuários, transações e assinaturas. Essa separação permite que cada sistema seja otimizado para seu propósito específico.
+
+\textbf{Comparação com plataformas tradicionais de e-commerce:} A arquitetura adotada na Achievece difere significativamente das abordagens tradicionais utilizadas em plataformas como \textit{WordPress}/WooCommerce ou Shopify. Enquanto essas soluções oferecem maior facilidade de implementação inicial e menor necessidade de conhecimento técnico, elas operam como ``caixas pretas'' que limitam o acesso aos detalhes de implementação e aos dados granulares de operação. No \textit{WordPress}, o código é fragmentado entre \textit{plugins} de terceiros com lógicas próprias; no Shopify, a plataforma é totalmente gerenciada e o acesso ao \textit{backend} é restrito.
+
+A arquitetura customizada da Achievece oferece controle total sobre cada camada do sistema. Isso foi importante para a realização deste trabalho, pois foi possível adicionar instrumentação de métricas em pontos específicos do código, acessar o banco de dados diretamente para análises mais detalhadas, e modificar componentes individuais para observar seus impactos. Em uma plataforma como Shopify, por exemplo, não seria possível implementar e medir com a mesma precisão estratégias como as ofertas de retenção no fluxo de cancelamento, já que o controle sobre esse fluxo é limitado pela plataforma.
+
+A escolha da Achievece como objeto de estudo justifica-se pelo acesso completo aos dados de \textit{analytics} e métricas de negócio, pela possibilidade de implementar modificações técnicas de forma controlada, e pelo volume de tráfego suficiente para análise. A plataforma também é representativa do segmento de \textit{e-learning} no mercado americano e opera com modelos de monetização distintos (pagamento único e assinatura), permitindo análise comparativa entre eles.
 
 É relevante mencionar que o autor deste trabalho atua como responsável técnico da Achievece há mais de dois anos, sendo responsável pela implementação de todas as estratégias técnicas descritas neste capítulo. Essa posição permite não apenas acesso privilegiado aos dados e à infraestrutura da plataforma, mas também conhecimento aprofundado das decisões técnicas e de negócio que motivaram cada implementação. O acesso aos dados e sua divulgação neste trabalho foram devidamente alinhados com as demais lideranças da empresa.
 
@@ -84,7 +455,7 @@ A análise dos dados é predominantemente descritiva, comparando métricas ao lo
 
 \section{Limitações Metodológicas}
 
-É importante reconhecer as limitações desta abordagem metodológica:
+Esta abordagem metodológica possui limitações:
 
 \begin{itemize}
     \item A aplicação prática foi realizada em uma única plataforma, com características específicas (e-commerce de cursos \textit{online}, segmento de educação médica nos EUA), o que limita a generalização dos resultados para outros contextos;
