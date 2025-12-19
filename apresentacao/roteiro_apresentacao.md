@@ -1,223 +1,331 @@
-# Roteiro de Apresentação - TFG
+# Roteiro de Apresentação - TFG (Defesa Final)
 ## Cenário Atual do Desenvolvimento de Plataformas de E-commerce: Estratégias Técnicas e Impacto na Receita das Empresas
 
 **Aluno:** Danilo Godofredo de Mattos (Mat. 2018009986)
 **Orientadora:** Profa. Bárbara Pimenta Caetano
 **Curso:** Engenharia de Computação - UNIFEI
+**Duração estimada:** 20 minutos
 
 ---
 
-## SLIDE 1: Contexto e Problema
+## Estrutura da Apresentação (20 slides)
 
-**[Iniciar]**
-Bom dia a todos. Meu trabalho investiga o cenário atual do desenvolvimento de plataformas de e-commerce, com foco nas estratégias técnicas e seu impacto na receita das empresas.
-
-**[Contextualizar o problema]**
-O e-commerce cresceu bastante nas últimas décadas. Segundo dados da Shopify, as vendas globais devem passar de 6,56 trilhões de dólares em 2025 para mais de 8 trilhões até 2028. Mas esse crescimento traz desafios técnicos sérios: como garantir performance quando o tráfego aumenta? Como melhorar a experiência do usuário para converter mais vendas? Como usar inteligência artificial de forma efetiva?
-
-**[O problema real]**
-O que percebi trabalhando com e-commerce é que há muita informação técnica dispersa na literatura. Vários estudos falam sobre arquitetura de software, outros sobre otimização de interface, outros sobre sistemas de recomendação. Mas falta uma visão integrada que conecte essas decisões técnicas com o impacto financeiro real nas empresas. Um engenheiro ou gestor que vai desenvolver uma plataforma não tem clareza sobre qual decisão técnica vai trazer mais retorno.
-
-**[Transição]**
-Por isso resolvi fazer este trabalho: mapear o estado da arte nessa área e fazer experimentos práticos que demonstrem o impacto real dessas decisões.
+| Parte | Slides | Tempo |
+|-------|--------|-------|
+| Introdução e Contexto | 1-2 | 3 min |
+| Revisão Bibliográfica | 3-7 | 5 min |
+| Metodologia | 8-9 | 2,5 min |
+| Resultados | 10-16 | 6,5 min |
+| Limitações e Conclusão | 17-20 | 3 min |
+| **Total** | **20** | **~20 min** |
 
 ---
 
-## SLIDE 2: Motivação e Relevância
+## SLIDE 1: Contexto e Problema (1,5 minutos)
 
-**[Três aspectos principais]**
-A motivação para este trabalho veio de três pontos que observei na prática:
+**[Abertura]**
+Bom dia/boa tarde a todos. Meu nome é Danilo Mattos, e este é meu Trabalho Final de Graduação, orientado pela Professora Bárbara Caetano. O título é "Cenário Atual do Desenvolvimento de Plataformas de E-commerce: Estratégias Técnicas e Impacto na Receita das Empresas".
 
-**Primeiro - Impacto econômico direto:**
-Decisões técnicas erradas custam dinheiro. Há um caso documentado do Alibaba.com que ilustra bem isso: quando implementaram Progressive Web App, tiveram 76% de aumento nas conversões. Setenta e seis por cento! Só essa mudança técnica. Isso mostra que escolhas de arquitetura e tecnologia não são apenas questões de engenharia, são questões de negócio.
+**[Contextualizar o mercado]**
+O e-commerce é um mercado em crescimento acelerado. Segundo dados da Shopify, as vendas globais devem passar de 6,56 trilhões de dólares em 2025 para mais de 8 trilhões até 2028. Esse crescimento traz desafios técnicos importantes: como garantir performance com mais usuários? Como melhorar a experiência para converter mais vendas?
 
-**Segundo - Complexidade das escolhas:**
-Hoje um desenvolvedor precisa decidir entre arquitetura monolítica ou microsserviços, entre aplicação web tradicional ou PWA, entre usar filtragem colaborativa ou deep learning para recomendação. Cada escolha tem ganhos e perdas em custo, complexidade e performance. As empresas precisam de orientação baseada em evidências para tomar essas decisões.
+**[O problema identificado]**
+Na prática, o que se observa é que a informação técnica está dispersa na literatura. Existem estudos sobre arquitetura de software, outros sobre otimização de interface, outros sobre sistemas de recomendação. Mas falta uma visão que integre essas dimensões e, principalmente, que conecte decisões técnicas com resultados financeiros reais.
 
-**Terceiro - Lacuna entre pesquisa e prática:**
-A literatura tem estudos isolados sobre cada aspecto: performance arquitetural, otimização de UX, algoritmos de IA. Mas falta trabalho que integre essas dimensões e mostre o impacto conjunto na receita. É isso que este TFG busca fazer.
-
-**[Contexto pessoal]**
-Além disso, trabalho há alguns anos com plataformas de e-commerce e assinaturas, então pude trazer essa experiência prática para o trabalho acadêmico.
+**[Exemplo concreto]**
+Para ilustrar: o Alibaba.com, ao implementar Progressive Web App, teve aumento de 76% nas conversões. Isso mostra que decisões técnicas podem ter impacto direto e significativo na receita.
 
 ---
 
-## SLIDE 3: Objetivos do Trabalho
+## SLIDE 2: Motivação e Objetivos (1,5 minutos)
+
+**[Motivação]**
+A motivação para este trabalho veio da minha experiência profissional. Trabalho há mais de dois anos como responsável técnico de uma plataforma de e-commerce, e frequentemente me deparo com decisões técnicas cujo impacto financeiro não é claro. Migrar de arquitetura? Investir em performance? Implementar personalização? São decisões que demandam recursos, mas cujo retorno é difícil de quantificar.
 
 **[Objetivo geral]**
-O objetivo geral é analisar o cenário atual do desenvolvimento de plataformas de e-commerce, identificando as principais estratégias técnicas e avaliando o impacto delas na receita das empresas.
+O objetivo geral é analisar o cenário atual do desenvolvimento de plataformas de e-commerce, identificando estratégias técnicas e discutindo seu potencial impacto na receita.
 
-**[Objetivos específicos - ir comentando cada um]**
-Para isso, dividi em cinco objetivos específicos:
-
-**1. Mapear estratégias arquiteturais**
-Identificar as principais abordagens arquiteturais usadas hoje - monolíticas, microsserviços, event-driven - e analisar os trade-offs de cada uma. Quando vale a pena a complexidade de microsserviços? Quando um monólito é suficiente?
-
-**2. Analisar estratégias de UX e interface**
-Examinar técnicas de otimização da experiência do usuário, especialmente em mobile. Progressive Web Apps, otimizações de performance, design responsivo. O que realmente impacta a conversão?
-
-**3. Avaliar o papel da inteligência artificial**
-Investigar como IA e machine learning estão sendo aplicados: sistemas de recomendação, personalização de conteúdo, geração automática de descrições de produtos. Qual o retorno real desses investimentos?
-
-**4. Correlacionar decisões técnicas com receita**
-Este é o objetivo central: identificar a relação mensurável entre decisões técnicas específicas e métricas de negócio como taxa de conversão, valor médio de pedido, receita recorrente.
-
-**5. Identificar lacunas e oportunidades**
-Mapear o que ainda falta na literatura e quais são as oportunidades de pesquisa futura nessa área.
+**[Objetivos específicos]**
+Os objetivos específicos são cinco. Destaco o quarto: discutir relações entre decisões técnicas e receita - este é o objetivo central do trabalho.
 
 ---
 
-## SLIDE 4: Metodologia - Revisão da Literatura
+## SLIDE 3: Revisão Bibliográfica - Visão Geral (1 minuto)
 
-**[Duas frentes]**
-A metodologia do trabalho tem duas frentes principais: revisão bibliográfica e experimentos práticos.
+**[Estrutura da revisão]**
+A revisão bibliográfica analisou 12 trabalhos recentes, de 2023 a 2025, organizados em quatro eixos temáticos:
 
-**[Revisão bibliográfica]**
-Na revisão, analisei 12 trabalhos recentes que cobrem as principais áreas do desenvolvimento de e-commerce. Organizei em quatro eixos temáticos:
+1. **Arquitetura de Software** - monolítico vs microsserviços, event-driven, trade-offs de escalabilidade
+2. **UX/UI e Performance** - Core Web Vitals, PWA, otimização mobile
+3. **Inteligência Artificial** - sistemas de recomendação, IA generativa, personalização
+4. **Métricas de Conversão** - jornada do usuário, gargalos no checkout
 
-**Arquitetura e Performance:**
-Estudos como o do Ubur comparando arquitetura event-driven com monolítica, trabalho do Zhao mapeando 109 estudos sobre análise de desempenho arquitetural. O que esses estudos mostram é que não existe arquitetura "melhor" em absoluto - depende do contexto, volume de transações, padrão de crescimento.
-
-**UX e Interface:**
-Vários trabalhos sobre impacto da experiência do usuário nas conversões. Destaque para estudos sobre otimização mobile na Indonésia, sobre SEO e velocidade de carregamento, e principalmente os casos de sucesso com PWA. Além do Alibaba que mencionei, há vários outros casos documentados.
-
-**Inteligência Artificial:**
-Trabalhos sobre IA generativa aplicada a e-commerce, sistemas de recomendação. Tem um estudo interessante do Nguyen sobre sistema de recomendação para a H&M que compara LightGBM com deep neural networks. O LightGBM performou melhor e com menos complexidade.
-
-**Métricas e Conversão:**
-Análise da jornada do usuário, taxas de conversão por fonte de tráfego, identificação de gargalos no processo de checkout. O trabalho do Muralidhar mostra como a análise detalhada das métricas pode revelar oportunidades de otimização.
+Vou detalhar cada eixo nos próximos slides.
 
 ---
 
-## SLIDE 5: Metodologia - Experimentos Práticos (Achievece)
+## SLIDE 4: Revisão - Arquitetura de Software (1 minuto)
 
-**[Experimentos reais]**
-Além da revisão teórica, estou fazendo experimentos práticos na plataforma Achievece, que é uma plataforma de assinaturas de audiobooks que desenvolvi. Ela tem cerca de 30 mil visitantes mensais e receita diária na ordem de 2.500 dólares, então dá para fazer testes estatisticamente significativos.
+**[Ubur 2023]**
+O trabalho de Ubur, de 2023, comparou arquitetura event-driven com monolítica. A conclusão principal é que não existe uma solução universal. Aplicações monolíticas têm menos overhead e respondem melhor em baixa carga. Microsserviços escalam melhor quando a demanda aumenta.
 
-**[Estrutura dos experimentos]**
-Os experimentos seguem metodologia rigorosa de A/B testing. Divido o tráfego aleatoriamente entre versão de controle e versão de teste, rodo por tempo suficiente para ter significância estatística, e analiso o impacto em métricas como taxa de conversão, receita média por usuário, lifetime value.
+**[Zhao et al. 2024]**
+O mapeamento sistemático de Zhao e colaboradores analisou 109 estudos sobre performance arquitetural. Uma das conclusões importantes é a falta de padronização em benchmarks, o que dificulta comparações entre abordagens.
 
-**[Três dimensões de experimentos]**
-
-**1. Performance e Core Web Vitals**
-Estou testando otimizações de carregamento, lazy loading de imagens, code splitting. Medindo o impacto direto na taxa de conversão quando melhoro LCP, FID e CLS. A hipótese é que cada melhoria de 100ms no tempo de carregamento deve aumentar a conversão.
-
-**2. UX e fluxo de checkout**
-Testando diferentes designs de checkout, simplificação de formulários, indicadores de progresso. Um experimento interessante é testar checkout em uma página versus multipáginas. Outro é sobre transparência de preços - mostrar ou não o preço total logo no início.
-
-**3. Estratégias de retenção em assinaturas**
-Como a Achievece trabalha com modelo de assinatura recorrente, estou testando estratégias de upsell e ofertas de retenção. Por exemplo: oferecer upgrade de plano durante o checkout, oferecer desconto quando o usuário tenta cancelar. Medindo o impacto em MRR, churn rate e lifetime value.
-
-**[Coleta de dados]**
-Todo experimento é instrumentado com tracking detalhado. Uso ferramentas de analytics para coletar dados de comportamento, testes de significância estatística para validar resultados.
+**[Implicação]**
+A implicação prática é que a decisão arquitetural deve considerar contexto: tamanho da equipe, escala esperada e recursos disponíveis. Não existe "bala de prata".
 
 ---
 
-## SLIDE 6: Resultados Esperados e Cronograma
+## SLIDE 5: Revisão - UX/UI e Performance (1 minuto)
 
-**[O que espero obter]**
-Com este trabalho, espero gerar três tipos de resultados:
+**[Nawir 2024]**
+O estudo de Nawir, de 2024, é particularmente relevante. Encontrou que 70% da variância nas taxas de conversão pode ser explicada por fatores de usabilidade. Design responsivo e navegação intuitiva são críticos.
 
-**1. Framework de análise integrada**
-Um framework que conecte as diferentes dimensões técnicas - arquitetura, UX, IA - com métricas de negócio. A ideia é que outro engenheiro ou gestor possa usar esse framework para tomar decisões mais informadas sobre onde investir recursos técnicos.
+**[Bansal 2024]**
+Bansal, também de 2024, mostrou a relação entre performance e conversão: queda de 7% nas conversões para cada segundo adicional de carregamento. Core Web Vitals também afetam o ranqueamento no Google.
 
-**2. Evidências quantitativas**
-Dados reais dos experimentos na Achievece mostrando o impacto de cada otimização. Por exemplo: "melhorar LCP de 3s para 1.5s aumentou conversão em X%", "implementar ofertas de retenção reduziu churn em Y%". Isso vai além da teoria e traz números concretos.
-
-**3. Identificação de lacunas**
-Mapear claramente o que ainda falta ser estudado. A revisão bibliográfica já está mostrando várias áreas pouco exploradas, especialmente sobre estratégias de assinatura e relação quantitativa entre decisões técnicas e receita em diferentes contextos de negócio.
-
-**[Cronograma]**
-O cronograma está distribuído ao longo de 2025:
-
-- **Primeiro trimestre:** Finalizando revisão bibliográfica, definindo protocolos dos experimentos
-- **Segundo trimestre:** Executando os experimentos na Achievece, coletando dados
-- **Terceiro trimestre:** Análise estatística dos resultados, escrita do trabalho final
-- **Quarto trimestre:** Revisão, ajustes finais, preparação da defesa
-
-**[Considerações finais]**
-Este trabalho busca contribuir tanto para a academia quanto para a prática. Para a academia, trazendo evidências empíricas sobre o impacto de decisões técnicas. Para a prática, oferecendo orientação baseada em dados para quem desenvolve plataformas de e-commerce.
-
-Obrigado pela atenção. Estou aberto a perguntas.
+**[Caso Alibaba]**
+O caso mais emblemático é do Alibaba.com, que ao implementar Progressive Web App teve aumento de 76% nas conversões, especialmente em experiência mobile.
 
 ---
 
----
+## SLIDE 6: Revisão - Inteligência Artificial (1 minuto)
 
-# PERGUNTAS E RESPOSTAS PARA A DEFESA
+**[Stamkou et al. 2025]**
+Stamkou e colaboradores, em 2025, analisaram o uso de IA generativa em e-commerce - ChatGPT para atendimento e descrições de produto, DALL-E para geração de imagens. O potencial de personalização em massa é alto.
 
-## Perguntas sobre Metodologia
+**[Nguyen et al. 2024 - H&M]**
+Um resultado interessante vem do sistema de recomendação da H&M analisado por Nguyen. Comparando LightGBM com Deep Neural Networks, o modelo mais simples teve melhor desempenho: MAP@50 de 0,06 contra 0,02 da rede neural. Isso mostra que modelos simples podem superar complexos dependendo do contexto.
 
-### P1: Por que você escolheu apenas 12 artigos para a revisão bibliográfica? Não seria necessário um número maior para ter representatividade?
-
-**R:** A escolha dos 12 artigos foi criteriosa e baseada em cobertura temática, não apenas em quantidade. Priorize trabalhos recentes (maioria de 2023-2025) que representam o estado da arte em cada dimensão do problema: arquitetura, UX, IA e métricas. Além disso, incluí estudos de caso documentados como o do Alibaba.com e a coleção de cases de PWA que trazem evidências quantitativas reais. O trabalho do Zhao et al., por exemplo, é um mapeamento sistemático que já analisou 109 estudos sobre análise de desempenho arquitetural, então indiretamente estou coberto por uma revisão muito mais ampla. Considero que esses 12 trabalhos dão uma visão sólida e atualizada do cenário atual.
-
-### P2: Você mencionou que vai fazer experimentos na plataforma Achievece. Como você garante que os resultados são generalizáveis para outras plataformas de e-commerce?
-
-**R:** Essa é uma limitação reconhecida do trabalho. A Achievece é um caso específico - modelo de assinatura, segmento de audiobooks. Os resultados não vão ser universalmente aplicáveis a qualquer e-commerce. Mas existem alguns pontos que tornam os experimentos relevantes: primeiro, o volume de tráfego (30 mil visitantes mensais) permite significância estatística. Segundo, muitos dos testes - como otimização de Core Web Vitals, simplificação de checkout - têm princípios que se aplicam a diferentes contextos. Terceiro, a própria revisão bibliográfica complementa os experimentos mostrando evidências de outros contextos. O trabalho deixa claro as limitações de generalização e sugere que estudos futuros repliquem os experimentos em outros segmentos.
-
-### P3: Como você vai garantir rigor estatístico nos experimentos de A/B testing?
-
-**R:** Vou seguir práticas estabelecidas de experimentação: tamanho de amostra calculado com base em poder estatístico desejado (geralmente 80%) e significância de 95%. Divisão aleatória do tráfego entre grupos de controle e teste. Duração mínima de experimentos para capturar variações de comportamento ao longo da semana. Vou usar testes de hipótese apropriados - qui-quadrado para taxas de conversão, teste t para médias de receita. E vou reportar não apenas p-values mas também intervalos de confiança e tamanho de efeito. Pretendo usar ferramentas como Python com scipy e statsmodels para as análises.
-
-## Perguntas sobre Conteúdo e Resultados
-
-### P4: Você falou sobre o caso do Alibaba.com com 76% de aumento nas conversões. Mas esse é um caso isolado de uma empresa gigante. Como isso se relaciona com a realidade de empresas menores?
-
-**R:** É verdade que o Alibaba é um caso extremo em termos de escala. Mas o princípio por trás do resultado se aplica: investimento em tecnologia web moderna (PWA) melhorou a experiência do usuário, especialmente em mobile e redes lentas, e isso se traduziu em mais conversões. O que muda em empresas menores é a magnitude do impacto e a viabilidade do investimento. Por isso a revisão bibliográfica inclui outros estudos sobre otimização mobile e performance que mostram resultados em contextos variados. E os experimentos na Achievece, que é uma plataforma de porte médio, vão justamente gerar dados em uma escala mais próxima da realidade de muitas empresas.
-
-### P5: Na revisão bibliográfica, você identificou que o modelo LightGBM performou melhor que redes neurais profundas no sistema de recomendação da H&M. Por que isso aconteceu?
-
-**R:** O trabalho do Nguyen et al. mostra que o LightGBM teve MAP@50 de 0,06 contra 0,02 das redes neurais. Vários fatores podem explicar isso: primeiro, LightGBM é muito eficiente com dados tabulares e features engenheiradas, que é o caso típico de sistemas de recomendação (histórico de compras, categorias de produtos, comportamento do usuário). Segundo, redes neurais profundas geralmente precisam de volumes maiores de dados e mais tempo de treinamento para convergir. Terceiro, a interpretabilidade do LightGBM é maior, o que facilita debugging e otimização do modelo. O resultado sugere que nem sempre a abordagem mais sofisticada é a melhor - há um trade-off entre complexidade e eficácia que precisa ser avaliado em cada contexto.
-
-### P6: Você mencionou "estratégias de retenção" em modelos de assinatura. Pode explicar melhor o que testou e por quê?
-
-**R:** Em modelos de assinatura, churn é o grande vilão - cada cliente que cancela é receita recorrente perdida. As estratégias que estou testando incluem: ofertas de desconto quando o usuário inicia o processo de cancelamento (por exemplo, "fique por mais 3 meses com 30% de desconto"), downsell (oferecer um plano mais barato ao invés de cancelar completamente), pausa temporária da assinatura. Também estou testando upsell durante o checkout - oferecer o plano anual com desconto quando o usuário vai comprar o mensal. A ideia é medir o impacto de cada estratégia em métricas como taxa de churn, lifetime value do cliente, e receita incremental. A literatura tem pouco sobre implementação técnica dessas estratégias, então os experimentos vão contribuir com evidências práticas.
-
-## Perguntas sobre Lacunas e Contribuições
-
-### P7: Quais você considera as principais lacunas que identificou na literatura?
-
-**R:** Identifiquei cinco lacunas principais:
-
-Primeira: falta de frameworks integrados que conectem arquitetura, UX e IA de forma holística. Os estudos tendem a focar em uma dimensão isoladamente.
-
-Segunda: faltam estudos de longo prazo sobre ROI real de implementações de IA. Sabemos que sistemas de recomendação funcionam tecnicamente, mas qual o retorno financeiro ao longo de 1, 2 anos considerando custos de desenvolvimento e manutenção?
-
-Terceira: falta de benchmarks padronizados para comparar diferentes abordagens arquiteturais. O Zhao et al. apontaram isso - é difícil replicar estudos e fazer comparações objetivas.
-
-Quarta: falta explorar melhor técnicas de ML/AI para otimização integrada e automática de plataformas.
-
-Quinta, e talvez a mais relevante para o meu trabalho: falta estabelecer relações quantitativas claras entre decisões técnicas específicas e receita em diferentes contextos de negócio. Por exemplo, qual o impacto de melhorar tempo de resposta de APIs de 200ms para 100ms? Como isso varia por segmento, por dispositivo?
-
-### P8: Qual você espera que seja a principal contribuição do seu trabalho?
-
-**R:** Espero que a principal contribuição seja conectar o técnico com o financeiro de forma prática e baseada em evidências. Muitos trabalhos acadêmicos focam em aspectos técnicos isolados. Muitos conteúdos de mercado são superficiais ou anedóticos. Este trabalho busca o meio termo: rigor metodológico da academia com aplicabilidade prática para quem desenvolve e-commerce. O framework de análise integrada e os dados quantitativos dos experimentos devem ajudar engenheiros e gestores a priorizar onde investir recursos técnicos para maximizar impacto na receita. E a identificação clara das lacunas deve orientar pesquisas futuras.
-
-## Perguntas Técnicas Específicas
-
-### P9: Você vai usar alguma arquitetura específica na Achievece ou vai testar diferentes arquiteturas?
-
-**R:** A Achievece já está em produção, então não vou fazer mudanças arquiteturais drásticas durante o TFG. A arquitetura atual é uma aplicação web moderna com frontend em React, backend em Node.js, banco de dados PostgreSQL. O foco dos experimentos não é comparar arquiteturas diferentes (monolítico vs microsserviços), mas sim otimizações dentro da arquitetura existente: performance de frontend (Core Web Vitals), otimização de queries no backend, estratégias de caching. A revisão bibliográfica complementa isso analisando estudos que fazem comparações arquiteturais em outros contextos.
-
-### P10: Como você vai medir Core Web Vitals e garantir que as melhorias são causadas pelas suas otimizações e não por outros fatores?
-
-**R:** Vou usar ferramentas padrão do ecossistema web: Google Lighthouse para análises de performance, Web Vitals library para coleta de métricas reais dos usuários (RUM - Real User Monitoring), Chrome User Experience Report para dados agregados. A metodologia de A/B testing resolve o problema de causalidade: ao dividir o tráfego aleatoriamente entre a versão atual (controle) e a versão otimizada (teste), com ambas rodando simultaneamente, fatores externos afetam os dois grupos igualmente. Diferenças significativas na taxa de conversão podem ser atribuídas às otimizações de performance. Vou também controlar por variáveis como tipo de dispositivo, horário do dia, fonte de tráfego na análise.
-
-### P11: E sobre privacidade e LGPD? Como você vai lidar com a coleta de dados dos usuários para os experimentos?
-
-**R:** Boa pergunta. A coleta de dados segue as práticas de privacidade e conformidade com LGPD. Os dados são anonimizados, não identificam usuários individuais. Uso de cookies e tracking está declarado na política de privacidade da plataforma, com consentimento dos usuários. Para o TFG, vou trabalhar com dados agregados e estatísticas - não preciso de informações pessoais identificáveis. Métricas como taxa de conversão, receita média, tempo de sessão são calculadas de forma agregada. Se houver necessidade de análises mais detalhadas de jornada do usuário, vou usar identificadores anonimizados e garantir que não seja possível reidentificar indivíduos.
-
-## Perguntas sobre Cronograma e Viabilidade
-
-### P12: O cronograma parece ambicioso. Como você vai garantir que consegue concluir tudo no prazo?
-
-**R:** O cronograma é apertado mas viável. Alguns fatores ajudam: primeiro, a revisão bibliográfica já está bem avançada. Segundo, a plataforma Achievece já existe em produção, não preciso desenvolver do zero - só implementar variações para os experimentos. Terceiro, tenho experiência prática com as tecnologias envolvidas, o que reduz a curva de aprendizado. Quarto, os experimentos vão rodar em paralelo quando possível. O risco maior é se algum experimento não atingir significância estatística no tempo esperado - para isso, tenho experimentos de backup mais simples que podem ser executados mais rapidamente. E a própria revisão bibliográfica já gera contribuições mesmo que os experimentos demorem mais.
-
-### P13: Você está fazendo o TFG sozinho. Não seria melhor ter uma equipe ou parceria com alguma empresa?
-
-**R:** É individual sim, que é o formato do TFG. Mas tenho algumas vantagens: já trabalho com a plataforma Achievece, então tenho acesso aos dados e estrutura para fazer os experimentos. Tenho suporte da orientadora para direcionamento metodológico e acadêmico. E a decisão de fazer experimentos em uma plataforma que eu mesmo desenvolvo, embora limite a escala, dá agilidade - não dependo de aprovações de terceiros para implementar mudanças e rodar testes. Claro que uma parceria com uma empresa maior poderia trazer dados em escala diferente, mas também traria complexidades de acordos, confidencialidade, tempos de aprovação que poderiam inviabilizar o TFG no prazo.
+**[Achado-chave]**
+O achado-chave é que IA tem alto potencial, mas dados quantitativos sobre impacto direto em receita ainda são escassos na literatura.
 
 ---
 
-**Observação:** Estas perguntas cobrem os principais aspectos do trabalho e antecipam questionamentos que orientadores e bancas costumam fazer. As respostas são diretas, reconhecem limitações quando existem, e demonstram compreensão profunda tanto da teoria quanto da prática.
+## SLIDE 7: Síntese da Revisão Bibliográfica (1 minuto)
+
+**[Principais achados]**
+Resumindo os principais achados:
+- Arquitetura: trade-offs claros, sem solução universal
+- UX/UI: evidências fortes de impacto em conversão
+- IA: promessa alta, evidências quantitativas limitadas
+- Performance: relação direta com métricas de negócio
+
+**[Lacunas identificadas]**
+As lacunas identificadas são importantes para situar este trabalho:
+- Faltam frameworks integrados que analisem múltiplas dimensões
+- Poucos estudos apresentam dados financeiros reais
+- Ausência de benchmarks padronizados
+- A relação quantitativa entre decisão técnica e receita é pouco explorada
+
+---
+
+## SLIDE 8: Aplicação Prática - Achievece (1,5 minutos)
+
+**[Apresentar a plataforma]**
+Além da revisão bibliográfica, o trabalho apresenta uma aplicação prática na plataforma Achievece - achievece.com. É um e-commerce de cursos online especializado em educação continuada para médicos nos Estados Unidos.
+
+**[Números]**
+A plataforma tem cerca de 30 mil visitantes mensais, mais de 700 cursos, e receita diária na ordem de 2.500 dólares. Trabalha com modelo híbrido: produtos de pagamento único e assinaturas.
+
+**[Justificativa]**
+A escolha se justifica por três razões: tenho acesso completo aos dados e à infraestrutura, o volume de tráfego permite análises significativas, e o modelo de negócio permite observar diferentes estratégias.
+
+**[Período]**
+O período de análise foi de aproximadamente um ano de implementações.
+
+---
+
+## SLIDE 9: Estratégias Implementadas (1 minuto)
+
+**[Listar estratégias]**
+As estratégias implementadas foram organizadas em quatro grupos:
+
+1. **Arquitetura**: Migração de WordPress para Next.js com arquitetura serverless na Vercel
+2. **UX/UI**: Reorganização da interface para destacar produtos por assinatura, e otimização de Core Web Vitals
+3. **SEO**: Implementação de dados estruturados JSON-LD para Organização, Produto, FAQ e Artigo. Também criamos mais de 100 páginas personalizadas por estado e profissão
+4. **Retenção**: Ofertas de retenção no fluxo de cancelamento e estratégia de upsell pós-compra
+
+**[Ferramentas]**
+Para coleta de dados, utilizamos Google Analytics 4, Vercel Speed Insights e Google Search Console.
+
+---
+
+## SLIDE 10: Resultado - Reorganização da Interface (1 minuto)
+
+**[Mostrar imagens]**
+Aqui temos a comparação visual. À esquerda, a interface anterior, onde produtos de pagamento único apareciam em destaque. À direita, a nova interface, com os planos de assinatura posicionados no topo, com comparação visual clara entre opções.
+
+**[Mudanças]**
+As mudanças incluíram: hierarquia visual favorecendo assinaturas, proposta de valor mais clara, credenciais de acreditação em destaque, e personalização por estado e profissão do usuário.
+
+**[Resultado]**
+Os resultados observados foram: aumento de 74% no valor médio do pedido de assinaturas e crescimento de 105% na participação de novas vendas dessa categoria.
+
+---
+
+## SLIDE 11: Resultado - Performance (1 minuto)
+
+**[Mostrar métricas]**
+Na questão de performance, a imagem mostra as métricas do Vercel Speed Insights, que mede a experiência real dos usuários.
+
+**[Números]**
+Atingimos score de 95, com LCP de 2,92 segundos, INP de 112ms, CLS de 0,07, FCP de 1,55 segundos e TTFB de 0,48 segundos. Todas dentro dos parâmetros considerados bons pelo Google.
+
+**[Arquitetura]**
+A arquitetura serverless também trouxe benefício importante: desde a migração, não houve indisponibilidade. A escalabilidade automática eliminou os problemas que existiam no WordPress quando havia picos de usuários.
+
+---
+
+## SLIDE 12: Resultado - SEO e Tráfego de IA (1 minuto)
+
+**[Contexto]**
+Uma estratégia interessante foi a otimização para plataformas de IA. Implementamos dados estruturados JSON-LD pensando em como sistemas como ChatGPT interpretam conteúdo.
+
+**[Mostrar gráficos]**
+Os gráficos mostram o tráfego vindo de chatgpt.com. Em julho de 2025, antes da implementação completa, tivemos 54 usuários. Em agosto, após as otimizações, foram 109 usuários.
+
+**[Resultado]**
+Um aumento de 102%.
+
+**[Ressalva]**
+É importante ressalvar: o crescimento da adoção do ChatGPT como ferramenta de busca também pode ter contribuído para esse aumento. Não foi possível isolar completamente o efeito das otimizações.
+
+---
+
+## SLIDE 13: Resultado - Ofertas de Retenção (1 minuto)
+
+**[Mostrar imagem]**
+Esta é a estratégia com atribuição mais clara. A imagem mostra o modal apresentado quando um assinante inicia o processo de cancelamento.
+
+**[Explicar estratégia]**
+A oferta permite "pular" a próxima cobrança, mantendo o acesso por mais um ciclo gratuitamente. A opção de prosseguir com o cancelamento permanece visível - não é uma estratégia de dark pattern.
+
+**[Resultado]**
+Os dados de três meses mostram redução de 30% na intenção de cancelamento. Ou seja, de cada 10 usuários que iniciam o cancelamento, 3 aceitam a oferta e permanecem. Isso tem impacto direto no MRR e no lifetime value dos clientes.
+
+---
+
+## SLIDE 14: Resultado - Upsell (0,5 minutos)
+
+**[Mostrar imagem]**
+A estratégia de upsell é apresentada após a compra de um produto avulso. A página usa elementos de urgência - contador regressivo - e destaca o desconto oferecido.
+
+**[Status]**
+Esta funcionalidade foi implementada recentemente e ainda não acumulou dados suficientes para análise. Está em observação.
+
+---
+
+## SLIDE 15: Síntese dos Resultados (1 minuto)
+
+**[Mostrar tabela]**
+Esta tabela resume a conexão entre a literatura e as observações práticas:
+
+- Migração serverless, baseada nos trade-offs arquiteturais da literatura, resultou em zero indisponibilidade
+- Reorganização UX, respaldada pelo dado de 70% de variância em conversões, coincidiu com aumento de 74% no AOV
+- Performance, conectada ao dado de -7% por segundo, atingiu score de 95
+- SEO para IA, com aumento de 102% no tráfego
+- Ofertas de retenção, com redução de 30% nos cancelamentos
+
+**[Destaque]**
+O destaque é a inversão no padrão de vendas: produtos por assinatura passaram de categoria secundária para principal fonte de novas vendas.
+
+---
+
+## SLIDE 16: Impacto por Categoria (1 minuto)
+
+**[Mostrar tabela]**
+Esta tabela detalha o impacto por categoria de produto.
+
+**[Explicar números]**
+Assinaturas: maior crescimento, com aumento de 74% no AOV e 105% na participação de novas vendas.
+Avulsos: queda de 23% no AOV e 28% na participação - esperado, já que o objetivo era direcionar usuários para assinaturas.
+Planos também tiveram crescimento significativo: 63% no AOV.
+
+**[Interpretação]**
+A inversão nos padrões de venda reflete o efeito combinado das estratégias. Não é possível isolar a contribuição individual de cada uma, mas o conjunto de mudanças claramente influenciou as decisões de compra.
+
+---
+
+## SLIDE 17: Limitações do Trabalho (1 minuto)
+
+**[Ser honesto]**
+É importante ser honesto sobre as limitações do trabalho.
+
+**[Listar limitações]**
+Primeiro, não foi possível aplicar testes A/B. Questões operacionais da empresa impediram a divisão de tráfego para grupos de controle.
+
+Segundo, as estratégias foram implementadas em períodos próximos, o que dificulta a atribuição de resultados a ações específicas.
+
+Terceiro, analisei apenas uma plataforma, limitando a generalização.
+
+Quarto, dados históricos do WordPress foram perdidos, impedindo comparação direta.
+
+**[Implicação]**
+A implicação é que os resultados são correlações, não causalidade comprovada. O trabalho apresenta os dados como observações, não como evidências definitivas.
+
+---
+
+## SLIDE 18: Trabalhos Futuros (1 minuto)
+
+**[Direções]**
+Para trabalhos futuros, identifico algumas direções importantes:
+
+- Estudos com testes A/B controlados para isolar o impacto de estratégias específicas
+- Análises longitudinais que capturem efeitos de longo prazo
+- Comparações entre diferentes segmentos de e-commerce
+- Criação de benchmarks padronizados
+
+**[Recomendação]**
+Para empresas que queiram fazer estudos similares, recomendo: implementar infraestrutura de testes desde o início, alocar recursos específicos para análise de impacto, separar períodos de implementação, e preservar dados históricos.
+
+---
+
+## SLIDE 19: Considerações Finais (1 minuto)
+
+**[Contribuições]**
+As contribuições do trabalho são:
+- Revisão bibliográfica de 12 trabalhos em 4 eixos temáticos
+- Aplicação prática em plataforma real de e-commerce
+- Discussão honesta sobre dificuldades de atribuição
+- Identificação de lacunas para pesquisa futura
+
+**[Mensagem principal]**
+A mensagem principal é que a relação entre decisões técnicas e receita é real, mas complexa de mensurar. A literatura oferece indícios, a prática confirma potencial, mas estabelecer causalidade isolada continua sendo um desafio.
+
+**[Encerramento]**
+Obrigado pela atenção. Estou à disposição para perguntas.
+
+---
+
+## SLIDE 20: Perguntas
+
+*[Aguardar perguntas da banca]*
+
+---
+
+# DICAS PARA A DEFESA
+
+## Postura Geral
+- **Humildade acadêmica**: reconhecer limitações sem se desculpar excessivamente
+- **Não inventar dados**: se não souber algo, diga "não tenho dados para responder isso"
+- **Defender o valor do trabalho**: limitações não invalidam contribuições
+- **Linguagem precisa**: "coincidiu com" em vez de "causou", "observamos" em vez de "provamos"
+- **Conectar com a literatura**: sempre que possível, referenciar os artigos revisados
+
+## Frases Úteis
+- "Essa é uma limitação reconhecida no trabalho..."
+- "Os dados sugerem correlação, mas não permitem estabelecer causalidade isolada..."
+- "O trabalho de [autor] indica que..."
+- "Não tenho dados para afirmar isso com certeza, mas..."
+- "Para trabalhos futuros, seria importante..."
+
+## Controle de Tempo
+- Se perceber que está atrasado: pule detalhes nos slides de revisão bibliográfica
+- Se perceber que está adiantado: explore mais os slides de resultados com imagens
+- Reserve os últimos 30 segundos para agradecer e convidar para perguntas
+
+---
+
+**Documento de perguntas e respostas completo disponível em:** `perguntas_respostas.md`
